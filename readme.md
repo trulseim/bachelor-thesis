@@ -1,1 +1,1 @@
-report PDF can be found in report/output/report.pdf
+Report PDF can be found in report/output/report.pdf. Download to view.
