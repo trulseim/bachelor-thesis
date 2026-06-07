@@ -1,0 +1,104 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arc distance between two points as \(d\) grows}}{16}{figure.caption.3}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 3D Angular spacing as a function of \(x_{\mathrm {RPM}}\) with examples at 3, 5 and 10.}}{17}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 2D coordinate frame vs 3D coordinate frame}}{18}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Motor feedback diagram, values not adjusted.}}{22}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Power architecture block diagram.}}{25}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Simulated current, voltage, and power over six, 15 minute mapping runs.}}{26}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Simulated rover trajectory using the odometry model.}}{28}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Geometric parameters of the rover side view. Source: Own CAD model.}}{32}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Original Prusa Mini+. Source: Own picture.}}{35}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Bambu Lab H2D 10W Laser Combo. Source: Elefun.no.}}{35}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Fit test for rocker connection.}}{36}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Bearing and bolt tolerance test.}}{36}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Wheel to motor connection.}}{36}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces NEMA17 mount/tolerance.}}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Rocker test part.}}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Fail/Warping.}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Print failure rocker.}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Warping and layer adhesion.}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Critical areas in prototype 1. Source: Own pictures.}}{37}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Prototype 1 rocker connection.}}{37}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Updated rocker connection with bearing and M8 bolt mounting geometry.}}{37}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Prototype 1 cross-section.}}{38}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Prototype 2 cross-section with increased support.}}{38}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Chassis cross-section and mounting dimensions.}}{38}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Updated chassis with cut-outs, bearing points and mounting geometry.}}{38}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Early/inner wheel geometry.}}{39}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Final wheel with tread pattern and drivetrain mounting points.}}{39}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Final upper chassis.}}{39}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Final lower chassis.}}{39}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Rocker differential arm.}}{39}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Final rear rocker.}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Final front rocker.}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Final wheel.}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces C1 LiDAR mount.}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Final Raspberry Pi 5 mount case.}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Final IMU mount case.}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Assembly view for mechanical connection.}}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Assembly for differential mechanical connection.}}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces All printed parts ready for assembly. Source: Own picture.}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Differential arm mounted to the chassis.}}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Differential arm connection detail.}}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Rocker arm with flange bearing.}}{41}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Rocker arm connection and fasteners.}}{41}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Turnbuckle link between chassis and rear rocker.}}{42}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Differential link connection detail.}}{42}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Lower chassis assembly from above.}}{42}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces Lower chassis assembly from the front.}}{42}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces Wheel with fasteners visible.}}{43}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces Wheel with aluminium flange shaft coupling.}}{43}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces Final structural assembly without wheels. Source: Own picture.}}{43}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces Area with visible layer adhesion weakness. Source: Own picture.}}{44}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces Extra fasteners added around the rocker area.}}{44}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.45}{\ignorespaces Bambu Studio settings for main components. Source: Engebretsen Data Og Media - 3DPrintButikk.no.}}{45}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.46}{\ignorespaces Physical wiring diagram of the rover (created with Fritzing).}}{46}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.47}{\ignorespaces Side view of rover chassis.}}{47}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.48}{\ignorespaces Raspberry Pi mounted to rover chassis.}}{47}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.49}{\ignorespaces LiDAR mounted to rover chassis.}}{47}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.50}{\ignorespaces UART wiring between the RPLIDAR C1 and Raspberry Pi 5 GPIO header. Pin numbers refer to physical header pins.}}{48}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.51}{\ignorespaces LiDAR coordinate frames in 2D (left) and when mounted vertically (right)}}{49}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.52}{\ignorespaces ROS architecture}}{51}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.53}{\ignorespaces Drivetrain rover motor ID setup}}{52}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.54}{\ignorespaces Gazebo lunar surface vs empty world.}}{59}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.55}{\ignorespaces Node graph showing active ROS 2 topics and node connections during simulation.}}{60}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.56}{\ignorespaces RViz TF tree visualized in RVIZ.}}{60}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.57}{\ignorespaces Gazebo problem 1}}{61}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.58}{\ignorespaces Gazebo problem 2}}{61}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.59}{\ignorespaces Rover successfully climbing a hill in Gazebo}}{62}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.60}{\ignorespaces Simulated lunar surface}}{63}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.61}{\ignorespaces Lunar world in Gazebo and RViz Lidar simulation.}}{63}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.62}{\ignorespaces Collision geometry going inside the surface}}{67}{figure.caption.55}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 2D LiDAR scan vs real environment}}{71}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Estimated vs Measured distance}}{72}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Height map side and top view}}{72}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces First primitive 3D scan by manually rotating motor.}}{73}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Full 3D scan of the same indoor room as the above scans.}}{73}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces LiDAR scans captured outside in the dark visualized in RViz, take note of door details.}}{73}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces LiDAR of indoors environment captured in RViz.}}{74}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Drivetrain motor responses under no load: (left) all motors at 100 RPM, (right) simulated right-hand turn.}}{75}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Stationary oscillation measurements.}}{76}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Motor RPM and IMU bearing during attempted zero-radius turn.}}{77}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces IMU acceleration components measured for different static rover poses.}}{77}{figure.caption.68}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces RViz showing position and velocity.}}{78}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Rover climbing a slope in the Gazebo lunar simulation.}}{79}{figure.5.13}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces LiDAR obstacle detection in RViz}}{79}{figure.5.14}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Prototype 2 rocker von Mises stress (max in Table~\ref {tab:fea_summary}).}}{80}{figure.5.15}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Prototype 2 rocker displacement (max in Table~\ref {tab:fea_summary}).}}{80}{figure.5.16}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Prototype 2 chassis von Mises stress: close-up at bearing mount (left) and full-view (right). The maximum value used for comparison is reported in Table~\ref {tab:fea_summary}.}}{80}{figure.caption.70}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Prototype 2 chassis displacement. The maximum value used for comparison is reported in Table~\ref {tab:fea_summary}.}}{81}{figure.5.18}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Prototype 2 wheel with hub mount. Reaction force at ground contact.}}{81}{figure.5.19}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Prototype 2 wheel hub with direct load at hub connection.}}{81}{figure.5.20}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Prototype 2 wheel hub mount displacement.}}{82}{figure.5.21}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Gantt diagram taken from midterm presentation.}}{90}{figure.caption.74}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Estimated wheel odometry, data considered inconclusive so not included in report.}}{90}{figure.caption.75}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Attempted square odometry test, commanded odometry in blue and estimated odometry in red.}}{91}{figure.caption.76}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Equipment and materials used during manufacturing.}}{91}{figure.caption.77}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Final chassis bearing load applied at the bearing contact area}}{92}{figure.caption.78}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Final chassis constraint: frictionless support at inner bearing and fixed bottom surface.}}{92}{figure.caption.79}%

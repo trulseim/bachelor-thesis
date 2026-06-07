@@ -1,0 +1,850 @@
+\chapter{Theory}
+
+\section{Similar Rover and Mapping Systems}
+\subsection{Planetary Rover Mobility Systems}
+
+Planetary rovers must operate in hazardous, remote environments where direct human control is limited. 
+Early examples include the Soviet Lunokhod rovers (1970–1973), which were teleoperated from Earth using eight independently driven wheels and television images for navigation \cite{Lunokhod}.
+Modern Mars rovers (Spirit, Opportunity, Curiosity, Perseverance) use a rocker-bogie suspension, a design that keeps all wheels in contact with uneven terrain without springs and dampers \cite{Mars2020Wheels}.
+This design allows the rover to climb obstacles up to one wheel diameter high while minimising chassis tilt. 
+Perseverance also features six independently motorised wheels for improved traction and in-place turning.
+
+Our prototype draws inspiration from these principles: slow and steady motion, reliable ground contact, independent motor control, and sensor-based remote operation. Unlike full planetary rovers, our design uses four wheels, a simplified rocker-bogie layout, and is not hardened for vacuum, radiation, or extreme temperatures.
+
+\subsection{Remote Operation and Low-Light Navigation}
+Lunar rovers benefit from a short Earth-Moon communication delay (~2.6 seconds round trip) \cite{SpaceLatency}, allowing real-time operation using sensor feedback and imagery. 
+Missions like NASA's VIPER plan to explore permanently shadowed craters, where visible-light navigation is insufficient, hence the need for active sensing such as LiDAR or headlights \cite{VIPER}.
+ Mars rovers, with delays of 6-44 minutes, rely on autonomous systems like Perseverance's AutoNav, 
+which uses onboard cameras to assess terrain and plan paths \cite{SpaceLatency,PerseveranceAutoNav}.
+
+Our rover is designed for remote operation through a local program, without direct line of sight. 
+It provides the operator with LiDAR point clouds, motor odometry, IMU data, and battery status. While not autonomous, 
+it follows the principle that a rover should use its sensors to inform the operator about the environment.
+
+\subsection{Low-Cost 3D Mapping Using 2D LiDAR}
+3D LiDAR sensors are expensive, making them not suitable for student projects. 
+Several studies have shown that a 2D LiDAR mounted on a rotating mechanism can generate a usable pseudo-3D point cloud at low cost \cite{LowCostLiDAR}.
+The key challenges are mechanical alignment, synchronisation of motor angle with each scan, and accurate coordinate transformation \cite{LowCostLiDAR}.
+
+Our project applies this method using a Slamtec RPLIDAR C1, mounted vertically and rotated by a closed-loop stepper motor. 
+Each 2D scan provides a thin slice of the environment; by rotating the sensor, multiple slices are combined into a single 3D point cloud. 
+This approach works in low-light or no-light conditions and is well-suited for student-scale robotics.
+
+\section{Slamtec RPLIDAR C1}
+The Slamtec RPLIDAR C1 is a 360\(^\circ\) 2D LiDAR scanner with a specified range of up to \(12\,m\), depending on target reflectivity. The LiDAR returns its data as an angle and distance pair, which can easily be converted into Cartesian coordinates \cite{RPLIDARDatasheet}.
+In this project the LiDAR is rotated using a motor to provide pseudo-3D point cloud data.
+\subsection{LiDAR Specifications}
+Below is a table of the most relevant RPLIDAR C1 specifications for this project \cite{RPLIDARDatasheet}.
+\begin{table}[H]
+    \centering
+    \caption{Relevant RPLIDAR C1 specifications used in this project.}
+    \label{tab:rplidar_c1_specs}
+    \begin{tabularx}{0.85\textwidth}{l X}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        Scan type & 2D, 360\(^\circ\) LiDAR scanner \\
+        Typical scan frequency & \(10\,Hz\) \\
+        Sample rate & \(5\,kHz\) \\
+        Angular resolution & \(0.72^\circ\) \\
+        Maximum range & \(12\,m\) \\
+        Output data & Distance and angle measurements \\
+        Interface & TTL UART \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Time-of-Flight Distance Measurement}
+Time-of-Flight (ToF) distance measurement is a method for estimating the distance to an object by measuring the time it takes a wave to complete a round-trip to an object.
+Ideally the formula is given as 
+\begin{equation}
+    d = \frac{v \Delta t}{2}
+    \label{eq:tof_distance_formula}
+\end{equation}
+where
+\begin{description}
+    \item[$d$] is the measured distance to an object.
+    \item[$v$] is the speed of the wave through the medium.
+    \item[$\Delta t$] is the round trip delay.
+\end{description}
+The division by two is due to the fact that we want the one way distance to the object, as the formula normally gives the round trip distance. Since a LiDAR sensor uses infrared laser light, \(v\approx c = 3\times10^8\mathrm{m/s}\) \cite{ToFOverview}.
+The accuracy of the measurement depends on the precision of the internal clock, the quality of the returned signal and also any other external noise.
+For a 2D LiDAR, this distance measurement is repeated at all scan angles around the sensor, which means each scan returns both an angle \(\theta\) and a distance \(d\), these can easily be converted into Cartesian coordinates.
+In practice, the RPLIDAR C1 performs internal signal processing and outputs processed distance and angle values rather than raw timing data.
+
+\subsection{2D LiDAR Scanning and Polar Coordinates}
+The C1 measures both distance \(d\) and the angle \(\theta\) relative to the C1's +X axis \cite{RPLIDARDatasheet}. This allows each measurement taken to be represented as a polar coordinate pair of the form \(d, \theta\).
+The polar coordinates can then be easily converted into Cartesian coordinates within the LiDAR's local frame by
+
+\begin{equation}
+    (x_L,y_L)=(d\cos(\theta), d\sin(\theta))
+    \label{eq:polar_to_cartesian}
+\end{equation}
+where \(x_L, y_L\) describe a point in the LiDAR's scan plane.
+
+\subsection{Angular Resolution, Frequency and Point Spacing}
+The angular resolution of our LiDAR scanner is given as \(0.72^\circ\), this implies the angular difference between two neighbouring measurements is given as \(0.72^\circ\) \cite{RPLIDARDatasheet}.
+The angular resolution formula is given as
+\begin{equation}
+    \Delta \theta = \frac{360^\circ}{N}
+\end{equation}
+
+where
+\begin{description}
+    \item[$\Delta \theta$] is the angular resolution.
+    \item[$N$] is the number of scanned points in 360\(^\circ\) scan.
+\end{description}
+
+When solved for \(N\) this becomes
+
+\begin{equation}
+    N=\frac{360^\circ}{0.72^\circ}
+\end{equation}
+
+This results in \(N=500\) for one full 360\(^\circ\) scan. This is consistent with the \(5\,kHz\) sample rate at a \(10\,Hz\) scan frequency, since \(5000/10 = 500\) samples per scan. 
+Since the LiDAR has a specified maximum range of \(12\,m\), the arc distance between two adjacent points can be estimated as
+\begin{equation}
+    s = d \Delta \theta_{\mathrm{rad}}
+\end{equation}
+
+This gives a linear relationship between object distance and spacing between neighbouring scan points, as shown in Figure~\ref{fig:lidar_linear_point_spacing}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{RPLIDAR Point Spacing Function.png}
+    \caption{Arc distance between two points as \(d\) grows}
+    \label{fig:lidar_linear_point_spacing}
+\end{figure}
+
+The scan frequency determines how often a full 2D scan is published as a ROS message, this means that the scan frequency directly affects the angular spacing between two consecutive 3D scan slices.
+If we assume our servo motor rotates at some given \(x_{\mathrm{RPM}}\), and the LiDAR scanning frequency is given as \(f_s\), then the angular spacing in the pseudo-3D case is given as
+\begin{equation}
+    \Delta \phi = \frac{6\times x_{\mathrm{RPM}}}{f_s}
+\end{equation}
+
+where
+
+\begin{description}
+    \item[$\Delta \phi$] is the angular spacing between two adjacent scan planes.  
+    \item[$x_\mathrm{RPM}$] is the motor speed in revolutions per minute.
+    \item[$f_s$] is the LiDAR scan frequency.
+    \item[$6$] arises from converting RPM to degrees per second. 
+\end{description}
+
+With this equation we can plot the expected angular spacing as a function of \(x_{\mathrm{RPM}}\).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{RPLIDAR 3D Angular Spacing.png}
+    \caption{3D Angular spacing as a function of \(x_{\mathrm{RPM}}\) with examples at 3, 5 and 10.}
+    \label{fig:3D_angular_spacing}
+\end{figure}
+This means that the time taken to perform any scan is given as
+\begin{equation}
+    t=\frac{\alpha}{6\times x_{\mathrm{RPM}}}
+\end{equation}
+where
+\begin{description}
+    \item[$t$] time taken in seconds.
+    \item[$\alpha$] sweep angle in degrees.
+    \item[$x_{\mathrm{RPM}}$] motor speed in RPM.   
+\end{description}
+Therefore a sweep taken from \(-89.1^\circ\) to \(89.1^\circ\) at 5 
+RPM takes \(\frac{178.2}{30}\)=5.94s.
+
+\subsection{Coordinate Systems and Sensor Orientation}
+For a complete 3D reconstruction we need to define the coordinate frames which are used by the LiDAR and the rover.
+The LiDAR returns its measurements in its own local coordinate frame.
+The physical orientation of the LiDAR sensor in 3D was inspected using its CAD model which is provided by Slamtec. 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Orientation.png}
+        \caption{2D LiDAR coordinate orientation with X+ being forwards}
+        \label{fig:lidar_2D_orientation}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR 3D Axis Orientation.png}
+        \caption{3D LiDAR coordinate orientation with Z- being the new forwards direction}
+        \label{fig:lidar_3D_orientation}
+    \end{subfigure}
+
+    \caption{2D coordinate frame vs 3D coordinate frame}
+    \label{fig:lidar_2D_3D_orientation}
+\end{figure}
+If we assume \(P_L\) is a 3D point with respect to the LiDAR's reference frame it can be written as
+\begin{equation}
+    P_L=
+    \begin{bmatrix}
+        x_L \\
+        y_L \\
+        z_L 
+    \end{bmatrix}
+    = 
+    \begin{bmatrix}
+        d\cos(\theta) \\
+        d\sin(\theta) \\
+        0
+    \end{bmatrix}
+\end{equation} 
+The value \(z_L = 0\) because all points measured by the 2D LiDAR lie in the scan plane. To express the point in the rover's coordinate system, the rover frame is defined as
+\begin{equation}
+    P_R=
+    \begin{bmatrix}
+        x_R \\
+        y_R \\
+        z_R  
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \mathrm{forward} \\
+        \mathrm{left} \\
+        \mathrm{up}
+    \end{bmatrix}
+\end{equation}
+We therefore need to map
+\begin{equation}
+    \begin{bmatrix}
+        x_R \\
+        y_R \\ 
+        z_R 
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -z_L \\
+        y_L \\
+        x_L
+    \end{bmatrix}
+\end{equation}
+This can further be expanded by writing
+\begin{equation}
+    \begin{bmatrix}
+        x_R \\ 
+        y_R \\ 
+        z_R 
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0 & 0 & -1 \\
+        0 & 1 & 0 \\
+        1 & 0 & 0 
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_L \\ 
+        y_L \\ 
+        z_L 
+    \end{bmatrix}
+\end{equation}
+Recall that \(P_L\) is simply given by \(\begin{bmatrix}
+    d\cos(\theta) \\
+    d\sin(\theta) \\
+    0
+\end{bmatrix}\), therefore a mapped point at a motor rotation of \(0^\circ\) becomes
+\begin{equation}
+    P_R = 
+    \begin{bmatrix}
+        0 \\
+        d\sin(\theta) \\
+        d\cos(\theta)
+    \end{bmatrix}
+\end{equation}
+
+Since the LiDAR is rotated by the motor, this mapped scan plane must then be rotated around the rover's vertical \(z_R\) axis, the rotation matrix for positive rotation about \(Z\) is
+\begin{equation}
+    R_z(\phi) = 
+    \begin{bmatrix}
+        \cos(\phi) & -\sin(\phi) & 0 \\
+        \sin(\phi) & \cos(\phi) & 0 \\
+        0 & 0 & 1
+    \end{bmatrix}
+\end{equation}
+
+Therefore the final reconstructed point can be given by this equation
+\begin{equation}
+    P_R(\phi, \theta) = 
+    \begin{bmatrix}
+        -d\sin(\theta) \sin(\phi) \\
+        d\sin(\theta) \cos(\phi) \\
+        d\cos(\theta)
+    \end{bmatrix}
+\end{equation}
+This transformation assumes that the LiDAR origin is directly in line with the motor rotational axis, and that the motor angle \(\phi\) is known for each scan. Potential mechanical offsets and sign corrections are addressed in the implementation described in Chapter~4.
+
+\newpage
+\section{Closed-Loop Stepper Motor Control}
+\subsection{Stepper Motor Principle}
+A stepper motor is a type of electric motor where the motor shaft rotates in discrete steps instead of rotating continuously like a traditional DC motor \cite{StepperBasics}.
+The internal motor windings are energized in a way which causes the shaft to move from one stable position to the next, these stable positions are known as the steps. 
+Due to the fact that the angular distance between each stable step point is known, the commanded motor position can be estimated by counting the number of commanded steps, assuming no steps are missed.
+
+A common stepper motor such as the NEMA17 has 200 full steps per revolution \cite{NEMA17Datasheet}, if we assume \(N\) amount of steps per revolution the angular resolution \(\Delta \theta\) is given as
+\begin{equation}
+    \Delta \theta = \frac{360^\circ}{N}
+\end{equation}
+Stepper motors are particularly useful in applications where high precision and torque may be required, such as 3D printers, CNC machines and other robotics applications.
+
+A limitation of traditional stepper motors is the fact that the system is open-loop, this means that the motor controller will just assume the motor ended up in the commanded position without actually knowing if the motor shaft made it or not \cite{StepperBasics}.
+If the motor load is too heavy or if the acceleration is too high the motor may fail to reach the commanded step and either over or undershoot, if this happens then the motors estimated position will differ from the commanded position.
+
+Another important property of stepper motors is known as holding torque \cite{StepperBasics}. Holding torque is the maximum torque a powered motor will be able to hold back while remaining in position.
+This is very useful in robotic systems where a motor is required to hold its position under heavier loads, such as keeping robotic arms, 3D printers etc stable, and for our case holding the LiDAR steady during a scan.
+
+\subsection{Microstepping, Step Angle and Rotation Speed}
+As mentioned above, the angular resolution \(\Delta \theta\) of a stepper motor with \(N\) steps per revolution is given as
+\begin{equation}
+    \Delta \theta = \frac{360^\circ}{N}
+\end{equation}
+For a traditional NEMA17 stepper motor with \(N=200\) this becomes
+\begin{equation}
+    \Delta \theta = \frac{360^\circ}{200} = 1.8^\circ
+\end{equation}
+per full step.
+
+Stepper motors are also able to perform something known as microstepping, microstepping is where a full step is subdivided into smaller positions by controlling the phase currents more gradually \cite{MicrosteppingTI}.
+If we assume \(M\) microsteps per full step, our new angular resolution with microsteps included is
+\begin{equation}
+    \Delta \theta_{\mathrm{micro}} = \frac{360^\circ}{M\cdot N}
+\end{equation}
+Again using an example where \(N=200\) and we assume \(M=16\) microsteps per step this gives a new angular resolution 
+\begin{equation}
+    \Delta \theta_{\mathrm{micro}}=\frac{360^\circ}{3200}=0.1125^\circ
+\end{equation}
+All of this also means that any commanded angle may be written in terms of microsteps as well.
+
+The rotational speed in RPM can be estimated by knowing \(f_{\mathrm{step}}\) which represents the number of commanded microsteps per second, \(N\) which is the number of steps per full revolution, the formula is then given as
+\begin{equation}
+    \mathrm{RPM} = \frac{60\cdot f_{\mathrm{step}}}{M\cdot N}
+\end{equation}
+It is important to realize this is an idealized formula for motor speed, and realistically it will be affected by load and acceleration \cite{MicrosteppingTI}.
+Methods of measuring the real shaft motion may involve using feedback such as an encoder or other methods. This is one of the reasons why the Servo42D motors were chosen for the project as they are a closed-loop system with encoder feedback, this allows us to monitor real motor parameters instead of purely estimating them \cite{Makerbase}.
+
+\subsection{Open-Loop and Closed-Loop Stepper Control}
+Normal stepper motors are often operated open-loop: the controller sends step commands without verifying that the shaft reached the commanded position \cite{StepperBasics}.
+If the load is too high or acceleration too aggressive, steps may be missed, causing a permanent position error. 
+This is problematic for rover drivetrain and LiDAR rotation, where accuracy is critical.
+
+Closed-loop control adds feedback, typically from an encoder \cite{Makerbase}.
+The controller continuously compares the commanded position (or speed) with the measured value and corrects the error. 
+We can represent our closed-loop system by first looking at the instantaneous error with respect to time
+
+\begin{equation}
+    e_{\theta}(t) = \theta_{\mathrm{commanded}}(t) - \theta_{\mathrm{measured}}(t)
+\end{equation}
+
+A similar equation for the motor speed exists, where we compare measured motor speed vs commanded, however for the sake of this section we will only look at the position.
+
+Many types of feedback controllers exist, which all solve unique problems on their own but the one relevant to the Servo42D motors is the PID controller.
+The Proportional Integral Derivative controller consists of three unique components \cite{PIDUMich}
+
+\begin{description}
+    \item[$P$] is the proportional component, scales the current error by some constant \(K_p\).
+    \item[$I$] is the integral component, reacts to the total accumulated error as \(K_i \int e_\theta(\tau) d\tau\).
+    \item[$D$] is the derivative component, reacts to the instantaneous error as \(K_d \frac{d e_\theta (t)}{dt}\). 
+\end{description}
+If we take \(c(t)\) to be the compensated function, it then becomes
+\begin{equation}
+    c(t) = K_p e_\theta(t) + K_i \int_0^t e_\theta(\tau)d\tau + K_d \frac{de_\theta(t)}{dt}
+\end{equation}
+
+A full control theory derivation is outside the scope of this section, but the PID principle is useful for understanding why encoder feedback improves stepper motor control \cite{PIDUMich}.
+The simplified block diagram of our motors becomes
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Servo42D PID Feedback.png}
+    \caption{Motor feedback diagram, values not adjusted.}
+    \label{fig:motor_feedback_diagram}
+\end{figure}
+The feedback from the stepper motors is useful because it allows position errors to be detected and corrected during operation.
+In the Servo42D motors, this feedback control is handled internally by the motor driver \cite{Makerbase}. The project software communicates with the motor controller and uses the available feedback values, rather than implementing the low-level PID loop directly.
+
+\subsection{Relevance to the Rover Prototype}
+The closed-loop stepper motors are very relevant to this project because our rover and our LiDAR system both require precision movement with feedback corrections.
+Due to the fact our rover will be manoeuvring over uneven terrain it is important that each motor is capable of individually correcting itself at any time.
+We also require knowing the motor RPM such that our wheel odometry is able to be calculated, while odometry does require additional technologies, it would not be possible without these features.
+
+The LiDAR motor requires even more precision than that of the drivetrain, it is important to us that we know the exact angle of the motor for each scan, if this angle was off the pseudo-3D point cloud would contain incorrectly transformed points. 
+The closed-loop features therefore provide us additional reassurance that the motor will always be in the correct position for each scan.
+
+The available holding torque also makes the motors suitable for keeping the LiDAR mechanism stationary during scans and resisting motion when the rover is stopped on moderate slopes.
+All together this makes the stepper motors a well-suited candidate for this rover system, as solving the same tasks with open-loop motors would be considerably more challenging.
+
+\newpage
+\section{RS485 and Modbus RTU}
+\subsection{RS485 Physical Communication}
+RS485 is a physical communication standard used for differential serial data transmission.
+Instead of representing data as a voltage relative to ground, RS485 represents data as the voltage difference between the differential A and B lines \cite{RS485DesignGuide}.
+
+RS485 also supports multiple devices over the same bus, this is critically important for our project as we wish to control all five stepper motors over a single serial line \cite{RS485DesignGuide}.
+The Raspberry Pi will be sending out commands to the individually addressable motors, however the Raspberry Pi does not have a built in RS485 port, therefore we will be using an RS485 to USB adapter.
+
+The RS485 is only the physical communications layer, it helps us understand how the physical connections work and how the data is transferred but doesn't tell us anything about the underlying protocol, the Servo42D motors can commonly be controlled by either Modbus RTU or CAN \cite{Makerbase}.
+Our motors will be controlled by Modbus RTU.
+
+\subsection{Modbus RTU Frame Structure}
+Modbus is a communications protocol which has support for either ASCII (American Standard Code for Information Interchange) or RTU (Remote Terminal Unit) over a serial line \cite{ModbusSerialLine}. Modbus RTU is relevant for this project as that is what the Servo42D's use.
+Modbus RTU works by sending and receiving frames of data, a standard RTU frame looks like
+\begin{table}[H]
+    \centering
+    \caption{General Modbus RTU frame structure.}
+    \label{tab:modbus_rtu_frame}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        Start & Address & Function & Data & CRC & End \\
+        \hline
+        3.5 char time & 8 bit & 8 bit & \(N \cdot 8\) bit & 16 bit & 3.5 char time \\
+        \hline
+    \end{tabular}
+\end{table}
+
+where
+
+\begin{description}
+    \item[\textbf{Start \& Stop}] are silent time intervals between each transmission to ensure frames are sent and received correctly.
+    \item[\textbf{Address}] is the address of the slave device being addressed.
+    \item[\textbf{Function}] is the function code being called, below is a list of the most relevant ones for this project.
+    \item[\textbf{Data}] is an \(N\) byte sized field, which contains the relevant data.
+    \item[\textbf{CRC}] is a cyclic redundancy check used to detect transmission errors in the received frame.
+\end{description}
+
+Below are the functions which are most commonly used to read and write data to the motors \cite{ModbusApplicationProtocol}, more on this in the methods section.
+
+\begin{description}
+    \item[\textbf{0x03 Read Holding Registers}], which reads the data from holding registers.
+    \item[\textbf{0x04 Read Input Registers}], which reads the data from input registers.
+    \item[\textbf{0x06 Write Single Register}], which writes data to a single register.
+    \item[\textbf{0x10 Write Multiple Registers}], which writes data to multiple registers. 
+\end{description}
+It is not important to understand the underlying function of Modbus RTU to proceed with this project but it is important we understand how Modbus RTU frames are structured as this is what the motor wrapper will need to construct in order to effectively communicate with the motors.
+
+% \subsection{Relevance to the Servo42D Motors}
+% In our rover both RS485 and Modbus RTU are used to communicate with our motors.
+% The Raspberry Pi will serve as the master device with five slave motor devices, each with their unique ID such that they can be individually addressed whilst using the same communications bus \cite{ModbusSerialLine,Makerbase}.
+
+
+\newpage
+\section{Power Consumption and Energy Budget}
+
+\subsection{Motivation}
+Staying within the energy budget is necessary to complete the 15-minute mapping mission, avoid battery damage, and have reliable operation.
+
+\subsection{Power Architecture}
+Two voltage rails are used:
+\begin{itemize}
+    \item \textbf{14.8\,V high-voltage rail} – Powers all five Makerbase Servo42D motors directly.
+    \item \textbf{5.2\,V low-voltage rail} – Generated by a DC-DC buck converter; supplies Raspberry Pi 5, RPLIDAR C1, IMU and INA226 power monitor.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{power_block_diagram.png}
+    \caption{Power architecture block diagram.}
+    \label{fig:power_block}
+\end{figure}
+
+\subsection{Component Power Consumption}
+\begin{table}[H]
+    \centering
+    \caption{System power budget}
+    \begin{tabularx}{\textwidth}{l r r l}
+        \toprule
+        \textbf{Component} & \textbf{Typical (W)} & \textbf{Peak (W)} & \textbf{Notes} \\
+        \midrule
+        4× Servo42D (drivetrain) & 16–26 & 36 & Direct 14.8\,V \cite{Makerbase} \\
+        1× Servo42D (LiDAR tilt) & 2.0–4.0 & 9.0 & Slow tilt ~10°/s \cite{Makerbase} \\
+        Raspberry Pi 5 (ROS 2) & 7.5–10.5 & 12.5 & Full load \cite{rpi_power} \\
+        RPLIDAR C1 & 1.15–1.3 & 4.0 & 10\,Hz scanning \cite{RPLIDARDatasheet}  \\
+        IMU + INA226 & negligible & negligible & negligible \cite{IMUDatasheet} \cite{INA226Datasheet} \\
+        Buck converter losses (\(\eta\approx92\%\)) & 1.0–1.8 & 2.5 & Conversion loss (No datasheet) \\
+        \midrule
+        \textbf{Total} & \textbf{28.2–44.4} & \textbf{\(\approx65\)} & Full system \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{15-Minute Mission Energy Budget}
+Average power ~36\,W → energy consumed = \(36\ \text{W} \times 0.25\ \text{h} = 9.0\ \text{Wh}\). 
+Margin to usable energy is \(61.6/9.0 \approx 6.8\times\), making the energy source capable 
+for at least six full runs on a single charge.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{multi_run_power_profile.png}
+    \caption{Simulated current, voltage, and power over six, 15 minute mapping runs.}
+    \label{fig:multi_run_power}
+\end{figure}
+
+\subsection{Worst Case Analysis}
+Peak battery current is estimated as
+\begin{equation}
+    I_{\text{peak}} = 3.0 + \frac{17.5}{14.8 \times 0.92} \approx 4.28\ \text{A},
+\end{equation}
+
+Below the 13\,A short-burst limit, but higher than the continuous limit. Mitigations include current limiting the motors in Servo42D firmware.
+
+\subsection{Energy Source}
+The 14.8\,V 4S2P Li-ion battery has a capacity of 5.2\,Ah / 77\,Wh. Max continuous discharge is 4\,A. Usable energy (80\%) is about 61.6\,Wh \cite{battery_datasheet}.
+
+\subsection{Experimental Validation}
+The power system was evaluated using the estimated component power consumption and the selected battery capacity. A full runtime test with all motors, sensors and the Raspberry Pi operating simultaneously was not completed, the power validation is therefore based on calculated energy demand, expected motor current and the battery specification. The INA226 was included in the design for low-voltage rail monitoring, while the motor supply was evaluated using the expected Servo42D load.
+
+\newpage
+\section{Position Estimation: Wheel Odometry and Differential Steering}\label{sec:Position Estimation: Wheel Odometry and differential steering}
+
+\subsection{Background}
+Position is needed for SLAM (if used), 3D mapping software and navigation. The rover uses wheel odometry (Servo42D encoders) and inertial data (ICM-20948 IMU). 
+Fusion should compensate for individual weaknesses: wheel slippage for odometry, and magnetic interference / drift for the IMU.
+
+\subsection{Wheel Odometry Symbols and Definitions}\label{sec:Wheel Odometry Symbols and Definitions}
+
+\begin{description}
+    \item[\(\Delta s_R\)] Distance travelled by the right wheels.
+    \item[\(\Delta s_L\)] Distance travelled by the left wheels.
+    \item[\(L\)] Wheel track – distance between the left and right wheel centres.
+    \item[\(\Delta s\)] Forward displacement of the rover centre.
+    \item[\(\Delta\theta\)] Change in heading angle of the rover.
+    \item[\(\theta\)] Current heading angle (orientation) of the rover.
+    \item[\((x, y)\)] Position of the rover in coordinate system.
+\end{description}
+
+\subsubsection{Forward Displacement and Heading Change}
+Displacement and heading change are derived from individual wheel movements:
+
+\begin{equation}
+\Delta s = \frac{\Delta s_R + \Delta s_L}{2}, \qquad
+\Delta\theta = \frac{\Delta s_R - \Delta s_L}{L}.
+\end{equation}
+  
+The average of the two wheel distances gives the forward movement.  
+The difference divided by the track width gives how much the robot has turned.
+
+\subsubsection{Updated Position}
+The new position \((x_{\text{new}}, y_{\text{new}})\) assuming the robot moves along a circular arc. 
+The midpoint of that arc uses the average heading \(\theta + \frac{\Delta\theta}{2}\):
+
+\begin{equation}
+x_{\text{new}} = x + \Delta s \cdot \cos\!\bigl(\theta + \tfrac{\Delta\theta}{2}\bigr),\qquad
+y_{\text{new}} = y + \Delta s \cdot \sin\!\bigl(\theta + \tfrac{\Delta\theta}{2}\bigr).
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{odometry_trajectory.png}
+    \caption{Simulated rover trajectory using the odometry model.}
+    \label{fig:odometry_traj}
+\end{figure}
+
+\subsubsection{Error Sources in Odometry}
+Wheel odometry integrates small errors over time. Main error sources:
+\begin{itemize}
+    \item \textbf{Accumulated drift} – small errors sum up.
+    \item \textbf{Wheel slip} – wheels spin without moving the rover.
+\end{itemize}
+
+\subsection{IMU - ICM-20948}
+The ICM-20948 is a 9-DoF inertial measurement unit containing \cite{IMUDatasheet}:
+\begin{itemize}
+    \item \textbf{3-axis accelerometer} – measures acceleration.
+    \item \textbf{3-axis gyroscope} – measures angular velocity.
+    \item \textbf{3-axis magnetometer (AK09916)} – measures magnetic field direction (like a compass).
+\end{itemize}
+Communication is via I\(^2\)C protocol.
+
+\textbf{Limitations:}
+Gyroscope may drift (bias instability).
+Magnetometer is sensitive to magnetic fields and is easily disturbed.
+
+\subsection{Differential Steering Principle}
+The rover uses a differential steering configuration with four wheels where the left and right sides are controlled independently.
+Direction changes result from a speed difference between the two sides, where we defined the wheel track \(L\) and used \(\Delta s_R, \Delta s_L\) to compute heading change \(\Delta\theta\).
+
+\subsection{Odometry Definitions}
+
+\begin{description}
+    \item[\(v_L\)] Linear speed of the left wheels [m/s].
+    \item[\(v_R\)] Linear speed of the right wheels [m/s].
+    \item[\(\omega_L\)] Angular speed of left wheels [rad/s].
+    \item[\(\omega_R\)] Angular speed of right wheels [rad/s].
+    \item[\(r\)] Wheel radius [m] (from odometry calibration).
+    \item[\(L\)] Wheel track – distance between left and right wheel centres [m].
+    \item[\(v\)] \textbf{Forward velocity of the rover centre [m/s].}
+    \item[\(\omega\)] \textbf{Angular velocity (turn rate) of the rover [rad/s].}
+\end{description}
+
+Motor angular speeds are converted to linear wheel speeds:
+
+\begin{equation}
+v_L = \omega_L \cdot r, \qquad v_R = \omega_R \cdot r.
+\end{equation}
+
+Rover’s forward speed and turn rate are:
+
+\begin{equation}
+v = \frac{v_R + v_L}{2}, \qquad
+\omega = \frac{v_R - v_L}{L}.
+\end{equation}
+
+These are the \textit{instantaneous} versions of the equations from Section 3.6.2, \\ 
+   where \(\Delta s = v \cdot \Delta t\) and \(\Delta\theta = \omega \cdot \Delta t\).
+
+\subsubsection{From Command to Wheel Speeds}
+When the navigation stack sends a desired \((v, \omega)\), compute required wheel speeds:
+
+\begin{equation}
+v_R = v + \frac{\omega L}{2}, \qquad
+v_L = v - \frac{\omega L}{2}.
+\end{equation}
+
+These values are then converted back to motor angular speeds (\(\omega_R = v_R / r\), \(\omega_L = v_L / r\)) and sent to the Servo42D motors.
+
+\subsection{Point Turn}
+A special case of differential steering is the \texttt{point turn} (zero‑radius turn). Setting \(v_L = -v_R\) gives:
+
+\begin{equation}
+v = \frac{v_R + (-v_R)}{2} = 0, \qquad
+\omega = \frac{v_R - (-v_R)}{L} = \frac{2v_R}{L}.
+\end{equation}
+
+The rover spins in place without moving forward or backward, which can be useful in tight spaces. However this motion is sensitive to wheel scrubbing and surface friction.
+
+\subsection{Relationship to Odometry and Slip Detection}
+From measured wheel distances \(\Delta s_R, \Delta s_L\) we compute \(\Delta\theta\) and \(\Delta s\). 
+However, on loose terrain, wheel slip can reduce the reliability of this relationship.
+Slip is detected by comparing IMU acceleration with expected acceleration from odometry. When slip occurs, the differential steering model alone is unreliable.
+
+\subsection{Side Slip Problem}
+Since the rover has two wheels per side both driven at the same speed, 
+when turning the outer wheels travel a longer arc than the inner wheels, but because they are forced to the same speed, 
+they scrub sideways. This is called \textit{side slip}. This is similar to wheel slip but happens even when there is good traction during sharp turns.
+
+Mitigations that may be implemented:
+\begin{itemize}
+    \item \textbf{Moderate turning speed} - limiting \(\omega\) reduces the side slip.
+    \item \textbf{IMU correction} - As described in Section~\ref{sec:Wheel Odometry Symbols and Definitions}, the IMU helps detect heading errors caused by side slip.
+\end{itemize}
+
+In practice, experimental validation of the odometry was not finished on the physical prototype. Drivetrain testing revealed traction and oscillation challenges that prevented good wheel odometry data from being collected. This is discussed further in Section 5.3 and 6.2
+
+\newpage
+\section{IMU-Aided Odometry and Sensor Fusion}
+
+\subsection{Motivation for Sensor Fusion}
+Pure wheel odometry (Section~\ref{sec:Position Estimation: Wheel Odometry and differential steering}) integrates wheel rotations to compute both forward displacement \(\Delta s\) and heading change \(\Delta\theta\). 
+On high-friction surfaces this works reasonably well, but on low-friction surfaces such as hardwood or loose terrain, wheel slip becomes significant. 
+The outer wheels may spin without the rover turning proportionally, causing the wheel-based heading change \(\Delta\theta_{\text{wheels}}\) to be overestimated.
+
+The inertial measurement unit (ICM-20948) provides an independent measurement of angular velocity \(\omega_z\) (gyroscope) that is not affected by wheel slip. 
+However, the gyroscope suffers from bias drift over time. 
+By combining wheel odometry for forward distance and IMU gyro for heading, we obtain a more reliable estimate of the rover's trajectory.
+
+\subsection{Fusion Strategy: Distance from Wheels, Heading from IMU}
+Let:
+\begin{itemize}
+    \item \(v_L, v_R\) be the linear speeds of the left and right wheels [m/s], derived from motor encoders.
+    \item \(r\) be the wheel radius [m].
+    \item \(L\) be the wheel track [m].
+\end{itemize}
+The forward speed of the rover centre is given by the average of the two wheel speeds:
+\begin{equation}
+    v = \frac{v_R + v_L}{2}
+\end{equation}
+The distance travelled over a short time interval \(\Delta t\) is then \(\Delta s = v \,\Delta t\).
+
+The heading change \(\Delta\theta\) is obtained directly from the IMU gyroscope:
+\begin{equation}
+    \Delta\theta = \omega_z \,\Delta t
+\end{equation}
+where \(\omega_z\) is the calibrated gyro output in rad/s.
+
+The current heading \(\theta\) is updated by integrating successive \(\Delta\theta\) values:
+\begin{equation}
+    \theta(t) = \theta_0 + \int_0^t \omega_z(\tau)\,d\tau
+\end{equation}
+
+\subsection{Position Update}
+Assuming the rover moves along a circular arc during each short time step, the position update is:
+\begin{equation}
+    \begin{aligned}
+        x_{\text{new}} &= x + \Delta s \cdot \cos\!\bigl(\theta + \tfrac{\Delta\theta}{2}\bigr) \\
+        y_{\text{new}} &= y + \Delta s \cdot \sin\!\bigl(\theta + \tfrac{\Delta\theta}{2}\bigr)
+    \end{aligned}
+\end{equation}
+This is the same arc‑based update as in Equation~(3.25), but here \(\theta\) comes from the IMU, not from wheel differences.
+
+\subsection{Implementation on the Rover}
+The fusion algorithm was implemented in post‑processing Python scripts that read the logged data:
+\begin{itemize}
+    \item \texttt{odometry\_log.csv} – contains wheel speeds \(v\), time stamps, and other motor data.
+    \item \texttt{imu\_data.csv} – contains calibrated gyro angular velocity \(\omega_z\).
+\end{itemize}
+The two logs were synchronised by their relative time stamps. 
+A stationary initial period (2 seconds) was used to estimate and subtract the gyro bias:
+\begin{equation}
+    \omega_z^{\text{calibrated}} = \omega_z^{\text{raw}} - \frac{1}{N}\sum_{i=1}^{N} \omega_{z,i}^{\text{raw}} \quad\text{(stationary segment)}
+\end{equation}
+Thereafter, heading was integrated only from the calibrated gyro, while forward distance came from the wheel odometry.
+
+\subsection{Experimental Validation}
+A simple test was performed: the rover was driven straight, then rotated \(90^\circ\) in place using a point turn, then driven straight again. 
+Figure~\ref{fig:imu_fusion_test} shows the resulting XY trajectory computed with the fusion method. The turn angle is close to the commanded \(90^\circ\), and the straight segments are aligned correctly. 
+Without IMU correction (pure wheel odometry), the same manoeuvre produced a large heading overestimation due to wheel slip.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imu_trajectory.png}
+    \caption{XY trajectory using wheel distance + IMU heading. The rover drives forward, turns 90° (point turn), then drives forward again.}
+    \label{fig:imu_fusion_test}
+\end{figure}
+
+\subsection{Limitations and Future Work}
+The current fusion is a simple substitution: heading from IMU, distance from wheels. 
+This works well for short missions, but gyro bias may still drift over longer periods. 
+A full complementary filter or extended Kalman filter (EKF) could fuse both sensors more robustly, also incorporating accelerometer data for tilt estimation. 
+However, for the 15‑minute mapping mission and the observed slip characteristics, the presented method proved sufficient.
+
+\subsection{Summary of Key Equations}
+For quick reference, the fusion equations are summarised below:
+\[
+\boxed{
+\begin{aligned}
+    v &= \frac{v_R + v_L}{2}, \quad \Delta s = v\,\Delta t \\[2mm]
+    \Delta\theta &= \omega_z^{\text{calibrated}}\,\Delta t, \quad \theta = \int \omega_z^{\text{calibrated}}\,dt \\[2mm]
+    x_{\text{new}} &= x + \Delta s \cos\!\bigl(\theta + \tfrac{\Delta\theta}{2}\bigr) \\
+    y_{\text{new}} &= y + \Delta s \sin\!\bigl(\theta + \tfrac{\Delta\theta}{2}\bigr)
+\end{aligned}
+}
+\]
+
+\newpage
+\section{Failure Analysis and System Redundancy}
+
+A Failure Mode and Effects Analysis (FMEA) for mechanical, electrical, power and software failures.
+
+\begin{table}[H]
+\centering
+\caption{FMEA summary}
+\begin{tabularx}{\textwidth}{p{2.2cm} p{2.5cm} p{2.5cm} X}
+\toprule
+\textbf{Category} & \textbf{Failure mode} & \textbf{Cause} & \textbf{Mitigation} \\
+\midrule
+Mechanical & Wheel jams & Gravel wedged & Forward-reverse jiggle \\
+           & Tilt blocked & Mechanical collision & Block detection in firmware \\
+           & 3D-printed fracture & Overload / PLA brittleness & Spare parts \\
+           & Loose fasteners & Vibration & Loctite on threads \\
+\midrule
+Electrical & Buck converter failure & Overcurrent / short & Separate fuse \\
+           & UART loss & Loose cable / noise & Shielded cable \\
+           & RS485 collision & Incorrect termination & Modbus timeout \\
+           & IMU failure & I\(^2\)C conflict & Fallback to odometry only \\
+\midrule
+Power & Battery undervoltage & Deep discharge & Software cutoff at 14.0\,V / INA226 alarm \\
+       & BMS overcurrent trip & Transient spike & Motor current limiting \\
+       & Buck overheating & Excessive load & Thermal assessment \\
+\midrule
+Software & ROS2 node crash & Memory leak / exception & Auto-restart \\
+         & SLAM divergence & Few distinctive features & Fallback to pure odometry \\
+         & Tilt sync loss & Timestamp mismatch & Re-sync \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{Mechanical Design and Finite Element Analysis}
+
+\subsection{Objective}
+We compared two designs (Prototype 1 and final Prototype 2) using linear static FEA in Autodesk Fusion 360. The goal was to find stress concentrations and deformation, then improve the design.
+
+\subsection{Material and Safety Factor}
+The rover parts were printed in ASA. Allowable stress (weakest Z-direction) is $\sigma_{\text{allow}} = 31\,\text{MPa}$ \cite{BambuLabASA, MatWebASA}. Young's modulus $E = 2.45\,\text{GPa}$, Poisson's ratio $\nu = 0.37$.
+
+We used a factor of safety of 2.5 \cite{NASA_STD5001B}. All simulation loads were static load $\times$ 2.5.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\linewidth]{geometric_parameters}
+\caption{Geometric parameters of the rover side view. Source: Own CAD model.}
+\label{fig:geometry}
+\end{figure}
+
+\subsection{Key Assumptions and Limitations}
+\begin{itemize}
+    \item Isotropic material – real prints are anisotropic \cite{Zou2016}.
+    \item Perfect layer adhesion – no delamination.
+    \item Homogeneous solid – actual infill is 40–60\% honeycomb.
+    \item Linear elastic behaviour \cite{Wilcox2020}.
+    \item Static loading – dynamics approximated by FoS.
+\end{itemize}
+
+\subsection{Basic Stress and Equilibrium}
+Normal stress and strain are given by \cite{hibbeler_2018}
+\begin{equation}
+    \sigma = \frac{F}{A}, \quad \varepsilon = \frac{\Delta L}{L_0}
+\end{equation}
+For linear elasticity, Hooke's law gives $\sigma = E\varepsilon$.
+
+A rigid body is in static equilibrium when $\sum F = 0$ and $\sum M = 0$. For 3D \cite{hibbeler_2018}:
+\begin{equation}
+    \sum F_x = 0,\; \sum F_y = 0,\; \sum F_z = 0, \quad 
+    \sum M_x = 0,\; \sum M_y = 0,\; \sum M_z = 0
+\end{equation}
+These are relevant for reaction forces in the rocker arms, chassis bearings and wheel mounts.
+
+\subsection{Parallel Axis Theorem}
+
+The second moment of area, \(I\), describes how resistant a cross-section is to bending. This can be improved by placing more material further away from the neutral axis.
+
+For a rectangular cross-section, the second moment of area is calculated as \cite{hibbeler_2018}:
+\[
+I=\frac{hb^3}{12}
+\]
+For the C-shaped rocker arm, the section can be divided into simpler rectangular parts. The total second moment of area can then be calculated using the Parallel Axis Theorem:
+\[
+I=I_c+Ad^2
+\]
+where \(I_c\) is the second moment of area of each part, \(A\) is the area, and \(d\) is the distance from the part's centroid to the neutral axis of the full cross-section.
+
+\subsubsection{Prototype 1 --- rectangular cross-section}
+
+\[
+I_{y,P1}=\frac{30\cdot 11^3}{12}=3\,327.5\ \mathrm{mm}^4
+\]
+
+\subsubsection{Prototype 2 --- simplified C-shaped cross-section}
+
+The C-shaped cross-section was calculated as an outer rectangle minus the inner opening:
+\[
+I_{y,P2}=\frac{47.22\cdot 15^3-28.25\cdot 7^3}{12}=12473.15\ \mathrm{mm}4
+\]
+
+\subsection{Von Mises Stress and FEA}
+The von Mises stress for a general three-dimensional stress state is calculated as \cite{jong_von_mises_2009}
+\[
+    \sigma_v =
+    \sqrt{
+        \frac{
+            (\sigma_{xx}-\sigma_{yy})^2
+            +(\sigma_{yy}-\sigma_{zz})^2
+            +(\sigma_{zz}-\sigma_{xx})^2
+            +6(\tau_{xy}^2+\tau_{yz}^2+\tau_{zx}^2)
+            }{2}
+            }
+            \]
+where $\sigma_{xx}$, $\sigma_{yy}$ and $\sigma_{zz}$ are normal stresses, while $\tau_{xy}$, $\tau_{yz}$ and $\tau_{zx}$ are shear stresses.
+
+For principal stresses, the main Von Mises stress is given as
+\begin{equation}
+    \sigma_v = \sqrt{\frac{(\sigma_1 - \sigma_2)^2 + (\sigma_2 - \sigma_3)^2 + (\sigma_3 - \sigma_1)^2}{2}}
+\end{equation}
+Where $\sigma_1, \quad \sigma_2 \quad \sigma_3$ are the principal stresses.
+
+\subsection{Factor of Safety in Simulations}
+To account for uncertainties, we multiplied static loads by FoS = 2.5 \cite{NASA_STD5001B}: 
+\begin{equation}
+    F_{\mathrm{sim}} = F_{\mathrm{actual}} \cdot 2.5
+\end{equation}
+The part passes if $\sigma_{\mathrm{allow}} \geq \sigma_{v,\max}$ \cite{solidworks_von_mises_2025}.
+
+\subsection{Limitations of Our FEA}
+We treated the printed parts as isotropic, homogeneous and perfectly bonded, but real 3D-printed ASA is anisotropic (weaker across layers) and has infill patterns. So our FEA results are mainly useful for comparing Prototype 1 vs. Prototype 2, not as exact failure predictions.

@@ -1,0 +1,448 @@
+\chapter{Results}
+
+\section{Results Overview}
+The final rover prototype consists of a fully 3D-printed chassis, four Servo42D motors for the drivetrain, one additional Servo42D motor for the LiDAR rotation, a Raspberry Pi 5, an ICM-20948 IMU and a Slamtec RPLIDAR C1.
+The prototype was assembled and tested to ensure remote-controlled commands and the pseudo-3D mapping worked as expected, with loaded movement being a significant challenge. The strongest verified functions of the rover are the pseudo-3D point clouds, IMU readout and motor communication.
+
+\section{LiDAR Results}
+\subsection{Initial 2D Results}
+The first 2D LiDAR test was performed indoors just to ensure the distance measurements were accurate and that the point data was usable and made sense.
+The sensor was placed on a table and performed a 360 \(^\circ\) scan, the results can be seen in the figure below.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Single 2D Scan.png}
+        \caption{2D LiDAR scan test scan on table}
+        \label{fig:2D_lidar_scan}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Real Room.png}
+        \caption{2D LiDAR real environment}
+        \label{fig:2D_real_environment}
+    \end{subfigure}
+
+    \caption{2D LiDAR scan vs real environment}
+    \label{fig:lidar_real_vs_environment}
+\end{figure}
+
+\subsection{2D Distance Measurement Result}
+The above setup was also used to test the accuracy of the distance measuring capabilities of the LiDAR.
+This was done by placing a simple flat surface at a distance from the LiDAR, checking the distance on a plot and comparing it to a real measurement, the results can be seen in the figure below.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Single 2D Scan Distance Measurement.png}
+        \caption{Distance between LiDAR and solid surface}
+        \label{fig:2D_lidar_distance}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Real Measurement.png}
+        \caption{Distance between LiDAR and surface measured to be 24cm.}
+        \label{fig:2D_real_measurement}
+    \end{subfigure}
+
+    \caption{Estimated vs Measured distance}
+    \label{fig:lidar_distance_comparison}
+\end{figure}
+
+\subsection{Pseudo-3D Height Scan}
+At first we wanted to test if rudimentary 3D scanning would work by adjusting the height \(h\) above the table's surface by approximately \(2.5\mathrm{cm}\) per scan, this was repeated 10 times.
+The purpose of this test was to ensure that multiple scan planes could be combined into the same plot to give a rudimentary 3D scan, the results can be seen in the figure below.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR 3D Height Scan.png}
+        \caption{Pseudo 3D height map}
+        \label{fig:pseudo_3d_height_map}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR 3D Height Scan Top Down.png}
+        \caption{Top down view of 3D height scan}
+        \label{fig:top_down_height_map}
+    \end{subfigure}
+
+    \caption{Height map side and top view}
+    \label{fig:height_side_and_top}
+\end{figure}
+
+The height map test demonstrated that combining multiple scans into the same plot could emulate a 3D scan, however the results needed to be verified in a 360\(^\circ\) manner.
+
+\subsection{Rotating LiDAR Scan}
+The first rotating LiDAR scan was done by manually positioning the LiDAR at different angles and performing a single scan at each angle; the scans were then merged into a MATLAB plot. 
+Whilst the initial test provided very little usable spatial data, it demonstrated that the concept of merging multiple scans into the same plot could work.
+The next step was to implement motor control and perform a scan at every 1.8\(^\circ\) from -89.1\(^\circ\) to 89.1\(^\circ\). This provided near 360\(^\circ\) coverage.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Emulated 3D Hard Gaps.png}
+        \caption{First primitive 3D scan by manually rotating motor.}
+        \label{fig:first_3d_lidar}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Full 3D Scan.png}
+        \caption{Full 3D scan of the same indoor room as the above scans.}
+        \label{fig:emulated_3d_lidar}
+    \end{minipage}
+\end{figure}
+
+The LiDAR scans can also be observed from RViz, as can be seen in Figure~\ref{fig:lidar_out} below.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{lidar_outside.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{outside_real.png}
+    \end{minipage}
+    \caption{LiDAR scans captured outside in the dark visualized in RViz, take note of door details.}
+    \label{fig:lidar_out}
+\end{figure}
+
+Figure~\ref{fig:lidar_kitchen} also shows the LiDAR result taken from the same indoors environment visualized in RViz.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{lidar_kitchen.png}
+    \caption{LiDAR of indoors environment captured in RViz.}
+    \label{fig:lidar_kitchen}
+\end{figure}
+
+
+\newpage
+\section{Motor Control Verification}
+
+The Servo42D motors were functionally verified before being used for drivetrain and LiDAR testing. The purpose of these tests was not to fully characterize motor performance, but to confirm that the Raspberry Pi could communicate with each motor, command motion, read back telemetry and stop the motors safely.
+
+Each motor was first tested individually over the RS485 bus. The test program commanded a fixed RPM, read back motor speed and encoder position error, and then tested both an emergency stop and a controlled deceleration stop. After individual verification, the drivetrain motors were connected to the same RS485 bus and addressed using their unique slave IDs.
+
+\begin{table}[H]
+\centering
+\caption{Summary of motor control verification.}
+\begin{tabular}{p{0.35\textwidth} p{0.5\textwidth}}
+\hline
+Test & Result \\
+\hline
+Individual motor addressing & Each motor could be addressed using its configured Modbus slave ID. \\
+RPM command & The motors responded to speed commands sent from the Raspberry Pi. \\
+Telemetry readback & Motor speed and encoder position error could be read during testing. \\
+Emergency stop & The motors responded to immediate stop commands. \\
+Controlled stop & The motors could be stopped using deceleration instead of only abrupt stopping. \\
+Drivetrain direction mapping & Direction correction was required because the left and right motors were mounted in opposite orientations. \\
+LiDAR motor angle movement & The LiDAR motor angle conversion was corrected after early tests showed a factor-of-two rotation error. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Unloaded Drivetrain Motor Test}
+The unloaded drivetrain test showed that all drivetrain motors could be individually addressed over the single RS485 bus.
+Each motor was commanded to the same setpoint RPM and plotted against its measured RPM using the Servo42D telemetry.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{motor_drivetrain_unloaded.png}
+        \caption{Unloaded drivetrain test commanding all motors to 100 RPM.}
+        \label{fig:unloaded_drivetrain_test}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{motor_right_hand_turn_simulated.png}
+        \caption{Drivetrain motors configured for a right-hand turn, at a setpoint RPM of 100.}
+        \label{fig:motor_right_hand_turn}
+    \end{subfigure}
+    \label{fig:drivetrain_unloaded_combined}
+\end{figure}
+
+Figure~\ref{fig:unloaded_drivetrain_test} shows the measured RPM response for each of the four drivetrain motors.
+All four motors successfully reached the commanded RPM after a small windup period. This period arises from non-instant acceleration being used in the rover system such that the rover avoids experiencing heavy jerk-like motion.
+
+The motors were also tested in a simulated right-hand turn showcasing that individual direction was also possible.
+Figure~\ref{fig:motor_right_hand_turn} shows that the motors can successfully be individually directionally addressed as well.
+Since the above test was done under zero load it only demonstrates the communications uplink between Raspberry Pi and motors, it does not evaluate traction or terrain mobility.
+
+\subsection{Zero-Radius Turn}
+The zero-radius turn test showed that the rover faces significant challenges when attempting a zero-radius turn on a surface with high traction.
+The commanded motor mapping worked as expected, being able to individually command left and right but the rover presented very little physical turning.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{zero_radius_imu.png}
+        \caption{IMU bearing along Z axis.}
+    \end{subfigure}
+    \begin{subfigure}{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{zero_radius_rpm.png}
+        \caption{Motor RPM during zero-radius turn.}
+    \end{subfigure}
+    \caption{Motor RPM and IMU bearing during attempted zero-radius turn.}
+    \label{fig:zero_radius_turn}
+\end{figure}
+
+Figure~\ref{fig:zero_radius_turn} shows the measured motor RPM and IMU bearing during a short attempted zero-radius turn.
+Despite the IMU bearing changing over time, the registered bearing change is too low to be significant and is due to wheel slip rather than significant turning.
+
+
+\newpage
+\section{IMU Verification Results}
+
+The physical IMU was verified by placing the rover in several static orientations and recording averaged acceleration values for each pose. The tested poses were flat, forward tilt, backward tilt, left tilt, right tilt and flat again.
+
+Figure~\ref{fig:imu_acceleration_pose} shows the measured acceleration components for each rover pose. When the rover was placed flat, the acceleration was mainly measured along the vertical sensor axis. When the rover was tilted, the gravity vector shifted into the corresponding horizontal axis, while the total acceleration magnitude remained close to \(1g\). This confirms that the IMU was correctly connected and able to detect changes in rover orientation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{imu_data.png}
+    \caption{IMU acceleration components measured for different static rover poses.}
+    \label{fig:imu_acceleration_pose}
+\end{figure}
+
+
+\newpage
+
+\section{Simulation Results}
+
+\subsection{Topic Publish Rates}
+
+Topic publish rates were verified using \texttt{ros2 topic hz} while the simulation was running. The results were:
+
+\begin{table}[H]
+\centering
+\caption{Topic publish rates measured in simulation}
+\begin{tabular}{c c c}
+\hline
+Topic & Configured rate & Measured rate \\
+\hline
+Scan & 10 Hz & Ca. 7.8 Hz \\
+Imu & 10 Hz & Ca. 7.3 Hz \\
+Odom & 30 Hz & Ca. 38.3 Hz \\
+\hline
+\end{tabular}
+\end{table}
+
+Both the LiDAR and IMU run slightly below their configured 10 Hz rate. This is expected under simulation, since Gazebo processes physics, rendering and sensor output simultaneously, which can lead to minor timing delays. The rates are consistent and stable, with no drops or interruptions observed during testing. Odometry publishes at around 38 Hz, which is faster than the other topics. This is expected since it is being driven by DiffDrive plugin rather than a sensor update rate.
+
+% Insert Figure 1 - Scan
+% Insert Figure 2 - IMU
+% Insert Figure 3 - Odom
+
+% Insert IMU output screenshot
+
+\subsection{Odometry Output}
+\vspace*{-0.5\baselineskip}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    Odometry was verified by echoing the \texttt{odom} topic while the rover was moving forward at \(0.5\,\text{m/s}\). The output showed a non-zero position \((x:1.85,\ y:-4.56)\) meaning the rover had moved from its spawn point. The linear velocity was also around \(0.5\,\text{m/s}\), matching the commanded speed. This shows that the DiffDrive plugin is correctly converting \texttt{cmd\_vel} commands into movement and reporting the robot's position through odometry.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \vspace{-2\baselineskip}
+    \includegraphics[width=0.7\linewidth]{odometry_output}
+    \captionof{figure}{RViz showing position and velocity.}
+    \label{fig:odometry_output}
+\end{minipage}
+
+\subsection{Terrain Mobility}
+\vspace*{-0.5\baselineskip}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    The rover was driven across the lunar world to test mobility on uneven terrain. It was able to climb the hill at moderate slopes without any issues, with all four wheels staying in contact with the ground. This shows that the rocker bogie design and wheel setup work as expected on inclines.
+    
+    However, on steeper parts of the hill, the rover lost traction, started sliding backwards, and eventually tipped over. This is likely caused by limitations in the simulation, especially related to wheel-ground contact and friction modeling. The results show that the current friction and contact parameters are not enough to keep the rover stable on steep slopes. This also shows a limitation of the simulation, where terrain interaction is very sensitive to parameter tuning and may not fully match real-world behavior.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \vspace{0.3\baselineskip}
+    \includegraphics[width=\linewidth]{terrain_mobility}
+    \captionof{figure}{Rover climbing a slope in the Gazebo lunar simulation.}
+    \label{fig:terrain_mobility}
+\end{minipage}
+
+\subsection{LiDAR Obstacle Detection}
+\vspace*{-0.45\baselineskip}   % adjust this to control gap after subsection
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    The LiDAR was tested by driving the rover near some of the scattered rocks in the lunar world and observing the scan output in Rviz. 
+    The red line in RViz correctly shows where the rocks are relative to the rover, 
+    confirming that the sensor data returns information correctly from Gazebo through the bridge to ROS2 and is visualized. 
+    The scan points appear at correct distance and update smoothly as the rover moves.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \vspace{-2\baselineskip}   % <-- pushes image down to align with text
+    \includegraphics[width=\linewidth]{obsticle_detection}
+    \captionof{figure}{LiDAR obstacle detection in RViz}
+    \label{fig:obstacle_detection}
+\end{minipage}
+
+\newpage
+
+\section{Mechanical FEA Results}
+
+The result section presents the final design figures and compares the values against Prototype 1 in tables. Numerical values used for comparison are collected in Table~\ref{tab:fea_summary}.
+
+\subsection{Rocker Arm and Motor Mount}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \subsubsection{Von Mises stress}
+    \includegraphics[width=\linewidth]{rocker_von_mises_final.png}
+    \captionof{figure}{Prototype 2 rocker von Mises stress (max in Table~\ref{tab:fea_summary}).}
+    \label{fig:rocker_von_mises_final}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \subsubsection{Displacement}
+    \includegraphics[width=0.93\linewidth]{rocker_displacement_final.png}
+    \captionof{figure}{Prototype 2 rocker displacement (max in Table~\ref{tab:fea_summary}).}
+    \label{fig:rocker_displacement_final}
+\end{minipage}
+
+\vspace{0.3\baselineskip}
+\noindent
+\subsection{Chassis}
+
+\subsubsection{Von Mises Stress}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{chassis_von_mises_closeup_final}%
+    \hfill
+    \includegraphics[width=0.48\textwidth]{chassis_von_mises_full_final}
+    \caption{Prototype 2 chassis von Mises stress: close-up at bearing mount (left) and full-view (right). 
+    The maximum value used for comparison is reported in Table~\ref{tab:fea_summary}.}
+    \label{fig:chassis_von_mises_final}
+\end{figure}
+
+\subsubsection{Displacement}
+\vspace*{-0.1\baselineskip}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \vspace{-0.6\baselineskip}   % <-- adjust this to lower the image (increase value)
+    \includegraphics[width=\linewidth]{chassis_displacement_final}
+    \captionof{figure}{Prototype 2 chassis displacement. The maximum value used for comparison is reported in Table~\ref{tab:fea_summary}.}
+    \label{fig:chassis_displacement_final}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \textbf{Results:} Stress reduced from 5.634 MPa to 2.939 MPa. Displacement went from 0.031 mm to 0.019 mm. Safety factors $\mathrm{FoS}_{\mathrm{Prototype1}}=31/27.371=1.13$, $\mathrm{FoS}_{\mathrm{Prototype2}}=31/9.718=3.19$. 
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wheel}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \subsubsection{Von Mises stress - reaction force at outer diameter}
+    \includegraphics[width=0.965\linewidth]{wheel_ground_reaction_stress_final}
+    \captionof{figure}{Prototype 2 wheel with hub mount. Reaction force at ground contact.}
+    \label{fig:wheel_ground_reaction_stress_final}
+    \textbf{Result:} Stress reduction from 11.929 MPa to 5.883 MPa.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \subsubsection{Von Mises stress - load applied directly on wheel mount}
+    \includegraphics[width=0.95\linewidth]{wheel_hub_load_stress_final}
+    \captionof{figure}{Prototype 2 wheel hub with direct load at hub connection.}
+    \label{fig:wheel_hub_load_stress_final}
+\end{minipage}
+
+\vspace{0.3\baselineskip}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \subsubsection{Displacement}
+    \includegraphics[width=\linewidth]{wheel_displacement_final}
+    \captionof{figure}{Prototype 2 wheel hub mount displacement.}
+    \label{fig:wheel_displacement_final}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \vspace{0.5cm}
+    \textbf{Results:} The hub mount has lower stress and lower displacement than the D‑shaft mount from Prototype~1, confirming the practical improvement of the final design.
+\end{minipage}
+
+\subsection{Summary of FEA results}
+
+\begin{table}[H]
+\centering
+\caption{Summary of the most important FEA results.}
+\label{tab:fea_summary}
+\begin{tabular}{p{0.18\textwidth} p{0.23\textwidth} p{0.16\textwidth} p{0.18\textwidth} p{0.17\textwidth}}
+\hline
+Component & Result & Prototype 1 & Prototype 2 / final design \\
+\hline
+Rocker & Von Mises stress & 27.371 MPa & 9.718 MPa \\
+Rocker & Displacement & 7.379 mm & 1.651 mm  \\
+Chassis & Von Mises stress & 5.634 MPa & 2.939 MPa \\
+Chassis & Displacement & 0.031 mm & 0.019 mm\\
+Wheel & Ground reaction stress & 11.929 MPa & 5.883 MPa\\
+Wheel & Direct hub load stress & 5.024 MPa & 2.474 MPa \\
+Wheel & Displacement & 0.272 mm & 0.150 mm\\
+\hline
+\end{tabular}
+
+\end{table}
+
+\newpage
+\section{Fully Assembled rover
+}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{rover.png}
+    \captionof{figure}{Fully assembled and driving prototype 2 rover.}
+    \label{fig:rover}
+\end{figure}
+\newpage
+
+\newpage
+\section{Summary of Objective Outcomes}
+\begin{table}[H]
+\centering
+\caption{Summary of project objectives and outcomes}
+\label{tab:objectives_outcomes}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{p{3.2cm} X p{3.0cm} X}
+\toprule
+\textbf{Objective} & \textbf{Project evidence} & \textbf{Outcome} & \textbf{Main limitation} \\
+\midrule
+Remote operation & Motor commands / ROS 2 topics / simulation & Partially achieved & Physical driving was heavily limited \\
+\midrule
+Pseudo-3D mapping & Rotating LiDAR scans / point clouds & Achieved & Slow update rate making real-time navigation harder \\
+\midrule
+Motor control & RS485 bus, individual motor control, telemetry & Achieved as subsystem & Loaded drivetrain oscillation and high surface friction \\
+\midrule
+IMU verification & Static pose acceleration test / Oscillatory and zero-radius turn test & Achieved as subsystem & Not fully integrated as sensor fusion \\
+\midrule
+Simulation & Gazebo, RViz, topic data & Achieved & Unable to model real wheel-surface behaviour \\
+\midrule
+Power monitoring & Included in electrical design & Not experimentally verified & Insufficient time for testing all subsystems \\
+\bottomrule
+\end{tabularx}
+\end{table}

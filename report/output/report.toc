@@ -1,0 +1,166 @@
+\contentsline {chapter}{List of Figures}{9}{table.caption.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Purpose and Goal of Project}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Report Structure}{10}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Background and Purpose}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Background}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Problem Statement}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Purpose and Objectives}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Scope and Limitations}{12}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Theory}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Similar Rover and Mapping Systems}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Planetary Rover Mobility Systems}{13}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Remote Operation and Low-Light Navigation}{13}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Low-Cost 3D Mapping Using 2D LiDAR}{13}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Slamtec RPLIDAR C1}{14}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}LiDAR Specifications}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Time-of-Flight Distance Measurement}{14}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}2D LiDAR Scanning and Polar Coordinates}{15}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Angular Resolution, Frequency and Point Spacing}{15}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Coordinate Systems and Sensor Orientation}{17}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Closed-Loop Stepper Motor Control}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Stepper Motor Principle}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Microstepping, Step Angle and Rotation Speed}{20}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Open-Loop and Closed-Loop Stepper Control}{21}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Relevance to the Rover Prototype}{22}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}RS485 and Modbus RTU}{23}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}RS485 Physical Communication}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Modbus RTU Frame Structure}{23}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Power Consumption and Energy Budget}{24}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Motivation}{24}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Power Architecture}{24}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Component Power Consumption}{25}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}15-Minute Mission Energy Budget}{25}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Worst Case Analysis}{26}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Energy Source}{26}{subsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.5.7}Experimental Validation}{26}{subsection.3.5.7}%
+\contentsline {section}{\numberline {3.6}Position Estimation: Wheel Odometry and Differential Steering}{27}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Background}{27}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Wheel Odometry Symbols and Definitions}{27}{subsection.3.6.2}%
+\contentsline {subsubsection}{Forward Displacement and Heading Change}{27}{subsection.3.6.2}%
+\contentsline {subsubsection}{Updated Position}{27}{equation.3.6.24}%
+\contentsline {subsubsection}{Error Sources in Odometry}{28}{figure.caption.11}%
+\contentsline {subsection}{\numberline {3.6.3}IMU - ICM-20948}{28}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Differential Steering Principle}{28}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Odometry Definitions}{29}{subsection.3.6.5}%
+\contentsline {subsubsection}{From Command to Wheel Speeds}{29}{equation.3.6.27}%
+\contentsline {subsection}{\numberline {3.6.6}Point Turn}{29}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}Relationship to Odometry and Slip Detection}{30}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3.6.8}Side Slip Problem}{30}{subsection.3.6.8}%
+\contentsline {section}{\numberline {3.7}Failure Analysis and System Redundancy}{31}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Mechanical Design and Finite Element Analysis}{32}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Objective}{32}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Material and Safety Factor}{32}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Key Assumptions and Limitations}{32}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Basic Stress and Equilibrium}{32}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Parallel Axis Theorem}{33}{subsection.3.8.5}%
+\contentsline {subsubsection}{Prototype 1 --- rectangular cross-section}{33}{subsection.3.8.5}%
+\contentsline {subsubsection}{Prototype 2 --- simplified C-shaped cross-section}{33}{subsection.3.8.5}%
+\contentsline {subsection}{\numberline {3.8.6}Von Mises Stress and FEA}{33}{subsection.3.8.6}%
+\contentsline {subsection}{\numberline {3.8.7}Factor of Safety in Simulations}{34}{subsection.3.8.7}%
+\contentsline {subsection}{\numberline {3.8.8}Limitations of Our FEA}{34}{subsection.3.8.8}%
+\contentsline {chapter}{\numberline {4}Materials and Methods}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Manufacturing and 3D Printing}{35}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Iterations, Print Failures and Design Changes}{35}{subsection.4.1.1}%
+\contentsline {subsubsection}{Iterations and Tolerance Fit}{35}{subsection.4.1.1}%
+\contentsline {subsubsection}{Print Failures}{36}{figure.caption.16}%
+\contentsline {subsubsection}{Prototype 1 Findings}{37}{figure.caption.17}%
+\contentsline {subsubsection}{Design Changes}{37}{figure.caption.18}%
+\contentsline {paragraph}{Rocker}{37}{figure.caption.18}%
+\contentsline {paragraph}{Chassis}{38}{figure.caption.20}%
+\contentsline {paragraph}{Wheel}{38}{figure.caption.21}%
+\contentsline {subsection}{\numberline {4.1.2}Final CAD Design}{39}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Assembly}{40}{subsection.4.1.3}%
+\contentsline {paragraph}{Chassis bearing installation}{40}{figure.caption.27}%
+\contentsline {paragraph}{Differential arm}{41}{figure.caption.27}%
+\contentsline {paragraph}{Rocker arm assembly}{41}{figure.caption.28}%
+\contentsline {paragraph}{Differential links and turnbuckles}{42}{figure.caption.29}%
+\contentsline {paragraph}{Lower chassis and wheel assembly}{42}{figure.caption.30}%
+\contentsline {paragraph}{Final structural assembly}{43}{figure.caption.32}%
+\contentsline {subsubsection}{Prototype 2 - Layer Adhesion and Precautions}{43}{figure.caption.33}%
+\contentsline {subsection}{\numberline {4.1.4}Software}{44}{subsection.4.1.4}%
+\contentsline {subsubsection}{Autodesk Fusion 360}{44}{subsection.4.1.4}%
+\contentsline {subsubsection}{Slicer Software}{44}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}System Wiring Diagram}{46}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Rover Electrical Assembly}{47}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Slamtec RPLIDAR C1}{47}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Initial 2D LiDAR Verification}{48}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}LiDAR Coordinate Frame and Sensor Orientation}{48}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Pseudo-3D Height Map Verification}{49}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Step Based Rotating LiDAR Scan}{50}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}ROS2 Real-Time Scanning}{51}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}RViz Visualization}{51}{subsection.4.4.6}%
+\contentsline {section}{\numberline {4.5}Makerbase Servo42D}{52}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Motor Configuration}{52}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}RS485 Bus and Raspberry Pi Connection}{53}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Custom C++ Motor Library}{53}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Implemented Motor Functions}{54}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Drivetrain Motor Mapping}{55}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}LiDAR Motor Control}{56}{subsection.4.5.6}%
+\contentsline {subsection}{\numberline {4.5.7}Unloaded Drivetrain Motor Test}{56}{subsection.4.5.7}%
+\contentsline {subsection}{\numberline {4.5.8}Stationary Oscillation Test}{57}{subsection.4.5.8}%
+\contentsline {subsection}{\numberline {4.5.9}Zero-Radius Turn Test}{57}{subsection.4.5.9}%
+\contentsline {section}{\numberline {4.6}ROS2 and Gazebo Simulation}{58}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}System Architecture}{58}{subsection.4.6.1}%
+\contentsline {subsubsection}{Robot Description Structure}{58}{subsection.4.6.1}%
+\contentsline {subsubsection}{Gazebo Execution Layer}{58}{lstnumber.4.3.4}%
+\contentsline {subsubsection}{ROS2 Communication Layer}{59}{figure.caption.47}%
+\contentsline {subsection}{\numberline {4.6.2}Robot Modeling in ROS 2}{60}{subsection.4.6.2}%
+\contentsline {subsubsection}{Link and Joint Tree}{60}{subsection.4.6.2}%
+\contentsline {subsubsection}{Development Problems and Refinements}{61}{figure.caption.49}%
+\contentsline {subsubsection}{Final Model Parameters}{62}{lstnumber.4.4.1}%
+\contentsline {subsection}{\numberline {4.6.3}Simulation Environment in Gazebo}{62}{subsection.4.6.3}%
+\contentsline {subsubsection}{World Design}{62}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Sensor Integration and Topic Communication}{63}{subsection.4.6.4}%
+\contentsline {subsubsection}{LiDAR}{63}{subsection.4.6.4}%
+\contentsline {subsubsection}{IMU}{64}{lstnumber.4.6.23}%
+\contentsline {subsubsection}{Bridge Configuration}{65}{lstnumber.4.7.9}%
+\contentsline {subsection}{\numberline {4.6.5}Launch Structure and System Execution}{66}{subsection.4.6.5}%
+\contentsline {subsubsection}{rsp.launch.py}{66}{subsection.4.6.5}%
+\contentsline {subsubsection}{launch.py}{67}{lstnumber.4.9.6}%
+\contentsline {section}{\numberline {4.7}Mechanical Design and FEA Method}{67}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Material Properties}{68}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Assumptions and Limitations}{68}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Load Calculations}{68}{subsection.4.7.3}%
+\contentsline {paragraph}{Chassis load:}{69}{subsection.4.7.3}%
+\contentsline {paragraph}{Wheel loads:}{69}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}FEA Setup}{69}{subsection.4.7.4}%
+\contentsline {section}{\numberline {4.8}Physical IMU Verification}{70}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Results}{71}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Results Overview}{71}{section.5.1}%
+\contentsline {section}{\numberline {5.2}LiDAR Results}{71}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Initial 2D Results}{71}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}2D Distance Measurement Result}{71}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Pseudo-3D Height Scan}{72}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Rotating LiDAR Scan}{72}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Motor Control Verification}{74}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Unloaded Drivetrain Motor Test}{75}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Stationary Oscillation Test}{76}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Zero-Radius Turn}{76}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}IMU Verification Results}{77}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Simulation Results}{78}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Topic Publish Rates}{78}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Odometry Output}{78}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Terrain Mobility}{79}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}LiDAR Obstacle Detection}{79}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Mechanical FEA Results}{79}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Rocker Arm and Motor Mount}{80}{subsection.5.6.1}%
+\contentsline {subsubsection}{Von Mises stress}{80}{subsection.5.6.1}%
+\contentsline {subsubsection}{Displacement}{80}{figure.5.15}%
+\contentsline {subsection}{\numberline {5.6.2}Chassis}{80}{subsection.5.6.2}%
+\contentsline {subsubsection}{Von Mises Stress}{80}{subsection.5.6.2}%
+\contentsline {subsubsection}{Displacement}{81}{figure.caption.70}%
+\contentsline {subsection}{\numberline {5.6.3}Wheel}{81}{subsection.5.6.3}%
+\contentsline {subsubsection}{Von Mises stress - reaction force at outer diameter}{81}{subsection.5.6.3}%
+\contentsline {subsubsection}{Von Mises stress - load applied directly on wheel mount}{81}{figure.5.19}%
+\contentsline {subsubsection}{Displacement}{82}{figure.5.20}%
+\contentsline {subsection}{\numberline {5.6.4}Summary of FEA results}{82}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Summary of Objective Outcomes}{83}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Discussion}{84}{chapter.6}%
+\contentsline {section}{\numberline {6.1}LiDAR and Pseudo-3D Mapping}{84}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Motor Discussion}{84}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}IMU and Motion Feedback}{85}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Simulation Compared to Real Testing}{86}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}System Limitations and Further Work}{86}{subsection.6.2.3}%
+\contentsline {chapter}{\numberline {7}Conclusion}{88}{chapter.7}%
+\contentsline {chapter}{Bibliography}{93}{figure.caption.79}%

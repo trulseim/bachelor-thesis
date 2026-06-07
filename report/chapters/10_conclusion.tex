@@ -1,0 +1,90 @@
+\chapter{Conclusion}
+This project developed an affordable rover prototype intended for remote operation and pseudo-3D point-cloud generation.
+The rover was designed around commercially available components, including a Raspberry Pi 5, Makerbase Servo42D closed-loop stepper motors, 
+a Slamtec RPLIDAR C1, and an ICM-20948 IMU.
+The core concept involved rotating a 2D LiDAR to generate a pseudo-3D point cloud, enabling low-light mapping without the use of expensive 3D LiDAR systems.
+
+
+\textbf{The results} show that a rotating 2D LiDAR can produce usable pseudo-3D point-cloud data. Motor angle feedback allowed multiple scan planes to be merged into a single point cloud. However, 
+the quality of the point cloud was very sensitive to mechanical alignment and accurate motor angle data; an error in angle conversion produced distorted scans.
+
+\textbf{The motor control} system proved communication with all motors over a single RS485 bus worked well.  
+The custom made C++ wrapper gave individual RPM commands, telemetry readback, and angle positioning for the LiDAR motor. 
+Drivetrain tests confirmed that all four drivetrain motors responded to commands. 
+But, tests revealed challenges: the drivetrain showed oscillatory behaviour with external disturbances, interpreted as repeated closed-loop correction from the internal motor controller.
+Also zero-radius turns were difficult to do because of high wheel scrub and surface friction. 
+These issues indicate while the communication and control software functioned as intended, however the interaction between the drivetrain and the ground requires tuning.
+
+\textbf{The IMU} was verified through tests, confirming that acceleration changed with tilt.
+The sensor was not completely integrated into a position estimation pipeline, but it proved useful for detecting the oscillations observed in the motor tests.
+
+\textbf{The power system} was evaluated through calculated energy budgets, which indicated sufficient capacity for multiple 15-minute mission cycles.
+Experimental runtime validation was not completed, and the INA226 power monitor was therefore not used for final measurement data.
+
+\textbf{The mechanical design} kept the rover within the given size limit, and was tested using finite element analysis in Autodesk Fusion 360. The newest rocker arm design reduced maximum von Mises stress compared to Prototype 1. The chassis bearing area showed a stress reduction, and the wheel hub mount reduced stress. All final components were below the allowable stress with safety factors above 3, therefore the mechanical design was suitable for the expected static loads. 
+
+\textbf{The Gazebo simulation} was made for ROS 2 integration and software verification. 
+The simulation confirmed that the robot description, differential-drive controller, (LiDAR, IMU, odometry) functioned as needed. 
+The rover could navigate slopes and detect obstacles using the simulated LiDAR.
+However, the simulation did not replicate the drivetrain oscillations and zero-radius turn difficulties observed during physical testing, showing limitations in the modelling. 
+The simulation was then useful for software validation but not as a predictor of physical drivetrain behaviour.
+
+\textbf{Future work} may prioritise three areas. Drivetrain tuning: the closed-loop PID parameters of the Servo42D motors should be adjusted
+to reduce oscillatory behaviour, and alternative turning strategies (such as Ackermann-inspired compensation) should be explored to make sharp turns usable.
+Tighter sensor integration: the IMU should be fused with wheel odometry for slip detection and improved position estimation,
+and the LiDAR mapping should be improved for visualisation with lower bandwidth.
+Mechanical refinement: the wheels and suspension should be redesigned to reduce scrub during tight turns and improve traction on loose regolith.
+
+\textbf{Overall}, the project demonstrated that an affordable rover with a rotating 2D LiDAR can generate pseudo-3D point-cloud data and that multiple
+closed-loop stepper motors can be controlled over a single RS485 bus. 
+The main limitation was mobility under load, caused by interactions between the drivetrain, closed-loop motors and wheel-surface friction.
+However, the LiDAR and communication systems met their design objectives. 
+With further tuning of the drivetrain and tighter sensor fusion,
+the prototype could form a viable platform not only for lunar rover research but also for other low-light,
+GPS-limited environments such as underground mine mapping, cave exploration, or disaster response scenarios.
+
+\chapter*{Appendix}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{gantt.png}
+    \caption{Gantt diagram taken from midterm presentation.}
+    \label{fig:gantt}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{odometry_heading.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{odometry_bearing.png}
+    \end{subfigure}
+    \caption{Estimated wheel odometry, data considered inconclusive so not included in report.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{square_odometry_test.png}
+    \caption{Attempted square odometry test, commanded odometry in blue and estimated odometry in red.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{table_jonas.png}
+    \caption{Equipment and materials used during manufacturing.}
+\end{figure}
+
+\begin{figure}[H]
+   \centering
+   \includegraphics{something.png}
+   \caption{Final chassis bearing load applied at the bearing contact area} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{something2.png}
+    \caption{Final chassis constraint: frictionless support at inner bearing and fixed bottom surface.}
+\end{figure}

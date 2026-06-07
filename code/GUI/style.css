@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #050B13;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+header div {
+    border-left: 2px solid black;
+    padding: 4px;
+    margin: 4px;
+    font-size: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.container .left {
+
+}
+
+.container .left .controls {
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: #090F1A;
+    padding: 10px;
+    margin: 2px;
+}
+
+.container .left .controls p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.container .left .controls .slider {
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    border-radius: 40px;
+    background-color: #212B39;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.container .left .controls .slider:hover {
+    opacity: 1;
+}
+
+.container .left .controls .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; 
+    height: 20px;
+    background-color: #04AA6D;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.container .left .motors {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: #090F1A;
+}
+
+.container .left .motors .motor {
+    text-align: left;
+    border-radius: 4px;
+    border: 2px solid white;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .left .motors .motor i {
+    font-size: 50px;
+    color: green;
+}
+
+.container .center {
+    border: 2px solid black;   
+}
+
+.container .center .rover_visualization {
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: #090F1A;
+}
+
+.container .center .lidar {
+    border: 2px solid white;
+    background-color: #090F1A;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.container .right {
+    border: 2px solid black;
+}
+
+.container .right .imu {
+    border: 2px solid white;
+    background-color: #090F1A;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.container .right .battery {
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: #090F1A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .right .battery i {
+    color: green;
+    font-size: 50px;
+}
+
+.log {
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: #090F1A;
+}

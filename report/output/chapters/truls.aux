@@ -1,0 +1,107 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Power Consumption and Energy Budget}{22}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Motivation}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Power Architecture}{22}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Power architecture block diagram. The 14.8V battery feeds two branches: the left branch supplies the motors directly, the right branch passes through the INA226 power monitor, then a buck converter stepping down to 5.2V, and powers the Raspberry Pi, LiDAR, and IMU.}}{23}{}\protected@file@percent }
+\newlabel{fig:power_block}{{4.1}{23}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Component Power Consumption}{23}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces System power budget}}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}15-Minute Mission Energy Budget}{23}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Simulated current, voltage, and power over six 15 minute mapping runs.}}{24}{}\protected@file@percent }
+\newlabel{fig:multi_run_power}{{4.2}{24}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Experimental Validation}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Energy Source}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Worst Case Analysis}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}15-Minute Mission Energy Budget}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Experimental Validation}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Position Estimation: Wheel Odometry and IMU Sensor Fusion}{26}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Background}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Wheel Odometry Symbols and Definitions}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Forward Displacement and Heading Change}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Updated Position}{27}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated rover trajectory using the odometry model.}}{27}{}\protected@file@percent }
+\newlabel{fig:odometry_traj}{{5.1}{27}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Error Sources in Odometry}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}IMU – ICM-20948}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Sensor Fusion – Extended Kalman Filter (EKF) \textcolor {red}{**IKKE GJORT RESEARCH OM EKF, PROB FJERNE DENNE**}}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Slip Detection – Symbols and Explanation}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Symbol definitions}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Expected acceleration from odometry}{29}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Slip condition}{29}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Sensor Calibration}{30}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Motivation}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}IMU Calibration (ICM-20948)}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Accelerometer}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Gyroscope Bias}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}RPLIDAR C1 Geometric Calibration}{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Radius Calibration}{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}LiDAR Tilt Servo Calibration}{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Material Identification Using LiDAR Reflectivity Data \textcolor {red}{**MULIG FJERNE HELE DETTE KAPITELET HVS LIDAR IKKE GIR NOK DATA**}}{32}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}RPLIDAR C1 – 2.5D Rreflectivity Output}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Reflectivity Signatures}{33}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Expected IR reflectivity ranges}}{33}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Classification Algorithm}{33}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Limitations}{33}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Failure Mode Analysis and System Redundancy}{34}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Methodology}{34}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Mechanical Failure Modes}{34}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8.1}{\ignorespaces Mechanical failure modes}}{34}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Electrical Failure Modes}{35}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8.2}{\ignorespaces Electrical failure modes}}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Power and Battery Failure Modes}{35}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8.3}{\ignorespaces Power and battery failure modes}}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Software Failure Modes}{35}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8.4}{\ignorespaces Software failure modes}}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Differential Steering}{36}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Principle}{36}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Odometry Definitions}{36}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.1}From Command to Wheel Speeds}{37}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Point Turn}{37}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.4}Relationship to Odometry and Slip Detection}{38}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.5}ROS2 Integration[UNFINISHED, NEEDS INFO]}{38}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.6}Side Slip problem}{38}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}IMU – SparkFun 9DoF (ICM-20948) **MULIG SLETTE HELE KAPITELETT, HVIS IKKE FINNER PÅ NOE TEORI TIL EXP CONTENT}{39}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {10.1}Hardware}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.2}Key numbers}{40}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10.1}{\ignorespaces SparkFun 9DoF IMU specifications}}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.3}How it works}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.4}Errors and what we do about them}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.5}ROS2 integration}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.6}Mounting notes}{40}{}\protected@file@percent }
+\@setckpt{chapters/truls}{
+\setcounter{page}{42}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{10}
+\setcounter{section}{6}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{0}
+\setcounter{table}{1}
+\setcounter{parentequation}{0}
+\setcounter{float@type}{8}
+\setcounter{lstnumber}{1}
+\setcounter{lstlisting}{0}
+}

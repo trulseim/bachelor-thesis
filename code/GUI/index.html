@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover GUI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Rover GUI
+        </div>
+        <div class="connection">
+            Connected
+        </div>
+        <div class="time">
+            15:28:36
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="controls">
+                <p id="speed_text">Speed (RPM)= xx</p>
+                <input type="range" min="1" max="3000" value="1500" class="slider" id="speed_slider">
+                <p id="acceleration_text">Acceleration=xx</p>
+                <input type="range" min="1" max="255" value="127" class="slider" id="acceleration_slider">
+            </div>
+            <div class="motors">
+                <div class="motor" id="motor_1">
+                    <i class="fa-brands fa-files-pinwheel"></i>
+                    <div>
+                        <p>Front Left</p>
+                        <p>STATUS</p>
+                        <p>Amperage</p>
+                    </div>
+                </div>
+                <div class="motor" id="motor_2">
+                    <i class="fa-brands fa-files-pinwheel"></i>
+                    <div>
+                        <p>Front Left</p>
+                        <p>STATUS</p>
+                        <p>Amperage</p>
+                    </div>
+                </div>
+                <div class="motor" id="motor_3">
+                    <i class="fa-brands fa-files-pinwheel"></i>
+                    <div>
+                        <p>Front Left</p>
+                        <p>STATUS</p>
+                        <p>Amperage</p>
+                    </div>
+                </div>
+                <div class="motor" id="motor_4">
+                    <i class="fa-brands fa-files-pinwheel"></i>
+                    <div>
+                        <p>Front Left</p>
+                        <p>STATUS</p>
+                        <p>Amperage</p>
+                    </div>
+                </div>
+                <p>All motors nominal</p>
+            </div>
+        </div>
+        <div class="center">
+            <div class="rover_visualization">
+                INSERT SIMPLE TOP DOWN ROVER ANIMATION HERE
+            </div>
+
+            <div class="lidar">
+                INSERT THE LIDAR HERE BUT NO IDEA HOW
+            </div>
+        </div>
+        <div class="right">
+            <div class="imu">
+                <p>ROLL: x deg</p>
+                <p>PITCH: x deg</p>
+                <p>YAW: x deg</p>
+                <p>OPTIONALLY ADD MORE FEATURES</p>
+            </div>
+
+            <div class="battery">
+                <i class="fa-solid fa-battery-full"></i>
+                <!-- <i class="fa-solid fa-battery-three-quarters"></i>
+                <i class="fa-solid fa-battery-half"></i>
+                <i class="fa-solid fa-battery-quarter"></i>
+                <i class="fa-solid fa-battery-empty"></i> -->
+                <div>
+                    <p>xx%</p>
+                    <p>Voltage: xxV</p>
+                    <p>Runtime: xxhxxm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="log">
+        <P>LOG MESSAGES WILL GO HERE</P>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/875eb346ef.js" crossorigin="anonymous"></script>
+</body>
+</html>

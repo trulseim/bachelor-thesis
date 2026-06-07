@@ -1,0 +1,102 @@
+% ============================================================
+% TITLE PAGE
+% ============================================================
+\pagecolor{yellow}  % entire page turns yellow
+\begin{titlepage}
+    \vspace*{-3cm} \noindent \hspace{-8cm} \includegraphics[width=0.4\textwidth]{oslomet_logo} \\[1cm]
+    \centering
+    % Title
+    {\LARGE \textbf{Low-Cost Rover with Rotating 2D LiDAR for Pseudo-3D Mapping and Exploration of Lunar Terrain}} \\[1.8cm]
+
+    % Subtitle / document type
+    {\large \textbf{Bachelor Thesis}} \\[0.3cm]
+    {\large Submitted in partial fulfillment of the requirements for the Bachelor's Degree Programme in} \\
+    {\large Engineering - Electrical and Mechanical} \\
+    {\large with emphasis on Automation, Construction and Design} \\[2cm]
+
+    % Authors
+    \textbf{AUTHORS} \\[0.2cm]
+    \begin{tabular}{c}
+        Elliot Cornier   \\
+        Truls Eimhjellen \\
+        Rameez A. Aftab  \\
+        Jonas S. Nicolaisen
+    \end{tabular} \\[2cm]
+
+    % Supervisors
+    \textbf{SUPERVISOR} \\
+    Artur Zolich \\[2cm]
+
+
+    % University and date
+    Bachelor thesis \\
+    Oslo Metropolitan University, \the\year{} \\
+    Faculty of Technology, Art and Design \\
+    Department of Mechanical, Electronic and Chemical Engineering \\[0.5cm]
+    {\small \text{Group EJRT}} \\[0.5cm]
+
+\end{titlepage}
+
+% \newpage
+\pagecolor{white}
+\section*{Acknowledgements}
+
+We would like to express our sincere gratitude to our supervisor, \textbf{Artur Zolich}, whose guidance, insight, and continuous support throughout this project have been invaluable. His knowledge in robotics and autonomous systems helped us navigate challenges and shape the final outcome.
+
+We would also thank the Department of Mechanical, Electronic and Chemical Engineering at Oslo Metropolitan University for providing the facilities, resources, and academic environment that made this work possible.
+
+We would also like to express our gratitude to Engebretsen Data og Media – 3DPrintButikk.no for their support with the ASA 3D printing process. Their contribution was important for producing the final prototype components used in the project.
+
+We are also grateful to the organisers of the LOOK (Lunar Robotics Competition) for the inspiring challenge and to the Norwegian Space Cluster for their collaboration.
+
+Finally, we thank our families and friends for their patience and encouragement during the course of this bachelor thesis.
+
+
+
+\vspace{1cm}
+\begin{flushright}
+Oslo, \the\year \\
+The authors
+\end{flushright}
+
+
+\section*{Abstract}
+This bachelor thesis presents the design, construction and testing of a low-cost rover prototype for remote operation and pseudo-3D mapping in a simulated lunar terrain context. The project was inspired by the LOOK Lunar Robotics Competition, but the final prototype was developed around self-defined objectives. These objectives were to demonstrate remote-controlled mobility and low-light spatial mapping using accessible components.
+
+The rover uses a Raspberry Pi 5 as the main controller, four Makerbase Servo42D closed-loop stepper motors for the drivetrain, one additional Servo42D motor for rotating the LiDAR mechanism, an ICM-20948 IMU and a Slamtec RPLIDAR C1. The mapping concept is based on rotating a 2D LiDAR to combine multiple scan planes into a single pseudo-3D point cloud for visualization and analysis. ROS 2 was used for sensor communication, visualization and simulation support, while a custom C++ wrapper was written for controlling the Servo42D motors using Modbus RTU.
+
+The completed prototype was assembled and tested through several subsystem experiments. The LiDAR tests showed that 2D scan data could be transformed and combined into usable pseudo-3D point-cloud data. The motor tests verified that multiple Servo42D motors could be addressed over the same RS485 bus, commanded individually and used for both drivetrain control and LiDAR rotation. The IMU test verified that orientation changes could be detected from the measured acceleration components. A Gazebo simulation was used to support software testing, differential-drive behaviour and ROS 2 topic communication.
+
+The results show that a low-cost rotating 2D LiDAR system can produce useful pseudo-3D point-cloud data in a controlled test environment. The system is, however, still limited by mechanical alignment, scan synchronization, real-time visualization performance and the lack of full SLAM or autonomous navigation. Further work should focus on improving the real-time mapping pipeline, adding better calibration procedures, integrating sensor feedback into the operator interface and testing the rover on more representative terrain.
+Loaded drivetrain testing revealed that wheel-surface interaction and internal closed-loop correction could cause stationary oscillatory behaviour, and made reliable zero-radius turning difficult.
+\newpage
+\section*{Group Members' Contributions}
+
+\vspace{0.5cm}
+
+% Table of contributions
+\renewcommand{\arraystretch}{1.3}
+
+\begin{table}[h]
+\centering
+\caption{Overview of individual contributions}
+\label{tab:contributions}
+\begin{tabular}{
+    p{0.25\textwidth}
+    p{0.35\textwidth}
+    p{0.35\textwidth}
+}
+\toprule\\
+\textbf{Student} & \textbf{Written contribution} & \textbf{Technical contribution} \\
+&  &  \\[4pt]
+\midrule\\[6pt]
+Elliot Cornier & 3.1-3.4, 4.4-4.5, 5.2-5.4, 6.1-6.2 & Designed motor controller software and developed the LiDAR tilt system for pseudo-3D point-cloud generation using ROS 2. \\
+
+Truls Eimhjellen & 3.5-3.7, 4.2-4.3, 4.8, 5.4 & Worked on power budget, odometry, IMU integration, calibration and energy-related analysis. \\
+
+Rameez A. Aftab & 4.6, 5.5, 5.7, 6.2.2 & Developed the ROS 2/Gazebo simulation environment and verified simulated topics, odometry and sensor communication. \\
+
+Jonas S. Nicolaisen & 3.8, 4.1, 4.7, 5.6  & Designed, printed and assembled the rover chassis and performed mechanical FEA of the final design. \\
+\bottomrule
+\end{tabular}
+\end{table}

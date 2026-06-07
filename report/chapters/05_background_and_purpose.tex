@@ -1,0 +1,51 @@
+
+\chapter{Background and Purpose}
+
+\section{Background}
+Lunar rovers are mobile vehicles designed to be used on the Moon's surface. They perform tasks such as terrain analysis, surface mapping, image collection, and measurements.
+Rovers provide surface data that can be analysed in detail after collection.
+
+The first successful lunar rover was the Soviet Lunokhod-1, which landed on November 17, 1970, and operated for 11 months,
+transmitting thousands of images and videos back to Earth \cite{FirstRover}. Since then, rovers have become an important tool for planetary exploration.
+NASA's Mars rovers (Spirit, Opportunity, Curiosity, Perseverance) have shown complex mobility and autonomous navigation capabilities \cite{nasa_mars_rovers}.
+
+
+\section{Problem Statement}
+Real planetary rover missions are expensive and highly specialized, which makes full-scale rover development unsuitable for most student projects \cite{perseverance_cost}.
+Implementing a full-scale rover is difficult within the scope of a student project. Therefore, this project investigates whether a low-cost prototype can demonstrate selected core rover functions.
+
+The prototype focuses on the following core functions:
+\begin{enumerate}
+    \item Remote operation on simulated lunar terrain.
+    \item Pseudo-3D mapping using a rotating 2D LiDAR.
+    \item Closed-loop stepper motor control for drivetrain and LiDAR rotation.
+    \item Low-light operation without relying on camera-based navigation.
+    \item ROS 2-based software integration.
+\end{enumerate}
+
+\newpage
+\section{Purpose and Objectives}
+The project was originally inspired by the LOOK competition held in Kongsberg, Norway. As the project developed, our group focused on a self-defined rover prototype for remote operation and pseudo-3D mapping in a simulated lunar environment.
+The competition, organized in collaboration with the Norwegian Space Cluster, challenges teams to develop solutions for lunar rover problems \cite{look}.
+
+
+Our specific objectives were inspired by the LOOK competition context, and are as follows:
+\begin{itemize}
+    \item \textbf{Remote operation}: Control the rover through a program running locally.
+    \item \textbf{Mobility}: Design a rocker-bogie-inspired suspension and differential steering system capable of driving on uneven terrain with small rocks and loose regolith.
+    \item \textbf{Mapping}: Generate a pseudo-3D point cloud using a 2D LiDAR rotated by a closed-loop stepper motor, enabling low-light mapping.
+    \item \textbf{Power management}: Operate on lithium-ion battery power with voltage and current monitoring.
+    \item \textbf{Sensor integration}: Use data from wheel encoders and an IMU for position estimation.
+    \item \textbf{Size limit}: Needs to be within 0.5 m x 0.2 m x 0.2 m fully assembled
+    \item \textbf{Weight}: Maximum target: 15 kg. This limited material use, motor count and chassis size.
+\end{itemize}
+
+\section{Scope}
+\textbf{Within scope:}
+\begin{itemize}
+    \item Remote control via local software.
+    \item Differential steering with closed-loop stepper motors.
+    \item 2D LiDAR with rotating mount for pseudo-3D mapping, Point cloud visualization.
+    \item IMU-based heading for odometry.
+    \item ROS 2 software.
+\end{itemize}

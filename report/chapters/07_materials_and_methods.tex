@@ -1,0 +1,1276 @@
+\chapter{Materials and Methods}
+
+\section{Manufacturing and 3D Printing}
+
+The first prototype was printed with Original Prusa Mini+ using PLA filament. PLA worked well in the early phase because it was easy to print and made it possible to test the design quickly. 
+After the first prototype, ASA was chosen for the larger final parts because it has better durability and is more 
+suitable for parts that may be exposed to outdoor conditions \cite{wevolver_asa_vs_pla}.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{prusa_mini}
+\caption{Original Prusa Mini+. Source: Own picture.}
+\label{fig:prusa_mini}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bambu_lab_h2d}
+\caption{Bambu Lab H2D 10W Laser Combo. Source: Elefun.no.}
+\label{fig:bambu_lab_h2d}
+\end{minipage}
+\end{figure}
+
+ASA was more difficult to print on our own printer, especially for larger components. The main problems were warping and the need for a more controlled printing environment. Because of this, the larger ASA parts were produced externally by Engebretsen Data Og Media - 3DPrintButikk.no using the Bambu Lab shown in Figure~\ref{fig:bambu_lab_h2d}.
+
+The Prusa Mini+ was still very useful in the project. It was mainly used for smaller iterations and test parts, such as fittings, bearing tolerances, bolt holes and smaller mounts for the differential arm, LiDAR, IMU and Raspberry Pi.
+
+\subsection{Iterations, Print Failures and Design Changes}
+
+\subsubsection{Iterations and Tolerance Fit}
+
+Before the larger parts were produced, several smaller parts were printed to check fit and assembly details. This was mainly used to test bearing placement, bolt holes, motor connections and component mounts. These tests helped us find tolerance problems early, before spending time and material on larger parts.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{fit_test}
+\caption{Fit test for rocker connection.}
+\label{fig:fit_test}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{bearing_bolt_test}
+\caption{Bearing and bolt tolerance test.}
+\label{fig:bearing_bolt_test}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{wheel_motor_test}
+\caption{Wheel to motor connection.}
+\label{fig:wheel_motor_test}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{nema17_mount_test}
+\caption{NEMA17 mount/tolerance.}
+\label{fig:nema17_mount_test}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{rocker_test_part}
+\caption{Rocker test part.}
+\label{fig:rocker_test_part}
+\end{minipage}
+\end{figure}
+
+\subsubsection{Print Failures}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{fail_warping}
+\caption{Fail/Warping.}
+\label{fig:fail_warping}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{print_failure_rocker}
+\caption{Print failure rocker.}
+\label{fig:print_failure_rocker}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{warping_layer_adhesion}
+\caption{Warping and layer adhesion.}
+\label{fig:warping_layer_adhesion}
+\end{minipage}
+\end{figure}
+
+\subsubsection{Prototype 1 Findings}
+
+The first prototype gave us a better understanding of what needed to be improved in the design. It was mainly used to check the overall geometry and to see whether the components could fit within the allowed dimensions. After assembly and testing, several critical areas were identified. The main issues were related to the wheel mounts, bending in the rocker arms, and the pivot joint between the rocker and the chassis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{prototype1_critical_areas}
+\caption{Critical areas in prototype 1. Source: Own pictures.}
+\label{fig:prototype1_critical_areas}
+\end{figure}
+
+\subsubsection{Design Changes}
+
+The following changes show how the design moved from a functional prototype toward a more reliable final mechanical solution.
+
+\paragraph{Rocker}
+The rocker connection was one of the most critical areas in the first prototype. The connection between the rocker and the chassis was improved by using a flange ball bearing and increasing the bolt diameter from M5 to M8. In addition, the front and rear rocker arms were connected with five M4 bolts. This made the rocker assembly more rigid and reduced unwanted movement.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{rocker_conn_proto1}
+\caption{Prototype 1 rocker connection.}
+\label{fig:rocker_conn_proto1}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{rocker_conn_proto2}
+\caption{Updated rocker connection with bearing and M8 bolt mounting geometry.}
+\label{fig:rocker_conn_proto2}
+\end{minipage}
+\end{figure}
+
+The cross-section was changed from a simple rectangular shape to a C-shaped beam. This increases the second moment of area by placing more material further away from the neutral axis. As a result, the rocker arm becomes more resistant to bending \cite{hibbeler_2018}.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{rocker_xsec_proto1}
+\caption{Prototype 1 cross-section.}
+\label{fig:rocker_xsec_proto1}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\includegraphics[width=0.7\linewidth]{rocker_xsec_proto2}
+\caption{Prototype 2 cross-section with increased support.}
+\label{fig:rocker_xsec_proto2}
+\end{minipage}
+\end{figure}
+
+\paragraph{Chassis}
+The chassis was changed to improve component fit. Slots and cut-outs were added to reduce material use and weight, while keeping enough stiffness in the structure. The mounting points were also adjusted to fit the selected bearings, fasteners and electrical components. This was useful because the battery, Raspberry Pi, IMU and LiDAR had to fit inside a limited volume while still leaving access for fastening and movements.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{chassis_proto1}
+\caption{Chassis cross-section and mounting dimensions.}
+\label{fig:chassis_proto1}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{chassis_proto2}
+\caption{Updated chassis with cut-outs, bearing points and mounting geometry.}
+\label{fig:chassis_proto2}
+\end{minipage}
+\end{figure}
+
+\paragraph{Wheel}
+The wheel design was changed to improve the mechanical connection between the wheel and the motor shaft. The final wheel includes an improved tread pattern to reduce material use and weight. This made the wheel easier to assemble and more reliable during testing.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{wheel_early}
+\caption{Early/inner wheel geometry.}
+\label{fig:wheel_early}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{wheel_final}
+\caption{Final wheel with tread pattern and drivetrain mounting points.}
+\label{fig:wheel_final}
+\end{minipage}
+\end{figure}
+
+\subsection{Final CAD Design}
+
+The figures below show the final chassis parts, rocker parts, wheel design and electronic mounts used in the final rover.
+
+% Row 1 of 3
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{final_upper_chassis}
+\caption{Final upper chassis.}
+\label{fig:final_upper_chassis}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{final_lower_chassis}
+\caption{Final lower chassis.}
+\label{fig:final_lower_chassis}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{rocker_differential_arm}
+\caption{Rocker differential arm.}
+\label{fig:rocker_differential_arm}
+\end{minipage}
+\end{figure}
+
+% Row 2 of 3
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{final_rear_rocker}
+\caption{Final rear rocker.}
+\label{fig:final_rear_rocker}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{final_front_rocker}
+\caption{Final front rocker.}
+\label{fig:final_front_rocker}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{final_wheel}
+\caption{Final wheel.}
+\label{fig:final_wheel}
+\end{minipage}
+\end{figure}
+
+% Row 3 of 3
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{c1_lidar_mount}
+\caption{C1 LiDAR mount.}
+\label{fig:c1_lidar_mount}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{rpi5_mount}
+\caption{Final Raspberry Pi 5 mount case.}
+\label{fig:rpi5_mount}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{imu_mount}
+\caption{Final IMU mount case.}
+\label{fig:imu_mount}
+\end{minipage}
+\end{figure}
+
+% Final row with two images (assembly views)
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{assembly_mech_conn}
+\caption{Assembly view for mechanical connection.}
+\label{fig:assembly_mech_conn}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{assembly_diff_conn}
+\caption{Assembly for differential mechanical connection.}
+\label{fig:assembly_diff_conn}
+\end{minipage}
+\end{figure}
+
+\subsection{Assembly}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{all_printed_parts}
+\caption{All printed parts ready for assembly. Source: Own picture.}
+\label{fig:all_printed_parts}
+\end{figure}
+
+\paragraph{Chassis bearing installation}
+
+The outer chassis used two F608ZZ flange bearings in the rocker pivot joint. The inner chassis used two 608-2Z ball bearings in the rocker pivot joint, and the differential arm pivot used two 625-2Z ball bearings.
+
+\paragraph{Differential arm}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{diff_arm_mounted}
+\caption{Differential arm mounted to the chassis.}
+\label{fig:diff_arm_mounted}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{diff_arm_detail}
+\caption{Differential arm connection detail.}
+\label{fig:diff_arm_detail}
+\end{minipage}
+\end{figure}
+
+The differential arm was mounted to the chassis using one M5x40 DIN 912 screw, one M5 DIN 934 nut, one M5 DIN 985 lock nut and three M5 DIN 125A washers. The screw head was placed against the differential arm, with washers used between the differential arm, bearing and nut side to reduce friction and improve the connection.
+
+\paragraph{Rocker arm assembly}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{rocker_flange_bearing}
+\caption{Rocker arm with flange bearing.}
+\label{fig:rocker_flange_bearing}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{rocker_fasteners}
+\caption{Rocker arm connection and fasteners.}
+\label{fig:rocker_fasteners}
+\end{minipage}
+\end{figure}
+
+
+Each rocker side was assembled using five M4x35 DIN 912 screws, five M4 DIN 985 lock nuts, one F608ZZ flange bearing and one M8x60 DIN 6921 bolt. The rocker arms were then mounted to the chassis using M8 lock nuts in the middle connection.
+\paragraph{Differential links and turnbuckles}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{turnbuckle_link}
+\caption{Turnbuckle link between chassis and rear rocker.}
+\label{fig:turnbuckle_link}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{diff_link_detail}
+\caption{Differential link connection detail.}
+\label{fig:diff_link_detail}
+\end{minipage}
+\end{figure}
+
+The differential link assembly used two 4x36 mm turnbuckle links, four 3x23 mm button head hex socket screws and four M3 thin nylon locking nuts. This connection links the differential arm movement to the rear rocker assembly.
+
+\paragraph{Lower chassis and wheel assembly}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{lower_chassis_above}
+\caption{Lower chassis assembly from above.}
+\label{fig:lower_chassis_above}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{lower_chassis_front}
+\caption{Lower chassis assembly from the front.}
+\label{fig:lower_chassis_front}
+\end{minipage}
+\end{figure}
+
+The lower chassis was connected as the second floor of the chassis using 8 x M6x60 DIN 912 screws and 8 x M6 DIN 934 nuts.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{wheel_fasteners}
+\caption{Wheel with fasteners visible.}
+\label{fig:wheel_fasteners}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\centering
+\includegraphics[width=0.8\linewidth]{wheel_coupling}
+\caption{Wheel with aluminium flange shaft coupling.}
+\label{fig:wheel_coupling}
+\end{minipage}
+\end{figure}
+
+Each wheel was assembled using six M3x16 DIN 912 screws and one aluminium flange shaft coupling for a 5 mm shaft with M3 threads.
+
+\paragraph{Final structural assembly}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{final_structural_no_wheels}
+\caption{Final structural assembly without wheels. Source: Own picture.}
+\label{fig:final_structural_no_wheels}
+\end{figure}
+
+The final structural assembly showed that the main mechanical system could be built as intended. The rocker mechanism and chassis connections were assembled with the selected bearings and fasteners, while the electronic mounts remained accessible.
+
+\subsubsection{Prototype 2 - Layer Adhesion and Precautions}
+
+The final prototype still showed some areas with poor layer adhesion. Since this was a known risk with FDM-printed parts, extra fasteners were added in selected areas as a precaution to reduce weakness across the layers.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{layer_adhesion_weakness}
+\caption{Area with visible layer adhesion weakness. Source: Own picture.}
+\label{fig:layer_adhesion_weakness}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=0.6\linewidth]{rocker_extra_fasteners}
+\caption{Extra fasteners added around the rocker area.}
+\label{fig:rocker_extra_fasteners}
+\end{minipage}
+\end{figure}
+
+
+For the rocker area, four M4x20 DIN 912 screws and four M4 DIN 934 nuts were added. For the motor mounts, sixteen M3x45 DIN 912 screws and sixteen M3 DIN 934 nuts were used. These fasteners helped clamp the printed sections together and gave extra support in areas where layer adhesion could become a weakness.
+
+\subsection{Software}
+
+\subsubsection{Autodesk Fusion 360}
+
+The student version of Autodesk Fusion 360 was used as the CAD software to design and develop the rover. Fusion is a cloud-based CAD/CAM/CAE/PCB platform that can be used for 3D modelling, simulation and preparation for manufacturing. The rover parts were first modelled in Fusion 360 and then exported as STL files for 3D printing.
+
+\subsubsection{Slicer Software}
+
+Slicer software was then used to divide the STL files into layers and generate the G-code that the printer follows during the printing process \cite{BambuLabASA}. PrusaSlicer was used for the Prusa Mini+, and Bambu Studio was used for the larger ASA parts with the Bambu Lab H2D 10W Laser Combo. In both programs, the models were prepared for printing by adjusting settings such as layer height, infill, supports, wall loops and temperature shown in Figure~\ref{fig:bambu_studio_settings}.
+
+
+
+\newpage
+\section{System Wiring Diagram}
+\label{sec:wiring}
+
+Figure~\ref{fig:fritzing} shows the complete wiring diagram of the rover. 
+The main components are a Raspberry Pi~5, five Makerbase Servo42D stepper motors
+(four for the drivetrain, one for LiDAR rotation), a Slamtec RPLIDAR C1, an ICM-20948 IMU, INA226 power monitor, and a 14.8\,V Li-ion battery pack.
+
+The four drivetrain motors and the LiDAR rotation motor are connected to the same RS485 bus, using a USB-to-RS485 adapter (PL2303GR) connected to the Raspberry Pi. 
+Communication follows the Modbus protocol, with each motor assigned a unique slave ID (1–4 for drivetrain, 5 for LiDAR). 
+The RPLIDAR C1 and INA226 is connected to the Raspberry Pi UART (TX/RX pins) on the GPIO header. The ICM-20948 IMU uses the I2C bus (SDA/SCL).
+
+Power is distributed as follows: the 14.8\,V battery supplies the motors directly. 
+A DC-DC buck converter steps the battery voltage down to 5.2\,V and powers the Raspberry Pi~5, the RPLIDAR C1, and the IMU. 
+An INA226 power monitor is placed on the low-voltage rail for current and voltage sensing.
+
+All ground connections are tied to a common ground plane on the rover chassis. The complete wiring is illustrated in Figure~\ref{fig:fritzing}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.99\textwidth]{wiring_diagram.png} % change path to your image
+\caption{Physical wiring diagram of the rover (created with Fritzing).}
+\label{fig:fritzing}
+\end{figure}
+
+% \newpage
+
+\newpage
+\section{Rover Electrical Assembly}
+
+Barebone rover, without any electronics
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{rover-assembly-side.jpg}
+        % \caption{Side view of rover chassis}
+        \label{fig:rover_chassis_side}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{rover-assembly-side2.jpg}
+        % \caption{Side view of rover chassis}
+        \label{fig:rover_chassis_side2}
+    \end{subfigure}
+
+    \caption{Side view of rover chassis.}
+    \label{fig:rover_chassis_parts}
+\end{figure}
+
+Raspberry Pi and the five motors were mounted.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{rover-assembly-pi.jpg}
+        % \caption{Raspberry Pi mounted to chassis}
+        \label{fig:rover_pi_mounted}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{rover-assembly-pi2.jpg}
+        % \caption{Raspberry Pi mounted to chassis}
+        \label{fig:rover_pi_mounted2}
+    \end{subfigure}
+
+    \caption{Raspberry Pi mounted to rover chassis.}
+    \label{fig:rover_pi_mounted_parts}
+\end{figure}
+LiDAR was mounted to the top of the fifth motor, along with the rover wheels.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{rover-assembly-lidar.jpg}
+        % \caption{LiDAR mounted to top of motor}
+        \label{fig:rover_lidar_mounted}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{rover-assembly-lidar2.jpg}
+        % \caption{LiDAR mounted to top of motor}
+        \label{fig:rover_lidar_mounted2}
+    \end{subfigure}
+
+    \caption{LiDAR mounted to rover chassis.}
+    \label{fig:rover_lidar_mounted_parts}
+\end{figure}
+
+\newpage
+
+\section{Slamtec RPLIDAR C1}
+The Slamtec RPLIDAR C1 was connected to the Raspberry Pi 5 using the UART interface on the GPIO header.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{RPLIDAR Electrical Connection.png}
+    \caption{UART wiring between the RPLIDAR C1 and Raspberry Pi 5 GPIO header. Pin numbers refer to physical header pins.}
+    \label{fig:lidar_electrical}
+\end{figure}
+
+The LiDAR receive line was connected to the Raspberry Pi transmit pin, and the LiDAR transmit line was connected to the Raspberry Pi receive pin.
+
+\subsection{Initial 2D LiDAR Verification}
+Before pseudo-3D scanning was tested, the LiDAR was tested in a normal 2D scan. 
+This test was done to ensure the LiDAR produced valid range and angle data before being put to use in rotating scan experiments.
+
+The RPLIDAR C1 was tested using its ROS 2 driver. The driver publishes the LiDAR data on the \texttt{/scan} topic as a \texttt{sensor\_msgs/LaserScan} message.
+This topic was inspected to verify the range and angle data were being correctly received.
+
+Data from a single 360\(^\circ\) scan was saved to a CSV file, and converted from polar to Cartesian coordinates using
+\[
+(x,y)=(d\cos(\theta), d\sin(\theta))
+\]
+
+where \(d\) is the measured distance and \(\theta\) is the current scan angle. 
+The converted data was plotted using a MATLAB script and compared with the physical testing environment. 
+This test verified LiDAR communication worked, ROS 2 topic output and coordinate conversion before pseudo-3D mapping was tested. The resulting 2D scan data is presented in Section~5.2.1.
+
+\subsection{LiDAR Coordinate Frame and Sensor Orientation}
+The LiDAR coordinate frame had to be inspected before any pseudo-3D scans were performed, this is because the scan data had to be correctly transformed into the rovers coordinate frame.
+The RPLIDAR C1 datasheet defined the scan angle as the angle relative to the sensor's \(X\) and \(Y\) axes, as shown in Figure~\ref{fig:lidar_axis_definition}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR Angle From Axis.png}
+        \caption{LiDAR axis definition}
+        \label{fig:lidar_axis_definition}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{RPLIDAR 3D Axis Orientation.png}
+        \caption{LiDAR 3D axis definition}
+        \label{fig:lidar_3d_axis_definition}
+    \end{subfigure}
+    \caption{LiDAR coordinate frames in 2D (left) and when mounted vertically (right)}
+    \label{fig:lidar_axis_combined}
+\end{figure}
+The physical orientation of the sensor was checked using the RPLIDAR C1 CAD model provided by the company.
+This model was taken into Fusion 360 to determine how the LiDAR frame would change when mounted vertically on the motor.
+
+The CAD inspection showed that the forward scan direction corresponded to the negative \(Z\)-axis when the LiDAR is mounted vertically.
+This orientation was used in the transformation for the pseudo-3D point-cloud conversion.
+
+\subsection{Pseudo-3D Height Map Verification}
+Before performing rotating LiDAR scans, a height-based pseudo-3D test was carried out in order to verify if multiple 2D scan planes could be combined into a more meaningful 3D point cloud.
+In this test, the LiDAR was kept horizontally flat while its height was manually changed between scans.
+
+The initial height was \(h_0 = 0\) and the LiDAR was thereafter raised by \(\Delta h = 2.5\,\mathrm{cm}\) between each scan for a total of 10 scans. Each scan plane was saved to a CSV and converted from polar to Cartesian as seen in the initial 2D verification, with an additional height value representing the vertical coordinate.
+The height-based point cloud is presented in Section~5.2.3.
+
+The resulting CSV data was plotted as a simple 3D point cloud. This test was performed to ensure data from multiple scans could be combined into a single point cloud to provide relevant spatial data.
+
+A rudimentary pseudo-3D scan was also performed by manually rotating the LiDAR by approximately \(15^\circ\) between scans and merging the resulting scans into another pseudo-3D point cloud. 
+This test was done to ensure the data could be represented at different angles, which was crucial in order for the motor to provide any benefit.
+
+\subsection{Step Based Rotating LiDAR Scan}
+After the height-based and manual rotation tests, the LiDAR motor was mounted on the motor and configured for step-based scans.
+The goal for this test was to capture multiple 2D scans at known angles and combine them all into a single pseudo-3D point cloud.
+
+The LiDAR motor required additional angle-positioning functions compared to the drivetrain motors, 
+
+The next step involved programming the servo motor which rotates the lidar, this motor required additional functions over the driver motors. 
+The most important function involved being able to command an angle from \(0^\circ\), this time measured from \(-Z\), and rotating the shaft either CW or CCW.
+A major issue was discovered in this function which caused the rotation to be twice the size as expected, this was due to assuming the motor had 400steps/rev, this made a -90\(^\circ\) turn into a -180\(^\circ\) turn.
+With this function correctly implemented, the executable \texttt{move\_motor\_relative -90} indeed rotated the shaft by -90 degrees.
+This was a huge breakthrough as many of the earliest LiDAR scans seemed rotationally warped.
+After the ability to move the motor to any relative angle became possible we wrote a Python script which would
+\begin{enumerate}
+    \item Move motor to start angle.
+    \item Capture a \texttt{/scan} topic.
+    \item Move motor by some \(\Delta \theta \).
+    \item Repeat \(x\) amount of times.
+    \item Save all transformed points into a CSV.
+    \item Plot in MATLAB.
+\end{enumerate}
+The Python program was frequently tested using the following parameters
+\begin{description}
+    \item [Start] -90\(^\circ\).
+    \item [End] 90\(^\circ\).
+    \item [Step] 0.9\(^\circ\) or 0.45\(^\circ\).
+    \item [Scans per angle] 1 or 2.
+\end{description}
+This let us perform long lasting scans which captured a lot of good data, the 3D scans became much clearer but brought out one issue, which is that a scan going from \([-\theta, \theta]\) will create a duplicate scan plane.
+This essentially meant that the final scans would need to omit a small frontal area of the scanner, and instead scan from -89.1\(^\circ\) to 89.1\(^\circ\).
+
+\subsection{ROS2 Real-Time Scanning}
+
+Moving from offline scans to online scans meant moving from Python scripts to ROS2 nodes. A workspace was created and the Servo42D wrapper was copied in.
+The ROS system architecture became
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{RPLIDAR relationship diagram.png}
+    \caption{ROS architecture}
+    \label{fig:lidar_ros_relationship}
+\end{figure}
+
+Doing the data in real-time required reading the motor shaft angle data in real-time, this meant we had to implement data from the Servo42D's cumulative encoder value.
+Doing this provided the motor with real-time angular data about itself instead of estimating it.
+We then modified the \texttt{servo\_angle\_node} program so that it
+\begin{enumerate}
+    \item Sets motor mode.
+    \item Sets motor RPM and acceleration.
+    \item Reads encoder value.
+    \item Publishes \texttt{/lidar\_motor\_angle}
+    \item Reverses direction at angle limits
+\end{enumerate}
+
+This worked well and allowed the motor to smoothly rotate with real angular data. 
+
+\newpage
+\subsection{RViz Visualization}
+
+Since we now had nodes that successfully communicated and published the data, we could open RViz on the Raspberry Pi and inspect. 
+This technically did work but there were two massive problems
+\begin{enumerate}
+    \item RViz was significantly laggy, running at 1-2FPS.
+    \item Point cloud accumulated as old points were not deleted.
+\end{enumerate}
+We then made it so all the ROS events are published over Wi-Fi such that we could listen to these events from a laptop. 
+However, this made another issue very clear, the ROS topics were being updated too slowly over Wi-Fi.
+On the Raspberry Pi itself, the \texttt{/scan} topic is posted at 10 Hz, same goes for \texttt{/lidar\_motor\_angle} and \texttt{/pseudo3d\_cloud}, but on an external terminal the \texttt{/pseudo3d\_cloud} had an average update count of 0.5 Hz.
+This meant that the RViz, while not being laggy anymore suffered very infrequent point cloud updates.
+The solution to this became using Markers, and sending the data back as each "slice" of the 3D environment is scanned. This drastically reduced Wi-Fi overhead, and provided relatively frequent RViz updates.
+
+
+\newpage
+\section{Makerbase Servo42D}
+\subsection{Motor Configuration}
+
+\begin{figure}[H]
+    \begin{minipage}{0.55\textwidth}
+        With our rover having 4 motors for the drivetrain it was important that these motors are pre configured and have their slave id's set before mounting, it was decided that the motors will follow a counter clockwise orientation with the first one being mounted in the bottom left, the rest of the motors followed a configuration as such:
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{motor setup.png}
+        \caption{Drivetrain rover motor ID setup}
+        \label{fig:motor_id_setup}
+    \end{minipage}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Servo42D motor addressing used on the rover.}
+\begin{tabular}{c c c c}
+\hline
+Motor ID & Position & Side & Function \\
+\hline
+1 & Rear left & Left & Drivetrain \\
+2 & Front left & Left & Drivetrain \\
+3 & Front right & Right & Drivetrain \\
+4 & Rear right & Right & Drivetrain \\
+5 & LiDAR rotation motor & Centre mount & LiDAR tilt/yaw scan \\
+\hline
+\end{tabular}
+\end{table}
+
+It is important to label the position of the motors as it makes programming the rover functions such as forward, reverse and turning makes easier, as opposing motors will have their "forwards" direction facing opposite from each other.
+It is important that all four motors contain the same internal settings as well, these settings are
+\begin{description}
+    \item[Baud rate] was set to 115200.
+    \item[Work mode] was set to SR\_vFOC.
+    \item[Protocol mode] was set to MB\_RTU.  
+\end{description}
+
+\subsection{RS485 Bus and Raspberry Pi Connection}
+The Servo42D motors were all connected to the Raspberry Pi through an RS485-USB adapter. The adapter appeared as a serial device on the Raspberry Pi and was therefore easily accessible through code.
+Before connecting every single motor we tested each motor individually by connecting it, running it through a simple program which did the following
+
+\begin{enumerate}
+    \item Set RPM to 450 with an acceleration of 254 and a direction of 1.
+    \item Read back motor speed and encoder position error and log it over 5 seconds.
+    \item Perform an instantaneous emergency stop alongside a slow deceleration.
+\end{enumerate}
+
+All the Servo42D motors were then connected to the same serial A/B differential pair with unique slave ID's such that they could be individually addressed.
+
+\subsection{Custom C++ Motor Library}
+A custom C++ wrapper was written in order to simplify the communication between the motors. Despite the motors using Modbus RTU for the communication, manually coding an algorithm in order to construct the RTU frames was out of scope for this project.
+Therefore a C library \texttt{libmodbus} was used in order to handle the low-level Modbus RTU frames, serial setup, CRC and response handling. 
+
+The custom wrapper written was structured around two classes, the first of these classes being \texttt{ModbusBus}. 
+This class handled a single shared RS485 bus instance, and its constructor was responsible for correctly setting up the bus with the correct baud rate, serial device, alongside functions for reading/writing to single or multiple registers.
+The second class was the \texttt{Motor} class which implemented all the main motor functions used for the project, the class is designed to have 5 unique motor instances in the main program for the rover. The motor objects all share a single reference to the \texttt{ModbusBus} instance.
+
+Having the wrapper structured like this made it easy to write software around the motors due to not needing to manually handle Modbus errors in code, rather just calling simplified motor functions such as setting and reading RPM.
+
+The constructor for the \texttt{ModbusBus} class initialized the RTU connection by setting up baud rate, initializing serial device, any errors during this step were handled during runtime which made it easy to diagnose if the differential pair A/B was incorrectly connected. 
+Below is the implementation
+\begin{lstlisting}[language=C++, caption={Modbus bus constructor}, label={lst:bus_constructor}]
+ModbusBus::ModbusBus(const std::string& port, int baud)
+{
+    ctx_ = modbus_new_rtu(port.c_str(), baud, 'N', 8, 1);
+    if (!ctx_) throw std::runtime_error("modbus_new_rtu failed");
+    if (modbus_connect(ctx_) != 0) {
+        std::string msg = "modbus connection failed: \n";
+        msg += modbus_strerror(errno);
+        modbus_free(ctx_);
+        ctx_ = nullptr;
+        throw std::runtime_error(msg);
+    }
+}
+\end{lstlisting}
+The settings \texttt{'N', 8, 1} correspond to no parity, 8 data bits and 1 stop bit, matching the serial configuration used by the Servo42D motors.
+
+
+% The Servo42D's needed a wrapper to be written in C++ such that communication would be made easier, as manually constructing the RTU frames was not ideal.
+% As there was no need to reinvent the wheel, a Modbus RTU library was installed called libmodbus. This library dealt with all the technical stuff regarding constructing the Modbus frames, evenly spacing it and memory management.
+% The C++ wrapper was structured into two header files, one for implementing the features of the motor directly, and one relating the modbus bus features, the files were then conversly named motor.hpp and modbusbus.hpp.
+% The Modbus bus wrapper 
+
+\subsection{Implemented Motor Functions}
+The \texttt{Motor} class implemented the essential functions for both drivetrain and LiDAR features alongside functions to provide telemetry.
+The drivetrain motors mainly required continuous speed functions, whilst the LiDAR required instantaneous angle feedback alongside accurate angular steps.
+Below is a table which summarizes the most important motor functions.
+
+\begin{table}[H]
+\centering
+\caption{Main motor functions implemented in the custom wrapper.}
+\label{tab:motor_functions}
+\begin{tabular}{p{0.28\textwidth} p{0.58\textwidth}}
+\hline
+Function & Purpose \\
+\hline
+\texttt{set\_rpm()} & Commands continuous motor rotation using direction, acceleration and RPM values. Used for drivetrain control. \\
+\texttt{read\_rpm()} & Reads the current motor speed from the Servo42D. Used during motor verification. \\
+\texttt{read\_position\_error()} & Reads the encoder position error. Used to check if the closed-loop motor was following the command. \\
+\texttt{emergency\_stop()} & Immediately stops the motor. Used as a safety stop during testing. \\
+\texttt{deceleration\_stop()} & Stops the motor using controlled deceleration. Used to avoid sudden motion changes. \\
+\texttt{move\_relative\_degrees()} & Commands relative angular movement. Used for the LiDAR rotation motor. \\
+\texttt{read\_encoder()} & Reads encoder position or cumulative position data. Used for LiDAR angle feedback. \\
+\hline
+\end{tabular}
+\end{table}
+
+The most important function for the drivetrain is \texttt{set\_rpm()}, since without it the rover would not be able to manoeuvre.
+\begin{lstlisting}[language=C++, caption={RPM commanding function}, label={lst:set_rpm}]
+    int Motor::set_rpm(uint8_t direction, uint8_t acceleration, uint16_t speed)
+    {
+        constexpr int addr = 0x00F6;
+        constexpr int nr = 0x02;
+        uint16_t data[nr];
+        if (direction > 1) direction = 1;
+        if (acceleration > 255) acceleration = 255;
+        if (speed > 3000) speed = 3000;
+        data[0] = (direction << 8) | acceleration;
+        data[1] = speed;
+        int res_count = bus.write_multiple_registers(slave_id, addr, nr, data);
+        if (res_count != nr)
+        {
+            std::cerr << "Failed writing to registers\n";
+            return -1;
+        }
+        return 0;
+    }
+\end{lstlisting}
+
+\subsection{Drivetrain Motor Mapping}
+After successfully implementing individual motor control it was time to combine the four drivetrain motors such that rover movement became trivial.
+At first the motors were grouped by side, where motors 1 and 2 became the left hand side, and 3 and 4 became the right hand side. 
+This grouping is important because if all motors are set to spin with \(\mathrm{direction} = 1\) then the opposing sides will actually counteract each other and cause the rover to spin in place.
+
+In order to control the rover at first we developed a simple program which allowed for control with W/A/S/D, the program was extremely primitive with no additional speed control while in operation but quickly showcased that the rover is capable of manoeuvring.
+The rover worked by only driving forward whilst a movement key was pressed and having the motors bring it to a stop relatively quickly, similar to the speed of regenerative braking on an EV. 
+The motor scheme with the raw direction parameters then became
+
+\begin{table}[H]
+\centering
+\caption{High-level drivetrain command mapping.}
+\label{tab:drivetrain_mapping}
+\begin{tabular}{c c c}
+\hline
+Command & Left side motors ID 1--2 & Right side motors ID 3--4 \\
+\hline
+Forward & Forward  & Reverse \\
+Reverse & Reverse & Forward direction \\
+Turn left & Reverse & Reverse \\
+Turn right & Forward & Forward \\
+Stop & Stop & Stop \\
+\hline
+\end{tabular}
+\end{table}
+
+Since the direction values depended on the physical orientation of the motor, a quick fix was added in the code such that all motors had their \texttt{forward} direction indicating the same direction.
+
+\subsection{LiDAR Motor Control}
+The motor for the LiDAR control required additional control, the first most primitive test for the LiDAR involved manually positioning the motor at given angles.
+Due to the fact that the stepper motors try to hold their current position under load, a function for temporarily disabling the holding torque needed to be implemented in order for the LiDAR to be correctly positioned according to the earliest scans.
+
+Since all the drivetrain motors worked on speed based commands we required additional functionality for angle based positioning, this was implemented such that instead of setting a target RPM, we could set the target angle from the origin.
+Under the hood this worked by taking the step size of the motor and moving it \(x\) amount of required steps, however this function had a critical flaw in early development where we wrongly assumed the step size for the motors was 400 steps per revolution.
+This caused all early LiDAR based scans to rotate twice as much as necessary therefore causing the early scans to look very morphed.
+
+For later scans it was implemented such that the motor will read its current angular position on each loop, and correcting for it if needed, this made it so that we always knew the exact angle of the current scan plane, and also allowed for continuous rotation back and forth.
+
+\subsection{Unloaded Drivetrain Motor Test}
+An unloaded drivetrain test was performed to verify that the four drivetrain motors could be addressed individually, commanded to a fixed RPM setpoint, and monitored through the custom Servo42D wrapper. The test was also used to confirm that the motors had been configured correctly before loaded drivetrain testing.
+
+During the test, the rover was lifted so that the wheels could rotate freely without ground contact. Each drivetrain motor was commanded individually to a fixed RPM setpoint and held for a short duration while telemetry data was recorded. The logged data included the commanded RPM, measured RPM and motor ID. The data was saved to a CSV file and later plotted in MATLAB.
+
+This test was not intended to evaluate traction or terrain mobility, since the wheels were unloaded. The purpose was to verify motor addressing, RPM command response and telemetry readback over the shared RS485 bus.
+
+\subsection{Stationary Oscillation Test}
+A stationary drivetrain response test was performed to investigate the behaviour of the closed-loop drivetrain motors when the rover was loaded by ground contact. During this test, the rover was placed on a soft test surface with the motors powered and holding position. A small manual disturbance was applied to the rover while motor telemetry and IMU acceleration data were recorded.
+
+The purpose of this test was to observe whether the drivetrain produced corrective oscillations when the wheels were loaded by the surface. The Servo42D motors use internal closed-loop control, and under load the correction behaviour can affect the stability of the drivetrain. The logged motor data and IMU acceleration data were saved to CSV files and plotted in MATLAB for comparison.
+
+This test was used to document the drivetrain behaviour under stationary load, rather than to validate normal driving performance.
+
+\subsection{Zero-Radius Turn Test}
+A zero-radius turn test was performed to evaluate how the rover responded to a differential steering command where the left and right drivetrain sides were commanded in opposite directions. This type of turn is useful for compact steering, but it also produces high wheel scrub because the wheels must slide against the surface during rotation.
+
+The rover was placed on the test surface and commanded to perform a zero-radius turn using different RPM and acceleration values. During each test, the commanded RPM, measured motor RPM and IMU acceleration data were recorded. The purpose was to evaluate whether the rover could perform the turn and to observe how the drivetrain behaved under the increased load caused by surface friction.
+
+The results from this test were used to assess the limitations of point turning for the physical prototype.
+\newpage
+
+\section{ROS2 and Gazebo Simulation}
+
+\subsection{System Architecture}
+
+The simulation system in this project is organized into three layers that work together to produce a functioning rover simulation. The first is the robot description layer, where Xacro files are processed into a parameter called \texttt{robot\_description} that defines the rover's physical structure. The second is the Gazebo execution layer, which starts the physics simulation, loads the required systems, and spawns the rover into the virtual world. The third is the ROS2 observation and control layer, where \texttt{robot\_state\_publisher} maintains the transform tree and \texttt{ros\_gz\_bridge} handles all communication between ROS2 and Gazebo's internal transport system. Keeping these three responsibilities separated makes the system easier to understand, debug, and extend.
+
+\subsubsection{Robot Description Structure}
+
+The top-level robot description is assembled in \texttt{robot.urdf.xacro}, which pulls together four files. \texttt{Robot\_core.xacro} defines the physical structure of the rover which is the chassis, rocker arms, wheels and their joint relationships. \texttt{Inertial\_macro.xacro} handles repeated inertia calculations so we dont have to write them out for every link. \texttt{Lidar.xacro} defines the laser frame and sensor element. \texttt{Gazebo\_control.xacro} sends Gazebo-specific system plugins, specifically the DiffDrive controller and the JointStatePublisher, which are only relevant at simulation time and do not affect the base URDF structure.
+
+The separation was an intentional descision. By keeping simulation-specific content in its own file, the core robot description remains clean, the same \texttt{robot\_core.xacro} could be loaded into RViz for inspection without pulling in Gazebo content. It also means that switching to a different simulator or adding hardware support later only requires changes to one file instead of going through one large combined script.
+
+\begin{lstlisting}[language=XML, caption={Xacro include structure used in the robot description}]
+<xacro:include filename="robot_core.xacro" />
+<xacro:include filename="gazebo_control.xacro" />
+<xacro:include filename="lidar.xacro" />
+<xacro:include filename="imu.xacro" />
+\end{lstlisting}
+
+\subsubsection{Gazebo Execution Layer}
+
+The simulation started in \texttt{empty.world} for early development and testing. Once the core system started working, it was switched to \texttt{lunar\_surface.sdf}, which is a custom world with moon-like terrain, including a hill and scattered rocks to represent the project environment.
+
+Both worlds use the same physics settings, with \texttt{max\_step\_size = 0.001} and \texttt{real\_time\_factor=1.0}. The \texttt{max\_step\_size} controls how small each simulation step is, where a lower value gives more accurate physics but also requires more computation. The \texttt{real\_time\_factor} controls how fast the simulation runs compared to real time, where a value of 1.0 means the simulation runs at normal speed. Some plugins also had to be added manually, like Physics, UserCommands, Scenebroadcaster, Sensors, and Contact, since they are not active by default in Gazebo.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{gazebo_worlds.png}
+    \caption{Gazebo lunar surface vs empty world.}
+    \label{fig:gazebo_worlds}
+\end{figure}
+
+\subsubsection{ROS2 Communication Layer}
+
+Communication between ROS2 and Gazebo is handled through \texttt{ros\_gz\_bridge}, which is configured in a YAML file called \texttt{gz\_bridge.yaml}. Using YAML setup is recomended when bridging multiple topics since it keeps the configuration readable and easy to maintain\cite{openrobotics2024}. Each entry defines the topic names on both sides, the message types, and direction of the data flow.
+
+The topics used in this project cover all the main data flows needed for the rover simulation. Velocity commands are sent from ROS2 to Gazebo through \texttt{cmd\_vel}, allowing the robot to be controlled from ROS2. At the same time, data such as odometry and transforms are sent back from Gazebo to ROS2 through \texttt{odom} and \texttt{tf}. Joint states are also published from Gazebo and forwarded to ROS2 on \texttt{joint\_states}. These are then used by \texttt{robot\_state\_publisher}, together with the robot's URDF model, to compute and publish the full transform tree.
+
+Velocity commands travel from ROS 2 to Gazebo on \texttt{cmd\_vel}. Odometry, transforms, joint states, LiDAR scan data, and the simulation clock all flow the other way from Gazebo back to ROS 2. The clock is bridged undirectionally, making Gazebo the only time source for all nodes, which keeps timestamps consistent across all topics\cite{openrobotics2024}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{node_graph.png}
+    \caption{Node graph showing active ROS 2 topics and node connections during simulation.}
+    \label{fig:node_graph}
+\end{figure}
+
+\subsection{Robot Modeling in ROS 2}
+\subsubsection{Link and Joint Tree}
+
+The kinematic tree starts at \texttt{base\_link}, which represents the main chassis. On each side, a rocker link branches off from the chassis and connects to a front and rear wheel through continious joints, giving the rover its four wheel drive. The LiDAR is mounted on top of the chassis through a fixed joint at \texttt{laser\_frame}. 
+
+Each link has three properties defined. Visual geometry uses imported STL mesh files for the chassis and rocker arms, and simple cylinders for the wheels. For collision we used simplified cylinder shapes instead of the full mesh. This keeps the physics stable and prevents the mesh detail from causing unpredictable physics behaviour. Inertial properties are handled through the macros in \texttt{inertial\_macros.xacro}, which calculates the correct inertia from the mass and dimensions of each link.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/rviz_tf.png}
+    \caption{RViz TF tree visualized in RVIZ.}
+    \label{fig:rvis_tf}
+\end{figure}
+
+\subsubsection{Development Problems and Refinements}
+
+Building the robot model came with a few problems that took some time to figure out.
+
+\begin{figure}[H]
+    \begin{minipage}{0.55\textwidth}
+        The first major problem was that several components appeared visually disconnected from the rest of the rover. The wheels and chassis were floating, and rockers weren't spawning in. This turned out not to be a missing link problem, but a wrong joint placement. Several joint names had left/right and front/back labels mixed up, joint parent/child relationships were inconsistently defined, and joint original positions placed links at unintended locations in space. The fix involved correcting joint naming systematically, verifying every parent/child pair against the intended physical layout, and adjusting origin values until each part appeared in the correct position. Simplifying parts of the structure temporarily during debugging helped isolate which joint was responsible for each visual issue.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/robot_problem_1.png}
+        \caption{Gazebo problem 1}
+        \label{fig:gazebo_problem_1}
+    \end{minipage}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{minipage}{0.55\textwidth}
+        The second problem involved the rear rocker arms appearing inverted or badly oriented. The cause was incorrect RPY values in the rocker joint origins. The rotation was defined in a way that flipped toe rockers visually. Rather than adjusting raw radian values by trial and error, the solution was to introduce a named Xacro property like \texttt{back\_rocker\_angle\_deg} and express rotation as:
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/gazebo_problem_2.png}
+        \caption{Gazebo problem 2}
+        \label{fig:gazebo_problem_2}
+    \end{minipage}
+\end{figure}
+
+\begin{lstlisting}[language=XML, caption={Rocker angle defined using a Xacro property}]
+rpy="0 ${back_rocker_angle_deg*pi/180} 0"
+\end{lstlisting}
+
+This made it easier to adjust the angle since degrees are more straightforward to work with. This made future modifications safer since the value only needs to be changed in one place.
+
+The third problem appeared when testing motion. The rover was not driving or turning correctly. IBy checking the TF tree and \texttt{joint\_states} in RViz, we found that wheel joint names were inconsistent with their physical positions. Left and right wheels had been swapped in the joint definitions, and some wheel joints used different orientations. This caused the DiffDrive plugin to control the wrong wheels as the left and right drive wheel group. The fix involved renaming and remapping wheel joints consistently and verifying the result by monitoring \texttt{joint\_states} while sending turn commands and confirming which joints were responding.
+
+The fourth and most involved problem was persistent wheel slipping and poor turning behaviour, even after the joint naming was corrected. By monitoring \texttt{cmd\_vel} and \texttt{joint\_states}, it was confirmed that the wheel joints were rotating as expected, meaning the issue was not in the control pipeline but in the physical simulation setup. The root cause was related to how the wheel-ground contact was modeled. The wheel collision shape had been defined as a sphere which resulted in unrealistic contact with the ground. To address this several Gazebo contact parameters were adjusted, including friction coefficients, slip values, and joint damping. These changes improved the turning behavior to an acceptable level. This showed that getting the physics right in simulation is just as important as getting the model right\cite{siegwart2004}.
+
+\subsubsection{Final Model Parameters}
+
+The final model uses a wheel radius of \(r = 0.069002m\) and a wheel separation of \(L = 0.10m\) both configured in \texttt{gazebo\_control.xacro}. These need to match the geometry defined in \texttt{robot\_core.xacro}, since the DiffDrive plugin uses them to convert \texttt{cmd\_vel} commands into individual wheel velocities. If they dont match, the odometry will drift over time.
+
+\begin{lstlisting}[language=XML, caption={Differential drive wheel parameters used in Gazebo}]
+<left_joint>left_wheel_joint</left_joint>
+<left_joint>left_wheel_joint_back</left_joint>
+<right_joint>right_wheel_joint</right_joint>
+<right_joint>right_wheel_joint_back</right_joint>
+<wheel_separation>0.10</wheel_separation>
+<wheel_radius>0.069002</wheel_radius>
+\end{lstlisting}
+
+\subsection{Simulation Environment in Gazebo}
+
+\subsubsection{World Design}
+
+\begin{figure}[H]
+    \begin{minipage}{0.55\textwidth}
+        The simulation environment went through two stages. Initially the rover was developed and tested in \texttt{empty.world} which is a flat and minimal world design that is better for validating the robot model, joint structure and topic communication. Once the core system was working correctly, the world was switched to a custom lunar surface to make the simulation more realistic for the actual deployment environment.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/gazebo_climbing.png}
+        \caption{Rover successfully climbing a hill in Gazebo}
+        \label{fig:gazebo_climbing}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}{0.55\textwidth}
+        The lunar world features a moon-like hill and a few rocks scattered around the surface. Both of these serve a purpose. The hill is used to test if the rover can climb and hold its position on a slope. This is relevant for testing the rocker-bogie geometry and wheel contact configuration to check if it will actually work in real life. The scattered rocks represent surface obstacles and give the LiDAR something to actually detect, which is more useful for validating the mapping, than only a flat empty world where the sensor has nothing to detect.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/lunar_world2.png}
+        \caption{Simulated lunar surface}
+        \label{fig:lunar_world2}
+    \end{minipage}
+\end{figure}
+
+
+Gazebo runs the physics simulation while RViz visualizes the live LiDAR output at the same time. As shown in the figure below, the red points in RViz are active scan returns from the surrounding rocks and terrain, showing that the sensor is correctly detecting obstacles around the rover.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/gazebo_rviz1.png}
+    \caption{Lunar world in Gazebo and RViz Lidar simulation.}
+    \label{fig:Gazebo_rviz1}
+\end{figure}
+
+\subsection{Sensor Integration and Topic Communication}
+
+\subsubsection{LiDAR}
+
+The rover's primary sensor is a LiDAR which is defined in \texttt{lidar.xacro} as a \texttt{gpu\_lidar} element attached to the \texttt{laser\_frame} link on top of the chassis. Gazebo generates the scan data internally and forwards it through \texttt{ros\_gz\_bridge} to the \texttt{scan} topic in ROS2 as \texttt{sensor\_msgs/msg/LaserScan}.
+
+\begin{lstlisting}[language=XML, caption={Gazebo LiDAR sensor configuration}]
+<gazebo reference="laser_frame">
+        <material>Gazebo/Black</material>
+        <sensor name="laser" type="gpu_lidar">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>false</visualize>
+            <update_rate>10</update_rate>
+            <lidar>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>12</max>
+                </range>
+                  </lidar>
+            <topic>scan</topic>
+            <gz_frame_id>laser_frame</gz_frame_id>
+        </sensor>
+    </gazebo>
+\end{lstlisting}
+
+The sensor covers a full 360 horizontal area with 360 samples, giving one scan point per degree. The detection range runs from 0.3 to 12 meters, and the minimum distance prevents the rover's own chassis from appearing in the scan. The \texttt{gz\_frame\_id} tag tells Gazebo which coordinate frame to attach the scan data to, which is important for the transforms to be correct in ROS2.
+
+\subsubsection{IMU}
+
+An IMU sensor was added in \texttt{imu.xacro}, attached as a fixed link to the chassis. It publishes orientation, angular velocity, and linear acceleration at 10 Hz on \texttt{/imu}.
+
+\begin{lstlisting}[language=XML, caption={Gazebo IMU sensor configuration}]
+<gazebo reference="imu_link">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>10</update_rate>
+    <topic>/imu</topic>
+    <plugin filename="gz-sim-imu-system"
+            name="gz::sim::systems::Imu"/>
+  </sensor>
+</gazebo>
+\end{lstlisting}
+
+Getting the sensor working required fixing two issues, a \texttt{<gz\_frame\_id>} tag that prevented the sensor from loading, and a topic naming mismatch between the bridge (\texttt{imu}) and Gazebo (\texttt{/imu}) that causes a connection failure. Both needed to be corrected before data appeared on the topic.
+
+\subsubsection{Bridge Configuration}
+
+All communication between Gazebo and ROS2 is defined in \texttt{gz\_bridge.yaml}. Each configuration defines the topic names on both sides, the message types, and the direction of data flow.
+
+\begin{lstlisting}[language=XML, caption={Gazebo bridge in YAML}]
+#Clock
+- ros_topic_name: "clock"
+  gz_topic_name: "clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# Sensors plugin
+- ros_topic_name: "scan"
+  gz_topic_name: "scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "imu"
+  gz_topic_name: "/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+
+# DiffDrive plugin
+- ros_topic_name: "odom"
+  gz_topic_name: "odom"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "tf"
+  gz_topic_name: "tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "cmd_vel"
+  gz_topic_name: "cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+# JointState plugin
+- ros_topic_name: "joint_states"
+  gz_topic_name: "joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: GZ_TO_ROS
+\end{lstlisting}
+
+Almost all topics flow from Gazebo to ROS2. Sensor data, odometry, transforms, joint states, and the simulation clock. The only exception is \texttt{cmd\_vel}, which flows from ROS2 into Gazebo, carrying the velocity commands which drive the rover. The clock is bridged one way from Gazebo,  making it the only time source for all ROS2 nodes. This keeps timestamps consistent across all topics, which is important when recording data or running time-dependent processes.
+
+The IMU entry is also worth mentioning since Gazebo topic name uses a leading slash (\texttt{/imu}) while the ROS2 side does not (\texttt{imu}). This was discovered during testing when the bridge was connecting but receiving no data. Gazebo publishes the IMU on \texttt{/imu} as an absolute topic path, and the bridge entry must match that exactly on the Gazebo side \cite{openrobotics2024}.
+
+\subsection{Launch Structure and System Execution}
+
+The system starts with two launch files that handle different tasks. Splitting them up made development easier since we could restart one part without taking down the whole simulation.
+
+\subsubsection{rsp.launch.py}
+
+This file has one important job which is to process the robot description and start \texttt{robot\_state\_publisher}. It runs Xacro on \texttt{robot.urdf.xacro} at launch time, converting it into a \texttt{robot\_description} string, and passes that directly into \texttt{robot\_state\_publisher} as a parameter. This way the description is always up to date with the xacro files, and we don't need to keep a separate URDF copy in the package. The \texttt{use\_sim\_time} parameter is also passed through here, so that \texttt{robot\_state\_publisher} uses the simulation clock rather than real time.
+
+\begin{lstlisting}[language=Python, caption={Robot description setup in rsp.launch.py}]
+xacro_file = os.path.join(pkg_path, 'description', 'robot.urdf.xacro')
+robot_description_config = Command(['xacro ', xacro_file])
+params = {
+    'robot_description': robot_description_config,
+    'use_sim_time': use_sim_time
+}
+\end{lstlisting}
+
+\subsubsection{launch.py}
+
+\begin{figure}[H]
+    \begin{minipage}{0.55\textwidth}
+        The main launch file handles everything else. It includes \texttt{rps.launch.py} first, then starts Gazebo with the lunar surface world, spawns the rover from \texttt{robot\_description}, and starts the topic bridge from \texttt{gz\_bridge.yaml}. The rover is spawned at a small z offset of 0.2 meters above the ground to prevent collision geometry from going inside the surface during startup as you can see in this photo. This would otherwise cause the physics engine to apply large forces and destabilize the spawn sequence.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/sinking_robot.png}
+        \caption{Collision geometry going inside the surface}
+        \label{fig:sinking_robot}
+    \end{minipage}
+\end{figure}
+The startup sequence follows a specific order. First robot description and TF are initialized, then Gazebo starts and loads the world, after that the rover spawns into the simulation, and finally the bridge connects all topics. The order matters. Attempting to spawn the rover before Gazebo is fully ready causes a failed spawn, and starting the bridge before the robot exists in the simulation causes connection warnings as the bridge tries to connect to topics that are not yet being published. The TimerAction script ensures this sequence works no matter how long Gazebo takes to load.
+
+\begin{lstlisting}[language=Python, caption={Launch sequence for the Gazebo simulation}]
+return LaunchDescription([
+    rsp,
+    world_arg,
+    gazebo,
+    TimerAction(period=3.0, actions=[spawn_entity]),
+    TimerAction(period=3.0, actions=[ros_gz_bridge]),
+])
+\end{lstlisting}
+
+
+\newpage
+\section{Mechanical Design and FEA Method}
+
+Finite Element Analysis was used to evaluate the main 3D-printed rover components and compare Prototype 1 with the final mechanical design. The analysis was carried out in Autodesk Fusion 360. The purpose was to investigate whether the final design reduced stress and displacement in critical areas such as the rocker arm, chassis bearing area and wheel hub.
+
+The rover components consist of complex geometries such as holes, curved surfaces, bearing fits, fastening points and varying wall thicknesses. Because of this, simple hand calculations were not sufficient to describe the full stress distribution. FEA was therefore used to visualize local stress concentrations and deformation under load \cite{Wilcox2020}.
+\subsection{Material Properties}
+
+The rover parts were manufactured using ASA. The material properties used in the Fusion 360 simulations are shown in Table~\ref{tab:asa_material_properties}. The allowable stress was chosen based on the lower strength direction of the printed material, since 3D-printed parts can be weaker across layer lines \cite{BambuLabASANEW}.
+
+\begin{table}[H]
+\centering
+\caption{ASA material properties used in the Fusion 360 FEA simulations.}
+\label{tab:asa_material_properties}
+\begin{tabular}{l c c}
+\hline
+Material property & Value & Unit \\
+\hline
+Density, \(\rho\) & 1050 & kg/m\(^3\) \\
+Poisson's ratio, \(\nu\) & 0.37 & -- \\
+Young's modulus, \(E\) & 2.45 & GPa \\
+Allowable stress, \(\sigma_{\mathrm{allow}}\) & 31 & MPa \\
+Tensile strength in XY print direction & 37 & MPa \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Assumptions and Limitations}
+
+The FEA simulations were based on several simplifying assumptions:
+
+\begin{itemize}
+    \item The material was treated as isotropic, meaning equal stiffness and strength in all directions.
+    \item Perfect layer adhesion was assumed.
+    \item The parts were treated as homogeneous, even though the printed components contain infill.
+    \item The material was assumed to behave linearly elastically.
+    \item The load cases were static, while real driving includes impacts, vibration and uneven terrain.
+\end{itemize}
+
+These assumptions mean that the FEA results should mainly be used to compare Prototype 1 and the final design, rather than as an exact prediction of real failure load.
+
+\subsection{Load Calculations}
+
+All load cases assumed a maximum rover mass of 15\,kg with a factor of safety of 2.5 \cite{NASA_STD5001B}.
+The mass is divided into the chassis weight supported by the pivot joints and components resting on the ground.
+
+\begin{tabularx}{\textwidth}{|X|c|c|c|}
+    \hline
+    \textbf{Component} & \textbf{Unit weight (g)} & \textbf{Quantity} & \textbf{Total (kg)} \\
+    \hline
+    Motors (NEMA 17) & 315 & 4 & 1.260 \\
+    \hline
+    Wheels & 157 & 4 & 0.628 \\
+    \hline
+    Rocker arms F/R & 106/117 & 2/2 & 0.446 \\
+    \hline
+    Total mass & & & 2.334 \\
+    \hline
+    Chassis load & & & \(15.000 - 2.334 = 12.666\) \\
+    \hline
+\end{tabularx}
+\paragraph{Chassis load:}
+The drivetrain components (total 2.334\,kg) were subtracted from the rover mass, leaving 12.666\,kg supported by the chassis. With FoS = 2.5 and distribution over two rocker sides:
+
+\begin{align*}
+W_{\text{chassis}} &= 12.666 \cdot 9.81 = 124.24\,\text{N} \\
+F_{\text{sim}} &= 124.24 \cdot 2.5 = 310.60\,\text{N} \\
+F_{\text{pivot}} &= 310.60 / 2 = 155\,\text{N (per rocker)}
+\end{align*}
+
+\paragraph{Wheel loads:}
+Two cases were considered. The results are summarized in Table~\ref{tab:wheel_loads}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|c|c}
+\textbf{Case} & \textbf{Total load (N)} & \textbf{Per wheel (N)} \\ \hline
+Ground reaction (full rover mass) & 367.88 & 92 \\
+Direct hub load (wheel mass removed) & 352.44 & 88.1 \\
+\end{tabular}
+\caption{Calculated wheel loads with FoS = 2.5.}
+\label{tab:wheel_loads}
+\end{table}
+
+For the ground reaction case:
+$W_{\text{total}} = 15 \cdot 9.81 = 147.15\,\text{N}$, $F_{\text{sim}} = 147.15 \cdot 2.5 = 367.88\,\text{N}$, $F_{\text{ground,wheel}} = 367.88 / 4 = 92\,\text{N}$.
+
+For the hub load case (removing 4 wheels at 0.157\,kg each):
+$m_{\text{hub}} = 15 - (4 \cdot 0.157) = 14.372\,\text{kg}$, $F_{\text{hub,total}} = 14.372 \cdot 9.81 \cdot 2.5 = 352.44\,\text{N}$, $F_{\text{hub,wheel}} = 352.44 / 4 = 88.1\,\text{N}$.
+
+\subsection{FEA Setup}
+
+Three main components were analysed: the rocker arm, the chassis bearing area and the wheel hub. These were selected due to the critical findings in prototype 1.
+
+For the rocker arm, reactionforces was applied to the motor mount and constrains were placed at the bearing and rocker joints. For the chassis, bearing load was applied, with frictionless constrains at inner bearing and constrained at the bottom. For the wheel, two load cases were used: one with a ground reaction force at the outer wheel contact area, and one with load applied directly at the hub connection.
+
+The Prototype 1 and final design simulations were compared using maximum von Mises stress and maximum displacement. The full Prototype 1 setup and result figures are placed in the appendix, while the main report focuses on the final design and the numerical comparison.
+Containg 3\% global mesh and 0.9\% local mesh for critical areas, images can be found in Appendix.
+\section{Physical IMU Verification}
+The IMU was connected to the Raspberry Pi using the I2C bus. The IMU appeared on the I2C bus at address \texttt{0x69} which was verified using \texttt{i2cdetect}.
+
+A python script was written to read the acceleration and gyro data from the IMU. This test was done to ensure the IMU was correctly wired and produced meaningful data.
+The rover was placed in several static orientations during this test, which are seen below
+
+\begin{itemize}
+    \item Flat. Forward 45\(^\circ\) tilt. Reverse 45\(^\circ\) tilt. Left 45\(^\circ\) tilt. Right 45\(^\circ\) tilt. Flat again.
+\end{itemize}
+
+In each orientation the rover was held still whilst the Python script captured the IMU data over 2 seconds, this data was written to a CSV file which was later used for plotting.
+The plot for this data was created in MATLAB and showed us an average acceleration of 1g in each pose orientation, whilst the individual acceleration components changed with orientation.
+
+This test gave us the confidence that the IMU worked as expected.

@@ -1,0 +1,102 @@
+\chapter{Discussion}
+
+\section{LiDAR and Pseudo-3D Mapping}
+The LiDAR mapping system was one of the strongest parts of the rover. The initial 2D tests demonstrated that the C1 could provide great spatial data with accurate angle
+and range measurements, and allowing this data to be converted into a Cartesian system.
+
+The height based pseudo-3D scan showed us that multiple 2D scans could be layered together and plotted as a single point cloud. 
+Despite this test being very simple it reinforced the idea that multiple 2D slices of an environment can be combined into a more detailed 3D map.
+Our rotating LiDAR scan test again demonstrated that several 2D planes when rotated are capable of producing an even more accurate point cloud, proving the idea was feasible.
+
+A major limitation with our system is the dependence on accurate motor data. An early test showed that an incorrect assumption about the motor angle would produce vastly warped results. 
+When this issue was fixed the point cloud data became more reliable, this showed that the scan quality does not only depend on the LiDAR sensor itself but also the rotating mechanism.
+
+The ROS 2 implementation showed that the system could publish and transform LiDAR data during operation, however visualization performance was quite limited.
+Running RViz on the Raspberry Pi resulted in low frame rates which made visualization near impossible. The implementation of streaming the 
+data over Wi-Fi worked well for RViz performance but introduced a big drop in bandwidth.
+The visualization approach then changed from sending PointCloud2 data to Marker data which improved bandwidth a little, but still made real-time visualization heavily dependent on Wi-Fi.
+
+Overall the LiDAR results show that rotating a 2D LiDAR sensor can generate quite usable pseudo-3D point cloud data, with the main limitations being scan frequency, 
+bandwidth limitations and visualization performance.
+The system serves as proof of concept but further work is needed before it can be considered a reliable real-time approach for rover navigation.
+
+\section{Motor Discussion}
+The motor control system was highly successful from a software and communications perspective. 
+It clearly demonstrated that all Servo42D motors could be individually addressed over the same physical RS485 bus, 
+and that the C++ wrapper made it possible to command RPM, angle and other useful features. 
+This confirmed that the Raspberry Pi is very capable of controlling multiple motors over the same physical bus.
+
+The unloaded drivetrain test showed that each drivetrain motor was capable of reaching a setpoint RPM. This allowed us to verify RPM command function as well as telemetry readback. 
+The simulated zero-point right-hand turn also showed that individually driving the motors of one side worked as expected. 
+
+The unloaded test did not represent real drivetrain performance on ground however, as when the rover sits on ground the drivetrain system behaves significantly different.
+The stationary oscillation test showed that the drivetrain motors would enter a looped correction pattern after a slight external disturbance.
+We interpreted the cause behind this to be the PID controller overcorrecting, as the encoder value would oscillate between large positive and negative values,
+this was also confirmed by the IMU data spiking similarly at the same time.
+This indicated that the oscillation was not just a software issue but rather physical movement of the rover body.
+
+The zero-radius turn test showcased that sharp turning was quite difficult for the current wheel design. During the test the mechanical friction between rover
+and ground became too high such that the rover was incapable of completing a zero-radius turn without risking damage to the motors.
+However, this does not mean a zero-radius turn is impossible, but it means that the rover requires more favourable conditions before a turn like this is feasible.
+
+Current limiting the motors was attempted in order to reduce the intensity of the oscillatory behaviour, this did have some beneficial effects but did not fully mitigate the problem. 
+This also meant that the motors would have less torque to drive the rover, effectively transferring the problem from one thing to another. 
+This behaviour may be fixable by tuning the built-in PID controller, but the function returned invalid data when attempted. 
+
+The LiDAR rotation was more successful than the drivetrain due to operating with a smaller load. 
+Once the correct angle conversion was implemented the LiDAR motor continuously provided us with highly accurate movements and telemetry for the scans.
+This showed us that the Servo42D motors had an excellent application for controlled sensor rotation, and a less favourable outcome when used under heavier mechanical loads.
+
+Overall the motor system verified multi-motor communications over the same physical bus, with the main limitation not being communication or the motor wrapper, 
+but rather the interaction between the closed-loop system of our motors, mechanical load, and ground quality.
+Future work should focus on drivetrain tuning, improved wheel traction and skid capabilities.
+
+\subsection{IMU and Motion Feedback}
+The IMU was verified as a functional sensor by placing the rover in static orientations and recording the data over a few seconds.
+The result showed that the measured forces changed based on rover orientation, while still keeping the total acceleration to 1g. 
+This confirmed that the IMU was connected correctly and working as expected.
+
+The IMU was originally intended to support position estimation and slip detection, however full sensor fusion was not implemented into the final prototype.
+Reliable position data would require combining wheel odometry, gyroscope data and was deemed to be outside the scope of the project.
+
+The stationary oscillation test provided a practical use for the IMU, as it showed and confirmed that the rover was indeed oscillating back and forth, 
+and that it was not due to a bug with the motor encoders.
+
+For future work the IMU should be more directly integrated into the rover control and feedback system. Possible improvements include detecting excessive tilt, 
+identifying wheel slip and assisting with wheel odometry.
+This makes the IMU not only useful as a standalone sensor but provides very good data when combined with the other data on the rover.
+
+\subsection{Simulation Compared to Real Testing}
+The Gazebo simulation was useful in verifying that ROS 2 structure, topic communication, robot model and basic differential-drive behaviour worked.
+The simulation allowed us to test commands, odometry output, LiDAR data and IMU data before the physical systems were integrated with each other.
+This reduced the amount of physical debugging that was required, and made it simpler to verify topic data worked as expected.
+
+However the simulation was not capable of representing the physical drivetrain behaviour. In the simulation the rover could be driven over simulated lunar terrain, 
+and the LiDAR data was easily visualized using RViz.
+In physical testing, the drivetrain was much more sensitive to friction and surface interaction, 
+the stationary oscillation test showed issues which the simulated rover model did not encounter.
+
+The simulation failed to capture the drivetrain issues due to the difficulty in modelling contact between the wheels and the ground. The physical prototype faced surfaces 
+with high friction and overall slippery surfaces which the rover wheels were not capable of navigating well.
+This showcases that the simulation was useful to us when it came to verifying software integrations, it failed to represent accurate physical driving conditions.
+
+The simulation results should therefore mainly be interpreted with the ROS 2 pipeline and sensor data in mind, as this provided a good baseline which was implemented into the rover prototype.
+For future work it is recommended to model a more realistic drivetrain model, ensuring wheel dimensions match precisely, 
+friction and mass being modelled correctly and ensuring the rover is simulated on a variety of different surfaces.
+Had the simulation and physical rover drivetrains matched more precisely, the final physical result may have been improved.
+
+\subsection{System Limitations and Further Work}
+
+The final rover prototype demonstrated that the main principles used in the project worked, but several limitations were also identified. The strongest verified features were the use of a 2D LiDAR sensor to generate a pseudo-3D point cloud, individual motor communication over a shared RS485 bus, IMU readout and ROS 2 simulation support.
+
+The LiDAR system produced useful spatial data, but the quality of the pseudo-3D point cloud depends strongly on correct angular positioning of the rotating LiDAR mount. If the motor angle is incorrect, the transformed point cloud becomes warped and unsuitable for mapping or navigation. Future work should therefore include a more rigid and repeatable LiDAR mount, improved synchronization between LiDAR data and motor angle, and possibly a sensor with a higher scan rate. This would allow faster rotation while still producing reliable spatial data.
+
+The drivetrain requires the most attention, since mobility is essential for any rover system. The unloaded RPM test showed that the motors responded correctly to commands, but loaded testing showed that the drivetrain became unstable when the rover was in contact with the ground. Zero-radius turns were especially difficult because the wheels could not scrub effectively on the tested surface, causing high resistance and corrective motor oscillation. Future work should therefore focus on motor PID tuning, improved turning strategies, wheel-surface interaction and reducing friction during skid steering.
+
+The power system was mainly validated through calculations and estimates. A full runtime test using the INA226 power monitoring device should be performed in order to obtain a more realistic estimate of battery capacity and current consumption during operation. Experimental validation of the power system and odometry was planned, but not completed. Mechanical design iterations and print failures delayed final assembly, and once the rover was available, the remaining time was mainly dedicated to validating the pseudo-3D mapping system. While basic drivetrain testing was performed, the oscillatory behaviour and turning difficulties prevented reliable physical testing of the power monitoring and odometry subsystems.
+
+The mechanical analysis was also limited by simplifications in the FEA setup. Future simulations should include more realistic load cases, such as dynamic loading while the rover moves over uneven terrain. This would give a better understanding of how forces transfer through the rocker arms, wheel mounts and chassis during driving. The material data should also be improved by printing physical test specimens with the same settings as the rover parts and testing them in different print directions. This would give more accurate strength values for the printed ASA components. Further work could also investigate stronger or more suitable materials, such as aluminium, carbon-fibre reinforced filament or other engineering plastics.
+
+The rocker-bogie geometry and wheel design should also be studied further. The current wheels were designed mainly to make the rover functional and easy to manufacture, but wheel geometry, tread pattern, width, diameter, material and ground contact have a large effect on traction and terrain performance. These factors are especially important for skid steering and obstacle climbing, and could be treated as a separate area of future work.
+
+Overall, the project demonstrates a proof of concept for low-cost pseudo-3D LiDAR mapping and individual motor control. The main limitations were related to loaded drivetrain behaviour, incomplete power and odometry validation, and simplified mechanical analysis. Future work should prioritize drivetrain reliability, improved sensor integration, more realistic mechanical testing and faster real-time mapping.

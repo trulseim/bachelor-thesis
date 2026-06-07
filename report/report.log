@@ -1,0 +1,2070 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.2)  7 JUN 2026 22:13
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/truls/OneDrive/Skrivebord/elliot_bachelor/My_Final/Bachelor-Thesis-master/report/report.tex
+(c:/Users/truls/OneDrive/Skrivebord/elliot_bachelor/My_Final/Bachelor-Thesis-master/report/report.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen151
+)) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen152
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count284
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count285
+\leftroot@=\count286
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count287
+\DOTSCASE@=\count288
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count289
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count290
+\dotsspace@=\muskip17
+\c@parentequation=\count291
+\dspbrk@lvl=\count292
+\tag@help=\toks20
+\row@=\count293
+\column@=\count294
+\maxfields@=\count295
+\andhelp@=\toks21
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count296
+\float@exts=\toks25
+\float@box=\box55
+\@float@everytoks=\toks26
+\@floatcapt=\box56
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen162
+\captionmargin=\dimen163
+\caption@leftmargin=\dimen164
+\caption@rightmargin=\dimen165
+\caption@width=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count297
+\c@continuedfloat=\count298
+Package caption Info: float package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count299
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count300
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen170
+\ar@mcellbox=\box57
+\extrarowheight=\dimen171
+\NC@list=\toks27
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box58
+)
+\TX@col@width=\dimen172
+\TX@old@table=\dimen173
+\TX@old@col=\dimen174
+\TX@target=\dimen175
+\TX@delta=\dimen176
+\TX@cols=\count301
+\TX@ftn=\toks28
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen177
+\lightrulewidth=\dimen178
+\cmidrulewidth=\dimen179
+\belowrulesep=\dimen180
+\belowbottomsep=\dimen181
+\aboverulesep=\dimen182
+\abovetopsep=\dimen183
+\cmidrulesep=\dimen184
+\cmidrulekern=\dimen185
+\defaultaddspace=\dimen186
+\@cmidla=\count302
+\@cmidlb=\count303
+\@aboverulesep=\dimen187
+\@belowrulesep=\dimen188
+\@thisruleclass=\count304
+\@lastruleclass=\count305
+\@thisrulewidth=\dimen189
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count306
+\LTcapwidth=\dimen190
+\LT@head=\box59
+\LT@firsthead=\box60
+\LT@foot=\box61
+\LT@lastfoot=\box62
+\LT@gbox=\box63
+\LT@cols=\count307
+\LT@rows=\count308
+\c@LT@tables=\count309
+\c@LT@chunks=\count310
+\LT@p@ftn=\toks29
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count311
+\lst@gtempboxa=\box64
+\lst@token=\toks30
+\lst@length=\count312
+\lst@currlwidth=\dimen191
+\lst@column=\count313
+\lst@pos=\count314
+\lst@lostspace=\dimen192
+\lst@width=\dimen193
+\lst@newlines=\count315
+\lst@lineno=\count316
+\lst@maxwidth=\dimen194
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count317
+\lst@skipnumbers=\count318
+\lst@framebox=\box65
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip60
+\enit@outerparindent=\dimen195
+\enit@toks=\toks31
+\enit@inbox=\box66
+\enit@count@id=\count319
+\enitdp@description=\count320
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count321
+\Gm@cntv=\count322
+\c@Gm@tempcnt=\count323
+\Gm@bindingoffset=\dimen196
+\Gm@wd@mp=\dimen197
+\Gm@odd@mp=\dimen198
+\Gm@even@mp=\dimen199
+\Gm@layoutwidth=\dimen256
+\Gm@layoutheight=\dimen257
+\Gm@layouthoffset=\dimen258
+\Gm@layoutvoffset=\dimen259
+\Gm@dimlist=\toks32
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip61
+\f@nch@offset@elh=\skip62
+\f@nch@offset@erh=\skip63
+\f@nch@offset@olh=\skip64
+\f@nch@offset@orh=\skip65
+\f@nch@offset@elf=\skip66
+\f@nch@offset@erf=\skip67
+\f@nch@offset@olf=\skip68
+\f@nch@offset@orf=\skip69
+\f@nch@height=\skip70
+\f@nch@footalignment=\skip71
+\f@nch@widthL=\skip72
+\f@nch@widthC=\skip73
+\f@nch@widthR=\skip74
+\@temptokenb=\toks33
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count324
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count325
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen260
+\Hy@linkcounter=\count326
+\Hy@pagecounter=\count327
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count328
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count329
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen261
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count330
+\Field@Width=\dimen262
+\Fld@charsize=\dimen263
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count331
+\c@Item=\count332
+\c@Hfootnote=\count333
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+\Fld@listcount=\count334
+\c@bookmark@seq@number=\count335
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip75
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip76
+\cftbeforetoctitleskip=\skip77
+\cftaftertoctitleskip=\skip78
+\cftbeforepartskip=\skip79
+\cftpartnumwidth=\skip80
+\cftpartindent=\skip81
+\cftbeforechapskip=\skip82
+\cftchapindent=\skip83
+\cftchapnumwidth=\skip84
+\cftbeforesecskip=\skip85
+\cftsecindent=\skip86
+\cftsecnumwidth=\skip87
+\cftbeforesubsecskip=\skip88
+\cftsubsecindent=\skip89
+\cftsubsecnumwidth=\skip90
+\cftbeforesubsubsecskip=\skip91
+\cftsubsubsecindent=\skip92
+\cftsubsubsecnumwidth=\skip93
+\cftbeforeparaskip=\skip94
+\cftparaindent=\skip95
+\cftparanumwidth=\skip96
+\cftbeforesubparaskip=\skip97
+\cftsubparaindent=\skip98
+\cftsubparanumwidth=\skip99
+\cftbeforeloftitleskip=\skip100
+\cftafterloftitleskip=\skip101
+\cftbeforefigskip=\skip102
+\cftfigindent=\skip103
+\cftfignumwidth=\skip104
+\c@lofdepth=\count336
+\c@lotdepth=\count337
+\cftbeforelottitleskip=\skip105
+\cftafterlottitleskip=\skip106
+\cftbeforetabskip=\skip107
+\cfttabindent=\skip108
+\cfttabnumwidth=\skip109
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count338
+\mult@box=\box67
+\multicol@leftmargin=\dimen264
+\c@unbalance=\count339
+\c@collectmore=\count340
+\doublecol@number=\count341
+\multicoltolerance=\count342
+\multicolpretolerance=\count343
+\full@width=\dimen265
+\page@free=\dimen266
+\premulticols=\dimen267
+\postmulticols=\dimen268
+\multicolsep=\skip110
+\multicolbaselineskip=\skip111
+\partial@page=\box68
+\last@line=\box69
+\mc@boxedresult=\box70
+\maxbalancingoverflow=\dimen269
+\mult@rightbox=\box71
+\mult@grightbox=\box72
+\mult@firstbox=\box73
+\mult@gfirstbox=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\c@minrows=\count344
+\c@columnbadness=\count345
+\c@finalcolumnbadness=\count346
+\last@try=\dimen270
+\multicolovershoot=\dimen271
+\multicolundershoot=\dimen272
+\mult@nat@firstbox=\box111
+\colbreak@box=\box112
+\mc@col@check@num=\count347
+\g__mc_curr_col_int=\count348
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box113
+\beforetitleunit=\skip112
+\aftertitleunit=\skip113
+\ttl@plus=\dimen273
+\ttl@minus=\dimen274
+\ttl@toksa=\toks34
+\titlewidth=\dimen275
+\titlewidthlast=\dimen276
+\titlewidthfirst=\dimen277
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 77.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count349
+) (report.aux (chapters/01_main_page.aux) (chapters/02_table_of_contents.aux) (chapters/04_introduction.aux) (chapters/05_background_and_purpose.aux) (chapters/06_theory.aux) (chapters/07_materials_and_methods.aux) (chapters/08_results.aux) (chapters/09_discussion.aux) (chapters/10_conclusion.aux) (chapters/11_reference_list_APA.aux))
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count350
+\scratchdimen=\dimen278
+\scratchbox=\box114
+\nofMPsegments=\count351
+\nofMParguments=\count352
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count353
+\MPscratchDim=\dimen279
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
+\everyMPtoPDFconversion=\toks36
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count356
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 77.
+(report.out) (report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
+\openout2 = `chapters/01_main_page.aux'.
+
+ (chapters/01_main_page.tex
+<Images/oslomet_logo.png, id=527, 242.3454pt x 131.7723pt>
+File: Images/oslomet_logo.png Graphic file (type png)
+<use Images/oslomet_logo.png>
+Package pdftex.def Info: Images/oslomet_logo.png  used on input line 6.
+(pdftex.def)             Requested size: 182.09486pt x 99.01193pt.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 19.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 19.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 19.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 19.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+{C:/Users/truls/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./Images/oslomet_logo.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.69 
+      [1] [2]
+Underfull \hbox (badness 1533) in paragraph at lines 93--94
+\T1/lmr/m/n/12 ware and de-vel-oped the Li-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+[]|\T1/lmr/m/n/12 Worked on power bud-get,
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 95--96
+\T1/lmr/m/n/12 odom-e-try, IMU in-te-gra-tion,
+ []
+
+
+Underfull \hbox (badness 6380) in paragraph at lines 97--98
+\T1/lmr/m/n/12 sim-u-la-tion en-vi-ron-ment and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+\T1/lmr/m/n/12 ver-i-fied sim-u-lated top-ics,
+ []
+
+
+Overfull \hbox (13.24333pt too wide) in paragraph at lines 84--102
+ [][] 
+ []
+
+) [3]
+\openout2 = `chapters/02_table_of_contents.aux'.
+
+ (chapters/02_table_of_contents.tex (report.toc
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+ [][] [][]\T1/lmr/m/n/12 Remote Op-er-a-tion 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+ [][] [][]\T1/lmr/m/n/12 Time-of-Flight Dis- 
+ []
+
+
+Underfull \hbox (badness 5374) in paragraph at lines 19--19
+ [][] [][]\T1/lmr/m/n/12 Angular Res-o-lu-tion, 
+ []
+
+
+Underfull \hbox (badness 6332) in paragraph at lines 20--20
+ [][] [][]\T1/lmr/m/n/12 Coordinate Sys-tems 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+ [][] [][]\T1/lmr/m/n/12 Open-Loop and 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+ [][] [][]\T1/lmr/m/n/12 Relevance to the 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+ [][] [][]\T1/lmr/m/n/12 Component Power 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+ [][] [][]\T1/lmr/m/n/12 15-Minute Mis-sion 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+ [][] [][]\T1/lmr/m/n/12 Wheel Odom-e-try 
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 44--44
+ [][] [][]\T1/lmr/m/n/12 Differential Steer-ing 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+ [][] [][]\T1/lmr/m/n/12 Relationship to 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+ [][] [][]\T1/lmr/m/n/12 Implementation on 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+ [][] [][]\T1/lmr/m/n/12 Summary of Key 
+ []
+
+[4
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+ [][] [][]\T1/lmr/m/n/12 Key As-sump-tions 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+ [][] [][]\T1/lmr/m/n/12 Basic Stress and 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+ \T1/lmr/m/n/12 ures and De-sign 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+ [][] [][]\T1/lmr/m/n/12 Initial 2D Li-DAR 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+ [][] [][]\T1/lmr/m/n/12 LiDAR Co-or-di-nate 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+ \T1/lmr/m/n/12 Frame and Sen-sor 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+ [][] [][]\T1/lmr/m/n/12 Pseudo-3D Height 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+ [][] [][]\T1/lmr/m/n/12 ROS2 Real-Time 
+ []
+
+
+Underfull \hbox (badness 7540) in paragraph at lines 105--105
+ [][] [][]\T1/lmr/m/n/12 Implemented Mo-tor 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+ [][] [][]\T1/lmr/m/n/12 Drivetrain Mo-tor 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+ [][] [][]\T1/lmr/m/n/12 Stationary Os-cil-la- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+ [][] [][]\T1/lmr/m/n/12 Sensor In-te-gra-tion 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
+ [][] [][]\T1/lmr/m/n/12 Assumptions and 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+ [][] [][]\T1/lmr/m/n/12 2D Dis-tance Mea- 
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+ [][] [][]\T1/lmr/m/n/12 IMU and Mo-tion 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+ [][] [][]\T1/lmr/m/n/12 Simulation Com- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+ [][] [][]\T1/lmr/m/n/12 System Lim-i-ta-tions 
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `report.toc'.
+
+) [6] (report.lof
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 11.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+ [][] [][]\T1/lmr/m/n/10.95 Bambu Lab H2D 10W Laser 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+ [][] [][]\T1/lmr/m/n/10.95 Critical ar-eas in pro-to-type 1. 
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 30--30
+ [][] [][]\T1/lmr/m/n/10.95 Updated chas-sis with cut-outs, 
+ []
+
+[7
+
+
+{C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}])
+\tf@lof=\write5
+\openout5 = `report.lof'.
+
+ [8]
+\openout2 = `chapters/04_introduction.aux'.
+
+ (chapters/04_introduction.tex
+Chapter 1.
+) [9
+
+
+]
+\openout2 = `chapters/05_background_and_purpose.aux'.
+
+ (chapters/05_background_and_purpose.tex
+Chapter 2.
+[10
+
+
+
+
+]) [11]
+\openout2 = `chapters/06_theory.aux'.
+
+ (chapters/06_theory.tex
+Chapter 3.
+[12
+
+
+
+
+] [13{C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<Images/RPLIDAR Point Spacing Function.png, id=1084, 333.8874pt x 207.53535pt>
+File: Images/RPLIDAR Point Spacing Function.png Graphic file (type png)
+<use Images/RPLIDAR Point Spacing Function.png>
+Package pdftex.def Info: Images/RPLIDAR Point Spacing Function.png  used on input line 114.
+(pdftex.def)             Requested size: 318.66948pt x 198.08214pt.
+ [14]
+<Images/RPLIDAR 3D Angular Spacing.png, id=1096, 321.6015pt x 207.53535pt>
+File: Images/RPLIDAR 3D Angular Spacing.png Graphic file (type png)
+<use Images/RPLIDAR 3D Angular Spacing.png>
+Package pdftex.def Info: Images/RPLIDAR 3D Angular Spacing.png  used on input line 137.
+(pdftex.def)             Requested size: 318.66948pt x 205.64746pt.
+ [15 <./Images/RPLIDAR Point Spacing Function.png (PNG copy)>]
+<Images/RPLIDAR Orientation.png, id=1102, 432.86719pt x 532.23843pt>
+File: Images/RPLIDAR Orientation.png Graphic file (type png)
+<use Images/RPLIDAR Orientation.png>
+Package pdftex.def Info: Images/RPLIDAR Orientation.png  used on input line 162.
+(pdftex.def)             Requested size: 182.09486pt x 223.89595pt.
+<Images/RPLIDAR 3D Axis Orientation.png, id=1103, 786.68906pt x 497.60907pt>
+File: Images/RPLIDAR 3D Axis Orientation.png Graphic file (type png)
+<use Images/RPLIDAR 3D Axis Orientation.png>
+Package pdftex.def Info: Images/RPLIDAR 3D Axis Orientation.png  used on input line 169.
+(pdftex.def)             Requested size: 218.51521pt x 138.22102pt.
+ [16 <./Images/RPLIDAR 3D Angular Spacing.png (PNG copy)>] [17{C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Images/RPLIDAR Orientation.png> <./Images/RPLIDAR 3D Axis Orientation.png>] [18] [19] [20]
+<Images/Servo42D PID Feedback.png, id=1159, 1324.19719pt x 598.48593pt>
+File: Images/Servo42D PID Feedback.png Graphic file (type png)
+<use Images/Servo42D PID Feedback.png>
+Package pdftex.def Info: Images/Servo42D PID Feedback.png  used on input line 355.
+(pdftex.def)             Requested size: 409.71692pt x 185.17256pt.
+ [21 <./Images/Servo42D PID Feedback.png>] [22] [23] [24]
+<Images/power_block_diagram.png, id=1190, 923.45pt x 452.69125pt>
+File: Images/power_block_diagram.png Graphic file (type png)
+<use Images/power_block_diagram.png>
+Package pdftex.def Info: Images/power_block_diagram.png  used on input line 441.
+(pdftex.def)             Requested size: 409.71692pt x 200.84947pt.
+
+Overfull \hbox (48.76842pt too wide) in alignment at lines 463--463
+[][][][] 
+ []
+
+[25 <./Images/power_block_diagram.png>]
+<Images/multi_run_power_profile.png, id=1214, 1821.80624pt x 948.54375pt>
+File: Images/multi_run_power_profile.png Graphic file (type png)
+<use Images/multi_run_power_profile.png>
+Package pdftex.def Info: Images/multi_run_power_profile.png  used on input line 473.
+(pdftex.def)             Requested size: 409.71692pt x 213.31181pt.
+ [26 <./Images/multi_run_power_profile.png>] [27]
+<Images/odometry_trajectory.png.png, id=1232, 1035.87pt x 592.2125pt>
+File: Images/odometry_trajectory.png.png Graphic file (type png)
+<use Images/odometry_trajectory.png.png>
+Package pdftex.def Info: Images/odometry_trajectory.png.png  used on input line 533.
+(pdftex.def)             Requested size: 318.66948pt x 182.18332pt.
+ [28] [29 <./Images/odometry_trajectory.png.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 602.
+ (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [30] [31] [32]
+<Images/imu_trajectory.png, id=1270, 403.5075pt x 375.65344pt>
+File: Images/imu_trajectory.png Graphic file (type png)
+<use Images/imu_trajectory.png>
+Package pdftex.def Info: Images/imu_trajectory.png  used on input line 695.
+(pdftex.def)             Requested size: 318.66948pt x 296.67125pt.
+ [33] [34 <./Images/imu_trajectory.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/bx/n/12 Failure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Gravel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Mechanical
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 3D-printed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Overload /
+ []
+
+
+Underfull \hbox (badness 4913) in paragraph at lines 749--749
+\T1/lmr/m/n/12 PLA brit-tle-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Buck con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 RS485 col-li-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Battery un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Deep dis-
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Software cut-off at 14.0V / INA226
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Transient
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Buck over-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Excessive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 ROS2 node
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 SLAM di-ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Few dis-tinc-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/lmr/m/n/12 Timestamp
+ []
+
+[35]
+<Images/geometric_parameters.png, id=1290, 1054.6903pt x 454.69875pt>
+File: Images/geometric_parameters.png Graphic file (type png)
+<use Images/geometric_parameters.png>
+Package pdftex.def Info: Images/geometric_parameters.png  used on input line 766.
+(pdftex.def)             Requested size: 318.66948pt x 137.382pt.
+ [36 <./Images/geometric_parameters.png>] [37]) [38]
+\openout2 = `chapters/07_materials_and_methods.aux'.
+
+ (chapters/07_materials_and_methods.tex
+Chapter 4.
+<Images/prusa_mini.png, id=1326, 162.6075pt x 165.61874pt>
+File: Images/prusa_mini.png Graphic file (type png)
+<use Images/prusa_mini.png>
+Package pdftex.def Info: Images/prusa_mini.png  used on input line 13.
+(pdftex.def)             Requested size: 204.85846pt x 208.66808pt.
+
+Underfull \hbox (badness 2556) in paragraph at lines 14--14
+[]\T1/lmr/m/n/12 Figure 4.1: |Orig-i-nal Prusa Mini+.
+ []
+
+<Images/bambu_lab_h2d.png, id=1327, 144.54pt x 144.54pt>
+File: Images/bambu_lab_h2d.png Graphic file (type png)
+<use Images/bambu_lab_h2d.png>
+Package pdftex.def Info: Images/bambu_lab_h2d.png  used on input line 19.
+(pdftex.def)             Requested size: 204.85846pt x 204.86885pt.
+<Images/fit_test.jpg, id=1329, 112.16907pt x 149.05687pt>
+File: Images/fit_test.jpg Graphic file (type jpg)
+<use Images/fit_test.jpg>
+Package pdftex.def Info: Images/fit_test.jpg  used on input line 39.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+<Images/bearing_bolt_test.jpg, id=1330, 112.16907pt x 149.05687pt>
+File: Images/bearing_bolt_test.jpg Graphic file (type jpg)
+<use Images/bearing_bolt_test.jpg>
+Package pdftex.def Info: Images/bearing_bolt_test.jpg  used on input line 45.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+<Images/wheel_motor_test.jpg, id=1331, 112.16907pt x 149.05687pt>
+File: Images/wheel_motor_test.jpg Graphic file (type jpg)
+<use Images/wheel_motor_test.jpg>
+Package pdftex.def Info: Images/wheel_motor_test.jpg  used on input line 51.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+[39
+
+
+
+
+ <./Images/prusa_mini.png> <./Images/bambu_lab_h2d.png>]
+<Images/nema17_mount_test.jpg, id=1339, 112.16907pt x 149.05687pt>
+File: Images/nema17_mount_test.jpg Graphic file (type jpg)
+<use Images/nema17_mount_test.jpg>
+Package pdftex.def Info: Images/nema17_mount_test.jpg  used on input line 61.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[]\T1/lmr/m/n/12 Figure 4.6: |NEMA17
+ []
+
+<Images/rocker_test_part.jpg, id=1340, 112.16907pt x 149.05687pt>
+File: Images/rocker_test_part.jpg Graphic file (type jpg)
+<use Images/rocker_test_part.jpg>
+Package pdftex.def Info: Images/rocker_test_part.jpg  used on input line 67.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+
+Underfull \hbox (badness 1152) in paragraph at lines 68--68
+[]\T1/lmr/m/n/12 Figure 4.7: |Rocker test
+ []
+
+<Images/fail_warping.jpg, id=1341, 112.16907pt x 149.05687pt>
+File: Images/fail_warping.jpg Graphic file (type jpg)
+<use Images/fail_warping.jpg>
+Package pdftex.def Info: Images/fail_warping.jpg  used on input line 79.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+<Images/print_failure_rocker.jpg, id=1342, 112.16907pt x 149.05687pt>
+File: Images/print_failure_rocker.jpg Graphic file (type jpg)
+<use Images/print_failure_rocker.jpg>
+Package pdftex.def Info: Images/print_failure_rocker.jpg  used on input line 85.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+<Images/warping_layer_adhesion.jpg, id=1343, 112.16907pt x 149.05687pt>
+File: Images/warping_layer_adhesion.jpg Graphic file (type jpg)
+<use Images/warping_layer_adhesion.jpg>
+Package pdftex.def Info: Images/warping_layer_adhesion.jpg  used on input line 91.
+(pdftex.def)             Requested size: 109.2601pt x 145.19681pt.
+[40 <./Images/fit_test.jpg> <./Images/bearing_bolt_test.jpg> <./Images/wheel_motor_test.jpg> <./Images/nema17_mount_test.jpg> <./Images/rocker_test_part.jpg> <./Images/fail_warping.jpg> <./Images/print_failure_rocker.jpg> <./Images/warping_layer_adhesion.jpg>]
+<Images/prototype1_critical_areas.jpg, id=1348, 419.31656pt x 185.19188pt>
+File: Images/prototype1_critical_areas.jpg Graphic file (type jpg)
+<use Images/prototype1_critical_areas.jpg>
+Package pdftex.def Info: Images/prototype1_critical_areas.jpg  used on input line 103.
+(pdftex.def)             Requested size: 364.19667pt x 160.84717pt.
+<Images/rocker_conn_proto1.jpg, id=1349, 194.97844pt x 133.24782pt>
+File: Images/rocker_conn_proto1.jpg Graphic file (type jpg)
+<use Images/rocker_conn_proto1.jpg>
+Package pdftex.def Info: Images/rocker_conn_proto1.jpg  used on input line 119.
+(pdftex.def)             Requested size: 163.88739pt x 112.00465pt.
+<Images/rocker_conn_proto2.jpg, id=1350, 194.97844pt x 104.64093pt>
+File: Images/rocker_conn_proto2.jpg Graphic file (type jpg)
+<use Images/rocker_conn_proto2.jpg>
+Package pdftex.def Info: Images/rocker_conn_proto2.jpg  used on input line 125.
+(pdftex.def)             Requested size: 163.88739pt x 87.95844pt.
+<Images/rocker_xsec_proto1.jpg, id=1352, 115.93312pt x 159.59625pt>
+File: Images/rocker_xsec_proto1.jpg Graphic file (type jpg)
+<use Images/rocker_xsec_proto1.jpg>
+Package pdftex.def Info: Images/rocker_xsec_proto1.jpg  used on input line 137.
+(pdftex.def)             Requested size: 109.25803pt x 150.41011pt.
+
+Underfull \hbox (badness 1087) in paragraph at lines 138--138
+[]\T1/lmr/m/n/12 Figure 4.14: |Pro-to-type 1 cross-
+ []
+
+<Images/rocker_xsec_proto2.jpg, id=1353, 137.01187pt x 155.07938pt>
+File: Images/rocker_xsec_proto2.jpg Graphic file (type jpg)
+<use Images/rocker_xsec_proto2.jpg>
+Package pdftex.def Info: Images/rocker_xsec_proto2.jpg  used on input line 143.
+(pdftex.def)             Requested size: 127.46584pt x 144.27673pt.
+
+Underfull \hbox (badness 1087) in paragraph at lines 144--144
+[]\T1/lmr/m/n/12 Figure 4.15: |Pro-to-type 2 cross-
+ []
+
+[41 <./Images/prototype1_critical_areas.jpg> <./Images/rocker_conn_proto1.jpg> <./Images/rocker_conn_proto2.jpg>]
+<Images/chassis_proto1.jpg, id=1358, 191.21437pt x 97.11281pt>
+File: Images/chassis_proto1.jpg Graphic file (type jpg)
+<use Images/chassis_proto1.jpg>
+Package pdftex.def Info: Images/chassis_proto1.jpg  used on input line 156.
+(pdftex.def)             Requested size: 204.85846pt x 104.04747pt.
+<Images/chassis_proto2.jpg, id=1359, 209.28188pt x 86.57344pt>
+File: Images/chassis_proto2.jpg Graphic file (type jpg)
+<use Images/chassis_proto2.jpg>
+Package pdftex.def Info: Images/chassis_proto2.jpg  used on input line 162.
+(pdftex.def)             Requested size: 204.85846pt x 84.74362pt.
+<Images/wheel_early.jpg, id=1360, 176.91093pt x 135.50626pt>
+File: Images/wheel_early.jpg Graphic file (type jpg)
+<use Images/wheel_early.jpg>
+Package pdftex.def Info: Images/wheel_early.jpg  used on input line 175.
+(pdftex.def)             Requested size: 163.88739pt x 125.5336pt.
+<Images/wheel_final.jpg, id=1361, 176.91093pt x 134.00063pt>
+File: Images/wheel_final.jpg Graphic file (type jpg)
+<use Images/wheel_final.jpg>
+Package pdftex.def Info: Images/wheel_final.jpg  used on input line 181.
+(pdftex.def)             Requested size: 163.88739pt x 124.13876pt.
+ [42 <./Images/rocker_xsec_proto1.jpg> <./Images/rocker_xsec_proto2.jpg> <./Images/chassis_proto1.jpg> <./Images/chassis_proto2.jpg>]
+<Images/final_upper_chassis.jpg, id=1367, 163.3603pt x 91.84312pt>
+File: Images/final_upper_chassis.jpg Graphic file (type jpg)
+<use Images/final_upper_chassis.jpg>
+Package pdftex.def Info: Images/final_upper_chassis.jpg  used on input line 196.
+(pdftex.def)             Requested size: 136.57462pt x 76.78331pt.
+<Images/final_lower_chassis.jpg, id=1368, 167.87718pt x 94.85437pt>
+File: Images/final_lower_chassis.jpg Graphic file (type jpg)
+<use Images/final_lower_chassis.jpg>
+Package pdftex.def Info: Images/final_lower_chassis.jpg  used on input line 202.
+(pdftex.def)             Requested size: 136.57462pt x 77.16739pt.
+<Images/rocker_differential_arm.jpg, id=1369, 167.87718pt x 94.85437pt>
+File: Images/rocker_differential_arm.jpg Graphic file (type jpg)
+<use Images/rocker_differential_arm.jpg>
+Package pdftex.def Info: Images/rocker_differential_arm.jpg  used on input line 208.
+(pdftex.def)             Requested size: 136.57462pt x 77.16739pt.
+<Images/final_rear_rocker.jpg, id=1370, 169.38281pt x 94.85437pt>
+File: Images/final_rear_rocker.jpg Graphic file (type jpg)
+<use Images/final_rear_rocker.jpg>
+Package pdftex.def Info: Images/final_rear_rocker.jpg  used on input line 219.
+(pdftex.def)             Requested size: 136.57462pt x 76.48424pt.
+
+Underfull \hbox (badness 1515) in paragraph at lines 220--220
+[]\T1/lmr/m/n/12 Figure 4.23: |Fi-nal rear
+ []
+
+<Images/final_front_rocker.jpg, id=1371, 169.38281pt x 94.85437pt>
+File: Images/final_front_rocker.jpg Graphic file (type jpg)
+<use Images/final_front_rocker.jpg>
+Package pdftex.def Info: Images/final_front_rocker.jpg  used on input line 225.
+(pdftex.def)             Requested size: 136.57462pt x 76.48424pt.
+<Images/final_wheel.jpg, id=1372, 169.38281pt x 94.85437pt>
+File: Images/final_wheel.jpg Graphic file (type jpg)
+<use Images/final_wheel.jpg>
+Package pdftex.def Info: Images/final_wheel.jpg  used on input line 231.
+(pdftex.def)             Requested size: 136.57462pt x 76.48424pt.
+<Images/c1_lidar_mount.jpg, id=1373, 177.66376pt x 100.12407pt>
+File: Images/c1_lidar_mount.jpg Graphic file (type jpg)
+<use Images/c1_lidar_mount.jpg>
+Package pdftex.def Info: Images/c1_lidar_mount.jpg  used on input line 242.
+(pdftex.def)             Requested size: 136.57462pt x 76.97047pt.
+<Images/rpi5_mount.jpg, id=1374, 177.66376pt x 100.12407pt>
+File: Images/rpi5_mount.jpg Graphic file (type jpg)
+<use Images/rpi5_mount.jpg>
+Package pdftex.def Info: Images/rpi5_mount.jpg  used on input line 248.
+(pdftex.def)             Requested size: 136.57462pt x 76.97047pt.
+<Images/imu_mount.jpg, id=1375, 175.40532pt x 98.61844pt>
+File: Images/imu_mount.jpg Graphic file (type jpg)
+<use Images/imu_mount.jpg>
+Package pdftex.def Info: Images/imu_mount.jpg  used on input line 254.
+(pdftex.def)             Requested size: 136.57462pt x 76.79263pt.
+<Images/assembly_mech_conn.jpg, id=1376, 162.6075pt x 196.48407pt>
+File: Images/assembly_mech_conn.jpg Graphic file (type jpg)
+<use Images/assembly_mech_conn.jpg>
+Package pdftex.def Info: Images/assembly_mech_conn.jpg  used on input line 265.
+(pdftex.def)             Requested size: 163.88739pt x 198.04558pt.
+<Images/assembly_diff_conn.jpg, id=1377, 202.50656pt x 127.22531pt>
+File: Images/assembly_diff_conn.jpg Graphic file (type jpg)
+<use Images/assembly_diff_conn.jpg>
+Package pdftex.def Info: Images/assembly_diff_conn.jpg  used on input line 271.
+(pdftex.def)             Requested size: 163.88739pt x 102.96457pt.
+[43 <./Images/wheel_early.jpg> <./Images/wheel_final.jpg> <./Images/final_upper_chassis.jpg> <./Images/final_lower_chassis.jpg> <./Images/rocker_differential_arm.jpg> <./Images/final_rear_rocker.jpg> <./Images/final_front_rocker.jpg> <./Images/final_wheel.jpg> <./Images/c1_lidar_mount.jpg> <./Images/rpi5_mount.jpg> <./Images/imu_mount.jpg>]
+<Images/all_printed_parts.jpg, id=1382, 238.64156pt x 317.68687pt>
+File: Images/all_printed_parts.jpg Graphic file (type jpg)
+<use Images/all_printed_parts.jpg>
+Package pdftex.def Info: Images/all_printed_parts.jpg  used on input line 281.
+(pdftex.def)             Requested size: 182.09486pt x 242.40916pt.
+<Images/diff_arm_mounted.jpg, id=1383, 144.54pt x 192.72pt>
+File: Images/diff_arm_mounted.jpg Graphic file (type jpg)
+<use Images/diff_arm_mounted.jpg>
+Package pdftex.def Info: Images/diff_arm_mounted.jpg  used on input line 296.
+(pdftex.def)             Requested size: 122.91632pt x 163.88628pt.
+<Images/diff_arm_detail.jpg, id=1384, 144.54pt x 192.72pt>
+File: Images/diff_arm_detail.jpg Graphic file (type jpg)
+<use Images/diff_arm_detail.jpg>
+Package pdftex.def Info: Images/diff_arm_detail.jpg  used on input line 302.
+(pdftex.def)             Requested size: 122.91632pt x 163.88628pt.
+ [44 <./Images/assembly_mech_conn.jpg> <./Images/assembly_diff_conn.jpg> <./Images/all_printed_parts.jpg>]
+<Images/rocker_flange_bearing.jpg, id=1389, 144.54pt x 192.72pt>
+File: Images/rocker_flange_bearing.jpg Graphic file (type jpg)
+<use Images/rocker_flange_bearing.jpg>
+Package pdftex.def Info: Images/rocker_flange_bearing.jpg  used on input line 316.
+(pdftex.def)             Requested size: 122.91632pt x 163.88628pt.
+<Images/rocker_fasteners.jpg, id=1390, 144.54pt x 192.72pt>
+File: Images/rocker_fasteners.jpg Graphic file (type jpg)
+<use Images/rocker_fasteners.jpg>
+Package pdftex.def Info: Images/rocker_fasteners.jpg  used on input line 322.
+(pdftex.def)             Requested size: 122.91632pt x 163.88628pt.
+<Images/turnbuckle_link.jpg, id=1391, 144.54pt x 192.72pt>
+File: Images/turnbuckle_link.jpg Graphic file (type jpg)
+<use Images/turnbuckle_link.jpg>
+Package pdftex.def Info: Images/turnbuckle_link.jpg  used on input line 336.
+(pdftex.def)             Requested size: 163.88739pt x 218.5268pt.
+<Images/diff_link_detail.jpg, id=1392, 144.54pt x 192.72pt>
+File: Images/diff_link_detail.jpg Graphic file (type jpg)
+<use Images/diff_link_detail.jpg>
+Package pdftex.def Info: Images/diff_link_detail.jpg  used on input line 342.
+(pdftex.def)             Requested size: 163.88739pt x 218.5268pt.
+ [45 <./Images/diff_arm_mounted.jpg> <./Images/diff_arm_detail.jpg> <./Images/rocker_flange_bearing.jpg> <./Images/rocker_fasteners.jpg>]
+<Images/lower_chassis_above.jpg, id=1397, 144.54pt x 192.72pt>
+File: Images/lower_chassis_above.jpg Graphic file (type jpg)
+<use Images/lower_chassis_above.jpg>
+Package pdftex.def Info: Images/lower_chassis_above.jpg  used on input line 356.
+(pdftex.def)             Requested size: 163.88739pt x 218.5268pt.
+<Images/lower_chassis_front.jpg, id=1398, 144.54pt x 192.72pt>
+File: Images/lower_chassis_front.jpg Graphic file (type jpg)
+<use Images/lower_chassis_front.jpg>
+Package pdftex.def Info: Images/lower_chassis_front.jpg  used on input line 362.
+(pdftex.def)             Requested size: 163.88739pt x 218.5268pt.
+<Images/wheel_fasteners.jpg, id=1399, 144.54pt x 192.72pt>
+File: Images/wheel_fasteners.jpg Graphic file (type jpg)
+<use Images/wheel_fasteners.jpg>
+Package pdftex.def Info: Images/wheel_fasteners.jpg  used on input line 374.
+(pdftex.def)             Requested size: 145.67644pt x 194.24571pt.
+<Images/wheel_coupling.jpg, id=1400, 144.54pt x 192.72pt>
+File: Images/wheel_coupling.jpg Graphic file (type jpg)
+<use Images/wheel_coupling.jpg>
+Package pdftex.def Info: Images/wheel_coupling.jpg  used on input line 380.
+(pdftex.def)             Requested size: 145.67644pt x 194.24571pt.
+ [46 <./Images/turnbuckle_link.jpg> <./Images/diff_link_detail.jpg> <./Images/lower_chassis_above.jpg> <./Images/lower_chassis_front.jpg>]
+<Images/final_structural_no_wheels.jpg, id=1405, 317.68687pt x 238.64156pt>
+File: Images/final_structural_no_wheels.jpg Graphic file (type jpg)
+<use Images/final_structural_no_wheels.jpg>
+Package pdftex.def Info: Images/final_structural_no_wheels.jpg  used on input line 392.
+(pdftex.def)             Requested size: 227.62206pt x 170.99155pt.
+<Images/layer_adhesion_weakness.jpg, id=1406, 173.14688pt x 231.11343pt>
+File: Images/layer_adhesion_weakness.jpg Graphic file (type jpg)
+<use Images/layer_adhesion_weakness.jpg>
+Package pdftex.def Info: Images/layer_adhesion_weakness.jpg  used on input line 407.
+(pdftex.def)             Requested size: 122.91632pt x 164.07053pt.
+<Images/rocker_extra_fasteners.jpg, id=1407, 152.06813pt x 202.50656pt>
+File: Images/rocker_extra_fasteners.jpg Graphic file (type jpg)
+<use Images/rocker_extra_fasteners.jpg>
+Package pdftex.def Info: Images/rocker_extra_fasteners.jpg  used on input line 413.
+(pdftex.def)             Requested size: 122.91632pt x 163.6895pt.
+
+Underfull \hbox (badness 1838) in paragraph at lines 414--414
+[]\T1/lmr/m/n/12 Figure 4.44: |Ex-tra fas-ten-ers added
+ []
+
+[47 <./Images/wheel_fasteners.jpg> <./Images/wheel_coupling.jpg> <./Images/final_structural_no_wheels.jpg>]
+
+LaTeX Warning: Reference `fig:bambu_studio_settings' on page 48 undefined on input line 430.
+
+[48 <./Images/layer_adhesion_weakness.jpg> <./Images/rocker_extra_fasteners.jpg>]
+<Images/wiring_diagram.png, id=1420, 2409.0pt x 1200.485pt>
+File: Images/wiring_diagram.png Graphic file (type png)
+<use Images/wiring_diagram.png>
+Package pdftex.def Info: Images/wiring_diagram.png  used on input line 454.
+(pdftex.def)             Requested size: 450.69417pt x 224.5958pt.
+ [49 <./Images/wiring_diagram.png (PNG copy)>]
+<Images/rover-assembly-side.jpg, id=1425, 4047.12pt x 2276.505pt>
+File: Images/rover-assembly-side.jpg Graphic file (type jpg)
+<use Images/rover-assembly-side.jpg>
+Package pdftex.def Info: Images/rover-assembly-side.jpg  used on input line 469.
+(pdftex.def)             Requested size: 196.66235pt x 110.60141pt.
+<Images/rover-assembly-side2.jpg, id=1426, 4047.12pt x 2276.505pt>
+File: Images/rover-assembly-side2.jpg Graphic file (type jpg)
+<use Images/rover-assembly-side2.jpg>
+Package pdftex.def Info: Images/rover-assembly-side2.jpg  used on input line 476.
+(pdftex.def)             Requested size: 196.66235pt x 110.60141pt.
+<Images/rover-assembly-pi.jpg, id=1427, 4047.12pt x 2276.505pt>
+File: Images/rover-assembly-pi.jpg Graphic file (type jpg)
+<use Images/rover-assembly-pi.jpg>
+Package pdftex.def Info: Images/rover-assembly-pi.jpg  used on input line 490.
+(pdftex.def)             Requested size: 196.66235pt x 110.60141pt.
+<Images/rover-assembly-pi2.jpg, id=1428, 4047.12pt x 2276.505pt>
+File: Images/rover-assembly-pi2.jpg Graphic file (type jpg)
+<use Images/rover-assembly-pi2.jpg>
+Package pdftex.def Info: Images/rover-assembly-pi2.jpg  used on input line 497.
+(pdftex.def)             Requested size: 196.66235pt x 110.60141pt.
+<Images/rover-assembly-lidar.jpg, id=1429, 4047.12pt x 2276.505pt>
+File: Images/rover-assembly-lidar.jpg Graphic file (type jpg)
+<use Images/rover-assembly-lidar.jpg>
+Package pdftex.def Info: Images/rover-assembly-lidar.jpg  used on input line 510.
+(pdftex.def)             Requested size: 196.66235pt x 110.60141pt.
+<Images/rover-assembly-lidar2.jpg, id=1430, 4047.12pt x 2276.505pt>
+File: Images/rover-assembly-lidar2.jpg Graphic file (type jpg)
+<use Images/rover-assembly-lidar2.jpg>
+Package pdftex.def Info: Images/rover-assembly-lidar2.jpg  used on input line 517.
+(pdftex.def)             Requested size: 196.66235pt x 110.60141pt.
+ [50 <./Images/rover-assembly-side.jpg> <./Images/rover-assembly-side2.jpg> <./Images/rover-assembly-pi.jpg> <./Images/rover-assembly-pi2.jpg> <./Images/rover-assembly-lidar.jpg> <./Images/rover-assembly-lidar2.jpg>]
+<Images/RPLIDAR Electrical Connection.png, id=1435, 1517.67pt x 441.14813pt>
+File: Images/RPLIDAR Electrical Connection.png Graphic file (type png)
+<use Images/RPLIDAR Electrical Connection.png>
+Package pdftex.def Info: Images/RPLIDAR Electrical Connection.png  used on input line 532.
+(pdftex.def)             Requested size: 364.19667pt x 105.85751pt.
+<Images/RPLIDAR Angle From Axis.png, id=1437, 553.31718pt x 444.91219pt>
+File: Images/RPLIDAR Angle From Axis.png Graphic file (type png)
+<use Images/RPLIDAR Angle From Axis.png>
+Package pdftex.def Info: Images/RPLIDAR Angle From Axis.png  used on input line 563.
+(pdftex.def)             Requested size: 204.85846pt x 164.72354pt.
+File: Images/RPLIDAR 3D Axis Orientation.png Graphic file (type png)
+<use Images/RPLIDAR 3D Axis Orientation.png>
+Package pdftex.def Info: Images/RPLIDAR 3D Axis Orientation.png  used on input line 570.
+(pdftex.def)             Requested size: 204.85846pt x 129.5803pt.
+ [51 <./Images/RPLIDAR Electrical Connection.png>] [52 <./Images/RPLIDAR Angle From Axis.png>]
+<Images/RPLIDAR relationship diagram.png, id=1448, 493.845pt x 221.82875pt>
+File: Images/RPLIDAR relationship diagram.png Graphic file (type png)
+<use Images/RPLIDAR relationship diagram.png>
+Package pdftex.def Info: Images/RPLIDAR relationship diagram.png  used on input line 632.
+(pdftex.def)             Requested size: 364.19667pt x 163.5922pt.
+ [53] [54 <./Images/RPLIDAR relationship diagram.png>] [55]
+<Images/motor setup.png, id=1476, 1255.69125pt x 1085.05376pt>
+File: Images/motor setup.png Graphic file (type png)
+<use Images/motor setup.png>
+Package pdftex.def Info: Images/motor setup.png  used on input line 677.
+(pdftex.def)             Requested size: 182.09486pt x 157.33704pt.
+ [56 <./Images/motor setup.png>] (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 731.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 732.
+ [57]
+Overfull \hbox (2.20728pt too wide) in paragraph at lines 768--768
+[]|\T1/lmtt/m/n/12 read_position_error()| 
+ []
+
+
+Overfull \hbox (14.55728pt too wide) in paragraph at lines 771--771
+[]|\T1/lmtt/m/n/12 move_relative_degrees()| 
+ []
+
+[58] [59] [60] [61] (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+<Images/gazebo_worlds.png, id=1543, 910.40125pt x 455.7025pt>
+File: Images/gazebo_worlds.png Graphic file (type png)
+<use Images/gazebo_worlds.png>
+Package pdftex.def Info: Images/gazebo_worlds.png  used on input line 885.
+(pdftex.def)             Requested size: 318.66948pt x 159.51216pt.
+
+Overfull \hbox (65.20117pt too wide) in paragraph at lines 882--888
+[]\T1/lmr/m/n/12 Both worlds use the same physics set-tings, with \T1/lmtt/m/n/12 max_step_size = 0.001 \T1/lmr/m/n/12 and \T1/lmtt/m/n/12 real_time_factor=1.0\T1/lmr/m/n/12 .
+ []
+
+[62]
+
+LaTeX Warning: Citation `openrobotics2024' on page 63 undefined on input line 892.
+
+
+LaTeX Warning: Citation `openrobotics2024' on page 63 undefined on input line 896.
+
+<Images/node_graph.png, id=1553, 817.0525pt x 410.53375pt>
+File: Images/node_graph.png Graphic file (type png)
+<use Images/node_graph.png>
+Package pdftex.def Info: Images/node_graph.png  used on input line 900.
+(pdftex.def)             Requested size: 318.66948pt x 160.12004pt.
+[63 <./Images/gazebo_worlds.png>]
+<images/rviz_tf.png, id=1559, 744.7825pt x 368.37625pt>
+File: images/rviz_tf.png Graphic file (type png)
+<use images/rviz_tf.png>
+Package pdftex.def Info: images/rviz_tf.png  used on input line 914.
+(pdftex.def)             Requested size: 318.66948pt x 157.623pt.
+<images/robot_problem_1.png, id=1560, 401.5pt x 344.28625pt>
+File: images/robot_problem_1.png Graphic file (type png)
+<use images/robot_problem_1.png>
+Package pdftex.def Info: images/robot_problem_1.png  used on input line 930.
+(pdftex.def)             Requested size: 182.09486pt x 156.15141pt.
+ [64 <./Images/node_graph.png> <./images/rviz_tf.png>]
+<images/gazebo_problem_2.png, id=1567, 448.67625pt x 293.095pt>
+File: images/gazebo_problem_2.png Graphic file (type png)
+<use images/gazebo_problem_2.png>
+Package pdftex.def Info: images/gazebo_problem_2.png  used on input line 944.
+(pdftex.def)             Requested size: 182.09486pt x 118.94879pt.
+
+
+LaTeX Warning: Citation `siegwart2004' on page 65 undefined on input line 958.
+
+[65 <./images/robot_problem_1.png> <./images/gazebo_problem_2.png>]
+<images/gazebo_climbing.png, id=1576, 377.41pt x 373.395pt>
+File: images/gazebo_climbing.png Graphic file (type png)
+<use images/gazebo_climbing.png>
+Package pdftex.def Info: images/gazebo_climbing.png  used on input line 984.
+(pdftex.def)             Requested size: 127.46584pt x 126.10938pt.
+
+Underfull \hbox (badness 2512) in paragraph at lines 985--985
+[]\T1/lmr/m/n/12 Figure 4.58: |Rover suc-cess-fully
+ []
+
+<images/lunar_world2.png, id=1577, 371.3875pt x 337.26pt>
+File: images/lunar_world2.png Graphic file (type png)
+<use images/lunar_world2.png>
+Package pdftex.def Info: images/lunar_world2.png  used on input line 997.
+(pdftex.def)             Requested size: 127.46584pt x 115.75272pt.
+[66 <./images/gazebo_climbing.png>]
+<images/gazebo_rviz1.png, id=1591, 982.67125pt x 413.545pt>
+File: images/gazebo_rviz1.png Graphic file (type png)
+<use images/gazebo_rviz1.png>
+Package pdftex.def Info: images/gazebo_rviz1.png  used on input line 1008.
+(pdftex.def)             Requested size: 318.66948pt x 134.10394pt.
+ [67 <./images/lunar_world2.png> <./images/gazebo_rviz1.png>] [68] [69]
+
+LaTeX Warning: Citation `openrobotics2024' on page 70 undefined on input line 1119.
+
+
+Overfull \hbox (2.99829pt too wide) in paragraph at lines 1127--1128
+\T1/lmr/m/n/12 it into a \T1/lmtt/m/n/12 robot_description \T1/lmr/m/n/12 string, and passes that di-rectly into \T1/lmtt/m/n/12 robot_state_publisher
+ []
+
+(C:\Users\truls\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+Underfull \hbox (badness 1043) in paragraph at lines 1142--1143
+\T1/lmr/m/n/12 bridge from \T1/lmtt/m/n/12 gz_bridge.yaml\T1/lmr/m/n/12 . The rover is
+ []
+
+<images/sinking_robot.png, id=1686, 365.365pt x 278.03876pt>
+File: images/sinking_robot.png Graphic file (type png)
+<use images/sinking_robot.png>
+Package pdftex.def Info: images/sinking_robot.png  used on input line 1147.
+(pdftex.def)             Requested size: 127.46584pt x 97.00107pt.
+[70] [71 <./images/sinking_robot.png>]
+
+LaTeX Warning: Citation `BambuLabASANEW' on page 72 undefined on input line 1173.
+
+[72] [73]) [74]
+\openout2 = `chapters/08_results.aux'.
+
+ (chapters/08_results.tex
+Chapter 5.
+<Images/RPLIDAR Single 2D Scan.png, id=1730, 1119.43219pt x 874.76813pt>
+File: Images/RPLIDAR Single 2D Scan.png Graphic file (type png)
+<use Images/RPLIDAR Single 2D Scan.png>
+Package pdftex.def Info: Images/RPLIDAR Single 2D Scan.png  used on input line 16.
+(pdftex.def)             Requested size: 218.51521pt x 170.74594pt.
+<Images/RPLIDAR Real Room.png, id=1731, 1569.865pt x 1177.39874pt>
+File: Images/RPLIDAR Real Room.png Graphic file (type png)
+<use Images/RPLIDAR Real Room.png>
+Package pdftex.def Info: Images/RPLIDAR Real Room.png  used on input line 23.
+(pdftex.def)             Requested size: 218.51521pt x 163.88252pt.
+<Images/RPLIDAR Single 2D Scan Distance Measurement.png, id=1732, 261.22594pt x 173.14688pt>
+File: Images/RPLIDAR Single 2D Scan Distance Measurement.png Graphic file (type png)
+<use Images/RPLIDAR Single 2D Scan Distance Measurement.png>
+Package pdftex.def Info: Images/RPLIDAR Single 2D Scan Distance Measurement.png  used on input line 40.
+(pdftex.def)             Requested size: 218.51521pt x 144.84pt.
+<Images/RPLIDAR Real Measurement.png, id=1733, 883.04906pt x 368.1253pt>
+File: Images/RPLIDAR Real Measurement.png Graphic file (type png)
+<use Images/RPLIDAR Real Measurement.png>
+Package pdftex.def Info: Images/RPLIDAR Real Measurement.png  used on input line 47.
+(pdftex.def)             Requested size: 218.51521pt x 91.09303pt.
+[75
+
+
+
+
+ <./Images/RPLIDAR Single 2D Scan.png> <./Images/RPLIDAR Real Room.png>]
+<Images/RPLIDAR 3D Height Scan.png, id=1739, 1658.44594pt x 880.03781pt>
+File: Images/RPLIDAR 3D Height Scan.png Graphic file (type png)
+<use Images/RPLIDAR 3D Height Scan.png>
+Package pdftex.def Info: Images/RPLIDAR 3D Height Scan.png  used on input line 64.
+(pdftex.def)             Requested size: 218.51521pt x 115.95317pt.
+<Images/RPLIDAR 3D Height Scan Top Down.png, id=1740, 1114.91531pt x 877.77937pt>
+File: Images/RPLIDAR 3D Height Scan Top Down.png Graphic file (type png)
+<use Images/RPLIDAR 3D Height Scan Top Down.png>
+Package pdftex.def Info: Images/RPLIDAR 3D Height Scan Top Down.png  used on input line 71.
+(pdftex.def)             Requested size: 218.51521pt x 172.03018pt.
+ [76 <./Images/RPLIDAR Single 2D Scan Distance Measurement.png> <./Images/RPLIDAR Real Measurement.png> <./Images/RPLIDAR 3D Height Scan.png> <./Images/RPLIDAR 3D Height Scan Top Down.png>]
+<Images/RPLIDAR Emulated 3D Hard Gaps.png, id=1749, 2251.41125pt x 1782.66pt>
+File: Images/RPLIDAR Emulated 3D Hard Gaps.png Graphic file (type png)
+<use Images/RPLIDAR Emulated 3D Hard Gaps.png>
+Package pdftex.def Info: Images/RPLIDAR Emulated 3D Hard Gaps.png  used on input line 91.
+(pdftex.def)             Requested size: 218.51521pt x 172.99942pt.
+<Images/RPLIDAR Full 3D Scan.png, id=1750, 1448.41125pt x 1182.4175pt>
+File: Images/RPLIDAR Full 3D Scan.png Graphic file (type png)
+<use Images/RPLIDAR Full 3D Scan.png>
+Package pdftex.def Info: Images/RPLIDAR Full 3D Scan.png  used on input line 98.
+(pdftex.def)             Requested size: 218.51521pt x 178.38338pt.
+<Images/lidar_outside.png, id=1752, 690.58pt x 422.57875pt>
+File: Images/lidar_outside.png Graphic file (type png)
+<use Images/lidar_outside.png>
+Package pdftex.def Info: Images/lidar_outside.png  used on input line 110.
+(pdftex.def)             Requested size: 218.51521pt x 133.71268pt.
+<Images/outside_real.png, id=1753, 979.66pt x 1307.88625pt>
+File: Images/outside_real.png Graphic file (type png)
+<use Images/outside_real.png>
+Package pdftex.def Info: Images/outside_real.png  used on input line 115.
+(pdftex.def)             Requested size: 218.51521pt x 291.70724pt.
+<Images/lidar_kitchen.png, id=1755, 690.58pt x 422.57875pt>
+File: Images/lidar_kitchen.png Graphic file (type png)
+<use Images/lidar_kitchen.png>
+Package pdftex.def Info: Images/lidar_kitchen.png  used on input line 124.
+(pdftex.def)             Requested size: 409.71692pt x 250.71852pt.
+ [77 <./Images/RPLIDAR Emulated 3D Hard Gaps.png> <./Images/RPLIDAR Full 3D Scan.png (PNG copy)> <./Images/lidar_outside.png> <./Images/outside_real.png>] [78 <./Images/lidar_kitchen.png>]
+<Images/motor_drivetrain_unloaded.png, id=1769, 1562.08594pt x 886.81313pt>
+File: Images/motor_drivetrain_unloaded.png Graphic file (type png)
+<use Images/motor_drivetrain_unloaded.png>
+Package pdftex.def Info: Images/motor_drivetrain_unloaded.png  used on input line 163.
+(pdftex.def)             Requested size: 192.56744pt x 109.32228pt.
+<Images/motor_right_hand_turn_simulated.png, id=1770, 1583.9175pt x 875.52094pt>
+File: Images/motor_right_hand_turn_simulated.png Graphic file (type png)
+<use Images/motor_right_hand_turn_simulated.png>
+Package pdftex.def Info: Images/motor_right_hand_turn_simulated.png  used on input line 170.
+(pdftex.def)             Requested size: 192.56744pt x 106.43399pt.
+ [79]
+<Images/zero_radius_imu.png, id=1778, 414.04688pt x 312.41719pt>
+File: Images/zero_radius_imu.png Graphic file (type png)
+<use Images/zero_radius_imu.png>
+Package pdftex.def Info: Images/zero_radius_imu.png  used on input line 192.
+(pdftex.def)             Requested size: 149.77504pt x 113.01353pt.
+<Images/zero_radius_rpm.png, id=1779, 414.04688pt x 313.17pt>
+File: Images/zero_radius_rpm.png Graphic file (type png)
+<use Images/zero_radius_rpm.png>
+Package pdftex.def Info: Images/zero_radius_rpm.png  used on input line 197.
+(pdftex.def)             Requested size: 149.77504pt x 113.28586pt.
+ [80 <./Images/motor_drivetrain_unloaded.png> <./Images/motor_right_hand_turn_simulated.png> <./Images/zero_radius_imu.png> <./Images/zero_radius_rpm.png>]
+<Images/imu_data.png, id=1791, 334.48965pt x 196.21304pt>
+File: Images/imu_data.png Graphic file (type png)
+<use Images/imu_data.png>
+Package pdftex.def Info: Images/imu_data.png  used on input line 217.
+(pdftex.def)             Requested size: 341.43307pt x 200.29631pt.
+ [81 <./Images/imu_data.png (PNG copy)>]
+<Images/odometry_output.png, id=1796, 606.76688pt x 799.48688pt>
+File: Images/odometry_output.png Graphic file (type png)
+<use Images/odometry_output.png>
+Package pdftex.def Info: Images/odometry_output.png  used on input line 263.
+(pdftex.def)             Requested size: 152.95998pt x 201.54251pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 264.
+See the caption package documentation for explanation.
+
+<Images/terrain_mobility.png, id=1797, 605.26125pt x 286.06876pt>
+File: Images/terrain_mobility.png Graphic file (type png)
+<use Images/terrain_mobility.png>
+Package pdftex.def Info: Images/terrain_mobility.png  used on input line 280.
+(pdftex.def)             Requested size: 218.51521pt x 103.27713pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 281.
+See the caption package documentation for explanation.
+
+[82 <./Images/odometry_output.png>]
+<Images/obsticle_detection.png, id=1804, 938.00438pt x 462.97969pt>
+File: Images/obsticle_detection.png Graphic file (type png)
+<use Images/obsticle_detection.png>
+Package pdftex.def Info: Images/obsticle_detection.png  used on input line 298.
+(pdftex.def)             Requested size: 218.51521pt x 107.85359pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 299.
+See the caption package documentation for explanation.
+
+[83 <./Images/terrain_mobility.png> <./Images/obsticle_detection.png>]
+<Images/rocker_von_mises_final.png, id=1812, 645.41125pt x 422.57875pt>
+File: Images/rocker_von_mises_final.png Graphic file (type png)
+<use Images/rocker_von_mises_final.png>
+Package pdftex.def Info: Images/rocker_von_mises_final.png  used on input line 314.
+(pdftex.def)             Requested size: 218.51521pt x 143.06876pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 315.
+See the caption package documentation for explanation.
+
+<Images/rocker_displacement_final.png, id=1815, 635.37375pt x 446.66875pt>
+File: Images/rocker_displacement_final.png Graphic file (type png)
+<use Images/rocker_displacement_final.png>
+Package pdftex.def Info: Images/rocker_displacement_final.png  used on input line 321.
+(pdftex.def)             Requested size: 203.21754pt x 142.86194pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 322.
+See the caption package documentation for explanation.
+
+<Images/chassis_von_mises_closeup_final.png, id=1818, 577.15625pt x 377.41pt>
+File: Images/chassis_von_mises_closeup_final.png Graphic file (type png)
+<use Images/chassis_von_mises_closeup_final.png>
+Package pdftex.def Info: Images/chassis_von_mises_closeup_final.png  used on input line 334.
+(pdftex.def)             Requested size: 218.51521pt x 142.89323pt.
+<Images/chassis_von_mises_full_final.png, id=1819, 577.15625pt x 377.41pt>
+File: Images/chassis_von_mises_full_final.png Graphic file (type png)
+<use Images/chassis_von_mises_full_final.png>
+Package pdftex.def Info: Images/chassis_von_mises_full_final.png  used on input line 336.
+(pdftex.def)             Requested size: 218.51521pt x 142.89323pt.
+<Images/chassis_displacement_final.png, id=1822, 705.63625pt x 431.6125pt>
+File: Images/chassis_displacement_final.png Graphic file (type png)
+<use Images/chassis_displacement_final.png>
+Package pdftex.def Info: Images/chassis_displacement_final.png  used on input line 349.
+(pdftex.def)             Requested size: 218.51521pt x 133.6536pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 350.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 355--356
+\T1/lmr/m/n/12 0.031 mm to 0.019 mm. Safety fac-
+ []
+
+[84 <./Images/rocker_von_mises_final.png (PNG copy)> <./Images/rocker_displacement_final.png (PNG copy)> <./Images/chassis_von_mises_closeup_final.png (PNG copy)> <./Images/chassis_von_mises_full_final.png (PNG copy)>]
+<Images/wheel_ground_reaction_stress_final.png, id=1830, 410.2828pt x 338.01282pt>
+File: Images/wheel_ground_reaction_stress_final.png Graphic file (type png)
+<use Images/wheel_ground_reaction_stress_final.png>
+Package pdftex.def Info: Images/wheel_ground_reaction_stress_final.png  used on input line 364.
+(pdftex.def)             Requested size: 210.86638pt x 173.72008pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 365.
+See the caption package documentation for explanation.
+
+<Images/wheel_hub_load_stress_final.png, id=1831, 565.11125pt x 472.76625pt>
+File: Images/wheel_hub_load_stress_final.png Graphic file (type png)
+<use Images/wheel_hub_load_stress_final.png>
+Package pdftex.def Info: Images/wheel_hub_load_stress_final.png  used on input line 372.
+(pdftex.def)             Requested size: 207.58878pt x 173.66556pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 373.
+See the caption package documentation for explanation.
+
+<Images/wheel_displacement_final.png, id=1832, 656.4525pt x 489.83pt>
+File: Images/wheel_displacement_final.png Graphic file (type png)
+<use Images/wheel_displacement_final.png>
+Package pdftex.def Info: Images/wheel_displacement_final.png  used on input line 381.
+(pdftex.def)             Requested size: 218.51521pt x 163.04955pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 382.
+See the caption package documentation for explanation.
+
+[85 <./Images/chassis_displacement_final.png (PNG copy)> <./Images/wheel_ground_reaction_stress_final.png> <./Images/wheel_hub_load_stress_final.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[]|\T1/lmr/m/n/12 Ground re-ac-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+[]|\T1/lmr/m/n/12 Direct hub load
+ []
+
+[86 <./Images/wheel_displacement_final.png (PNG copy)>]
+<Images/rover.png, id=1842, 1541.76pt x 1027.84pt>
+File: Images/rover.png Graphic file (type png)
+<use Images/rover.png>
+Package pdftex.def Info: Images/rover.png  used on input line 418.
+(pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
+ [87 <./Images/rover.png>]
+Underfull \hbox (badness 6559) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Motor com-mands /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Partially
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Physical driv-ing was
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Pseudo-3D map-
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 447--447
+\T1/lmr/m/n/12 ing real-time nav-i-ga-
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Static pose ac-cel-er-a-
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 447--447
+\T1/lmr/m/n/12 and zero-radius turn
+ []
+
+
+Underfull \hbox (badness 1742) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Gazebo, RViz, topic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Unable to model
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
+\T1/lmr/m/n/12 real wheel-surface
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Not ex-per-i-men-
+ []
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 447--447
+[]|\T1/lmr/m/n/12 Insufficient time for
+ []
+
+) [88]
+\openout2 = `chapters/09_discussion.aux'.
+
+ (chapters/09_discussion.tex
+Chapter 6.
+[89
+
+
+
+
+] [90] [91]) [92]
+\openout2 = `chapters/10_conclusion.aux'.
+
+ (chapters/10_conclusion.tex
+Chapter 7.
+[93
+
+
+
+
+] [94]
+<Images/gantt.png, id=1878, 1210.5225pt x 547.04375pt>
+File: Images/gantt.png Graphic file (type png)
+<use Images/gantt.png>
+Package pdftex.def Info: Images/gantt.png  used on input line 49.
+(pdftex.def)             Requested size: 455.24411pt x 205.7252pt.
+<Images/odometry_heading.png, id=1879, 1550.04094pt x 874.01532pt>
+File: Images/odometry_heading.png Graphic file (type png)
+<use Images/odometry_heading.png>
+Package pdftex.def Info: Images/odometry_heading.png  used on input line 58.
+(pdftex.def)             Requested size: 218.51521pt x 123.20149pt.
+<Images/odometry_bearing.png, id=1880, 1118.67938pt x 866.48718pt>
+File: Images/odometry_bearing.png Graphic file (type png)
+<use Images/odometry_bearing.png>
+Package pdftex.def Info: Images/odometry_bearing.png  used on input line 63.
+(pdftex.def)             Requested size: 218.51521pt x 169.24858pt.
+<Images/square_odometry_test.png, id=1881, 1266.23062pt x 904.88063pt>
+File: Images/square_odometry_test.png Graphic file (type png)
+<use Images/square_odometry_test.png>
+Package pdftex.def Info: Images/square_odometry_test.png  used on input line 70.
+(pdftex.def)             Requested size: 364.19667pt x 260.25471pt.
+ [95
+
+ <./Images/gantt.png> <./Images/odometry_heading.png> <./Images/odometry_bearing.png>]
+<Images/table_jonas.png, id=1890, 1021.8175pt x 447.6725pt>
+File: Images/table_jonas.png Graphic file (type png)
+<use Images/table_jonas.png>
+Package pdftex.def Info: Images/table_jonas.png  used on input line 76.
+(pdftex.def)             Requested size: 455.24411pt x 199.44246pt.
+<Images/something.png, id=1891, 433.62pt x 250.9375pt>
+File: Images/something.png Graphic file (type png)
+<use Images/something.png>
+Package pdftex.def Info: Images/something.png  used on input line 82.
+(pdftex.def)             Requested size: 433.61894pt x 250.93687pt.
+ [96 <./Images/square_odometry_test.png> <./Images/table_jonas.png>]
+<Images/something2.png, id=1898, 409.53pt x 248.93pt>
+File: Images/something2.png Graphic file (type png)
+<use Images/something2.png>
+Package pdftex.def Info: Images/something2.png  used on input line 88.
+(pdftex.def)             Requested size: 409.52899pt x 248.92938pt.
+) [97 <./Images/something.png> <./Images/something2.png>]
+\openout2 = `chapters/11_reference_list_APA.aux'.
+
+ (chapters/11_reference_list_APA.tex
+Underfull \hbox (badness 4454) in paragraph at lines 19--20
+[]\T1/lmr/m/n/12 D. A. Kring, ``Lu-nar Mo-bil-ity Re-view,'' Lu-nar and Plan-e-tary In-sti-tute,
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 19--20
+\T1/lmr/m/n/12 2006. [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / www . lpi . usra . edu / science / kring / lunar _
+ []
+
+
+Underfull \hbox (badness 4995) in paragraph at lines 22--23
+[]\T1/lmr/m/n/12 A. Gre-icius, ``Mars 2020 stands on its own six wheels,'' NASA, Oct.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+\T1/lmr/m/n/12 24, 2019. [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / www . nasa . gov / solar-[]system /
+ []
+
+
+Underfull \hbox (badness 4739) in paragraph at lines 31--32
+\T1/lmtt/m/n/12 news / nasas-[]self-[]driving-[]perseverance-[]mars-[]rover-[]takes-[]the-[]wheel/$[]\T1/lmr/m/n/12 . Ac-
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 37--38
+[]\T1/lmr/m/n/12 SLAMTEC, ``RPL-I-DAR C1 Datasheet v1.0,'' Shang-hai Slamtec Co., Ltd.,
+ []
+
+
+Underfull \hbox (badness 6741) in paragraph at lines 37--38
+\T1/lmr/m/n/12 2023. [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / static . generation-[]robots . com / media /
+ []
+
+
+Underfull \hbox (badness 4205) in paragraph at lines 43--44
+[]\T1/lmr/m/n/12 Oriental Mo-tor, ``Step-per mo-tor ba-sics,'' Ori-en-tal Mo-tor. [On-line]. Avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\T1/lmr/m/n/12 able: []$\T1/lmtt/m/n/12 https : / / www . orientalmotor . com / stepper-[]motors / technology /
+ []
+
+[98
+
+
+
+
+
+]
+Underfull \hbox (badness 6792) in paragraph at lines 46--47
+[]\T1/lmr/m/n/12 PBC Lin-ear, ``Step-per Mo-tor NEMA 17,'' data sheet. [On-line]. Avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\T1/lmr/m/n/12 able: []$\T1/lmtt/m/n/12 https : / / media . pbclinear . com / pdfs / pbc-[]linear-[]data-[]sheets /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+[]\T1/lmr/m/n/12 Makerbase, ``SERVO42D NEMA17 Closed Loop Step-per Mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+\T1/lmr/m/n/12 tor.'' [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / makerbase3d . com / product /
+ []
+
+
+Overfull \hbox (19.009pt too wide) in paragraph at lines 52--53
+\T1/lmtt/m/n/12 servo42d-[]nema17-[]closed-[]loop-[]stepper-[]motor-[]driver-[]cnc-[]3d-[]printer-[]for-[]gen _
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 55--56
+\T1/lmtt/m/n/12 CTMS / index . php ? example = Introduction & section = ControlPID$[]\T1/lmr/m/n/12 . Ac-cessed: May
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 64--65
+\T1/lmr/m/n/12 Apr. 26, 2012. [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / www . modbus . org / file / secure /
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 67--68
+[]\T1/lmr/m/n/12 Raspberry Pi Foun-da-tion, ``Rasp-berry Pi 5 Power Con-sump-tion,'' Rasp-berry
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+\T1/lmtt/m/n/12 documentation / computers / raspberry-[]pi . html # power-[]consumption$[]\T1/lmr/m/n/12 . Ac-cessed:
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 70--71
+[]\T1/lmr/m/n/12 SparkFun Elec-tron-ics, ``Spark-Fun 9DoF IMU ICM-20948 Break-out Hookup
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+\T1/lmr/m/n/12 Guide.'' [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / learn . sparkfun . com / tutorials /
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 70--71
+\T1/lmtt/m/n/12 sparkfun-[]9dof-[]imu-[]icm-[]20948-[]breakout-[]hookup-[]guide / all$[]\T1/lmr/m/n/12 . Ac-cessed: May
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 79--80
+\T1/lmr/m/n/12 [On-line]. Avail-able: []$\T1/lmtt/m/n/12 https : / / wiki . bambulab . com / filament-[]acc / abs-[]asa-[]pc /
+ []
+
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+[]\T1/lmr/m/n/12 MatWeb, ``ASA ma-te-rial prop-erty data,'' MatWeb. [On-line]. Avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+\T1/lmr/m/n/12 able: []$\T1/lmtt/m/n/12 https : / / www . matweb . com / search / datasheet . aspx ? matguid =
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 88--89
+[]\T1/lmr/m/n/12 R. Zou \T1/lmr/m/it/12 et al.\T1/lmr/m/n/12 , ``Isotropic and anisotropic elas-tic-ity of 3D printed ma-te-
+ []
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 88--89
+\T1/lmr/m/n/12 rial,'' \T1/lmr/m/it/12 Com-pos-ites Part B: En-gi-neer-ing\T1/lmr/m/n/12 , vol. 99, pp. 506--513, 2016, doi:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/lmtt/m/n/12 2025 / english / SolidWorks / cworks / r _ Maximum _ von _ Mises _ Stress _ Criterion .
+ []
+
+) [100] (report.aux (chapters/01_main_page.aux) (chapters/02_table_of_contents.aux) (chapters/04_introduction.aux) (chapters/05_background_and_purpose.aux) (chapters/06_theory.aux) (chapters/07_materials_and_methods.aux) (chapters/08_results.aux) (chapters/09_discussion.aux) (chapters/10_conclusion.aux) (chapters/11_reference_list_APA.aux))
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 535A0082D25A1485091F5EE031DF6F2E;24729.
+ ) 
+Here is how much of TeX's memory you used:
+ 18751 strings out of 467691
+ 323916 string characters out of 5414988
+ 1072991 words of memory out of 5000000
+ 46944 multiletter control sequences out of 15000+600000
+ 690016 words of font info for 82 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,13n,79p,1031b,2078s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/truls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on report.pdf (101 pages, 16417572 bytes).
+PDF statistics:
+ 2169 PDF objects out of 2487 (max. 8388607)
+ 552 named destinations out of 1000 (max. 500000)
+ 1599 words of extra memory for PDF output out of 10000 (max. 10000000)
+
